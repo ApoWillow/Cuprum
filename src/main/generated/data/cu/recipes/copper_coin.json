@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "minecraft:copper_ingot"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "pattern": [
+    " C ",
+    "CDC",
+    " C "
+  ],
+  "result": {
+    "item": "cu:copper_coin"
+  },
+  "show_notification": true
+}

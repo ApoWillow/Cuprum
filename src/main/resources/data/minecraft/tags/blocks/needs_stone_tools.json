@@ -1,0 +1,29 @@
+{
+  "replace": false,
+  "values": [
+    "cu:smooth_copper",
+    "cu:exposed_smooth_copper",
+    "cu:weathered_smooth_copper",
+    "cu:oxidized_smooth_copper",
+    "cu:waxed_smooth_copper",
+    "cu:waxed_exposed_smooth_copper",
+    "cu:waxed_weathered_smooth_copper",
+    "cu:waxed_oxidized_smooth_copper",
+    "cu:edgy_copper",
+    "cu:exposed_edgy_copper",
+    "cu:weathered_edgy_copper",
+    "cu:oxidized_edgy_copper",
+    "cu:waxed_edgy_copper",
+    "cu:waxed_exposed_edgy_copper",
+    "cu:waxed_weathered_edgy_copper",
+    "cu:waxed_oxidized_edgy_copper",
+    "cu:levitator_block",
+    "cu:exposed_levitator_block",
+    "cu:weathered_levitator_block",
+    "cu:oxidized_levitator_block",
+    "cu:waxed_levitator_block",
+    "cu:waxed_exposed_levitator_block",
+    "cu:waxed_weathered_levitator_block",
+    "cu:waxed_oxidized_levitator_block"
+  ]
+}

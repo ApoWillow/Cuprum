@@ -1,0 +1,32 @@
+{
+  "itemGroup.cu.cu": "Copper Undertake",
+
+  "block.cu.smooth_copper": "Smooth Copper Block",
+  "block.cu.exposed_smooth_copper": "Exposed Smooth Copper",
+  "block.cu.weathered_smooth_copper": "Weathered Smooth Copper",
+  "block.cu.oxidized_smooth_copper": "Oxidized Smooth Copper",
+  "block.cu.waxed_smooth_copper": "Waxed Smooth Copper",
+  "block.cu.waxed_exposed_smooth_copper": "Waxed Exposed Smooth Copper",
+  "block.cu.waxed_weathered_smooth_copper": "Waxed Weathered Smooth Copper",
+  "block.cu.waxed_oxidized_smooth_copper": "Waxed Oxidized Smooth Copper",
+
+  "block.cu.edgy_copper": "Edgy Copper",
+  "block.cu.exposed_edgy_copper": "Exposed Edgy Copper",
+  "block.cu.weathered_edgy_copper": "Weathered Edgy Copper",
+  "block.cu.oxidized_edgy_copper": "Oxidized Edgy Copper",
+  "block.cu.waxed_edgy_copper": "Waxed Edgy Copper",
+  "block.cu.waxed_exposed_edgy_copper": "Waxed Exposed Edgy Copper",
+  "block.cu.waxed_weathered_edgy_copper": "Waxed Weathered Edgy Copper",
+  "block.cu.waxed_oxidized_edgy_copper": "Waxed Oxidized Edgy Copper",
+
+  "block.cu.levitator_block": "Levitator",
+  "block.cu.exposed_levitator_block": "Exposed Levitator",
+  "block.cu.weathered_levitator_block": "Weathered Levitator",
+  "block.cu.oxidized_levitator_block": "Oxidized Levitator",
+  "block.cu.waxed_levitator_block": "Waxed Levitator",
+  "block.cu.waxed_exposed_levitator_block": "Waxed Exposed Levitator",
+  "block.cu.waxed_weathered_levitator_block": "Waxed Weathered Levitator",
+  "block.cu.waxed_oxidized_levitator_block": "Waxed Oxidized Levitator"
+
+
+}

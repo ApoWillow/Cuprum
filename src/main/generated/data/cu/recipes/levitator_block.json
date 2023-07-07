@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "A": {
+      "item": "minecraft:amethyst_shard"
+    },
+    "C": {
+      "item": "minecraft:copper_ingot"
+    },
+    "S": {
+      "item": "minecraft:shulker_shell"
+    }
+  },
+  "pattern": [
+    "CCC",
+    "CAC",
+    "SSS"
+  ],
+  "result": {
+    "item": "cu:levitator_block"
+  },
+  "show_notification": true
+}

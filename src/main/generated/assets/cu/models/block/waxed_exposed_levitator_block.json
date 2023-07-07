@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "cu:block/waxed_exposed_levitator_block"
+  }
+}

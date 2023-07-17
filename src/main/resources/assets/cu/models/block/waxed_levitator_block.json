@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "north": "cu:block/levitator_block",
+    "east": "cu:block/levitator_block",
+    "south": "cu:block/levitator_block",
+    "west": "cu:block/levitator_block",
+    "down": "cu:block/levitator_block_bottom",
+    "up": "cu:block/levitator_block_top",
+    "particle": "cu:block/levitator_block"
+  }
+}

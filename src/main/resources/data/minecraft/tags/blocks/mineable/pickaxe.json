@@ -1,8 +1,40 @@
 {
   "replace": false,
   "values": [
-    "tutorialmod:tanzanite_ore",
-    "tutorialmod:tanzanite_block",
-    "tutorialmod:deepslate_tanzanite_ore"
+    "cu:smooth_copper",
+    "cu:exposed_smooth_copper",
+    "cu:weathered_smooth_copper",
+    "cu:oxidized_smooth_copper",
+    "cu:waxed_smooth_copper",
+    "cu:waxed_exposed_smooth_copper",
+    "cu:waxed_weathered_smooth_copper",
+    "cu:waxed_oxidized_smooth_copper",
+
+    "cu:edgy_copper",
+    "cu:exposed_edgy_copper",
+    "cu:weathered_edgy_copper",
+    "cu:oxidized_edgy_copper",
+    "cu:waxed_edgy_copper",
+    "cu:waxed_exposed_edgy_copper",
+    "cu:waxed_weathered_edgy_copper",
+    "cu:waxed_oxidized_edgy_copper",
+
+    "cu:lined_copper_lamp",
+    "cu:exposed_lined_copper_lamp",
+    "cu:weathered_lined_copper_lamp",
+    "cu:oxidized_lined_copper_lamp",
+    "cu:waxed_lined_copper_lamp",
+    "cu:waxed_exposed_lined_copper_lamp",
+    "cu:waxed_weathered_lined_copper_lamp",
+    "cu:waxed_oxidized_lined_copper_lamp",
+
+    "cu:levitator_block",
+    "cu:exposed_levitator_block",
+    "cu:weathered_levitator_block",
+    "cu:oxidized_levitator_block",
+    "cu:waxed_levitator_block",
+    "cu:waxed_exposed_levitator_block",
+    "cu:waxed_weathered_levitator_block",
+    "cu:waxed_oxidized_levitator_block",
   ]
 }

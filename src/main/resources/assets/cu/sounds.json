@@ -1,0 +1,14 @@
+{
+  "goat_horn_disappointment": {
+    "subtitle": "subtitles.item.goat_horn.play",
+    "sounds": [
+      "cu:item/goat_horn_disappointment"
+    ]
+  },
+  "goat_horn_terror": {
+    "subtitle": "subtitles.item.goat_horn.play",
+    "sounds": [
+      "cu:item/goat_horn_terror"
+    ]
+  }
+}

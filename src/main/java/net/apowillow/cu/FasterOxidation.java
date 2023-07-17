@@ -1,0 +1,41 @@
+package net.apowillow.cu;
+
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Oxidizable;
+import net.minecraft.registry.tag.FluidTags;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
+import net.minecraft.world.BlockView;
+
+public class FasterOxidation {
+    public static BlockState oxideState(Oxidizable oxidizable, BlockState state) {
+        var result = oxidizable.getDegradationResult(state);
+        if(result.isEmpty()) return state;
+        else return result.get();
+    }
+
+    public static boolean oxideBoolean(BlockView world, BlockPos pos) {
+        boolean bl = false;
+        BlockPos.Mutable mutable = pos.mutableCopy();
+        Direction[] var4 = Direction.values();
+        int var5 = var4.length;
+
+        for (int var6 = 0; var6 < var5; ++var6) {
+            Direction direction = var4[var6];
+            BlockState blockState = world.getBlockState(mutable);
+            if (direction != Direction.DOWN || oxideBooleanTag(blockState)) {
+                mutable.set(pos, direction);
+                blockState = world.getBlockState(mutable);
+                if (oxideBooleanTag(blockState) && !blockState.isSideSolidFullSquare(world, pos, direction.getOpposite())) {
+                    bl = true;
+                    break;
+                }
+            }
+        }
+        return bl;
+    }
+
+    public static boolean oxideBooleanTag(BlockState state) {
+        return state.getFluidState().isIn(FluidTags.WATER);
+    }
+}

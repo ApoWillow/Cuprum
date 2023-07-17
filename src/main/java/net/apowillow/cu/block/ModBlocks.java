@@ -1,16 +1,11 @@
 package net.apowillow.cu.block;
 
 import net.apowillow.cu.CUMod;
-import net.apowillow.cu.block.advance.levitatorstates.ExposedLevitatorBlock;
-import net.apowillow.cu.block.advance.levitatorstates.LevitatorBlock;
-import net.apowillow.cu.block.advance.levitatorstates.OxidizedLevitatorBlock;
-import net.apowillow.cu.block.advance.levitatorstates.WeatheredLevitatorBlock;
+import net.apowillow.cu.block.custom.CopperLampBlock;
+import net.apowillow.cu.block.custom.levitatorblocks.*;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.Oxidizable;
-import net.minecraft.block.OxidizableBlock;
+import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -19,6 +14,8 @@ import net.minecraft.util.Identifier;
 
 public class ModBlocks {
 
+
+    // Registering all the types of smooth copper blocks
     public static final Block SMOOTH_COPPER = registerBlock("smooth_copper",
             new OxidizableBlock(Oxidizable.OxidationLevel.UNAFFECTED, FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(3.0f).requiresTool()));
 
@@ -43,17 +40,66 @@ public class ModBlocks {
     public static final Block WAXED_OXIDIZED_SMOOTH_COPPER = registerBlock("waxed_oxidized_smooth_copper",
             new Block(FabricBlockSettings.copyOf(Blocks.WAXED_OXIDIZED_COPPER).strength(3.0f).requiresTool()));
 
+    public static final Block SMOOTH_COPPER_STAIRS = registerBlock("smooth_copper_stairs",
+            new OxidizableStairsBlock(Oxidizable.OxidationLevel.UNAFFECTED, ModBlocks.SMOOTH_COPPER.getDefaultState(), FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(3.0f).requiresTool()));
+
+    public static final Block EXPOSED_SMOOTH_COPPER_STAIRS = registerBlock("exposed_smooth_copper_stairs",
+            new OxidizableStairsBlock(Oxidizable.OxidationLevel.EXPOSED, ModBlocks.EXPOSED_SMOOTH_COPPER.getDefaultState(), FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(3.0f).requiresTool()));
+
+    public static final Block WEATHERED_SMOOTH_COPPER_STAIRS = registerBlock("weathered_smooth_copper_stairs",
+            new OxidizableStairsBlock(Oxidizable.OxidationLevel.WEATHERED, ModBlocks.WEATHERED_SMOOTH_COPPER.getDefaultState(), FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(3.0f).requiresTool()));
+
+    public static final Block OXIDIZED_SMOOTH_COPPER_STAIRS = registerBlock("oxidized_smooth_copper_stairs",
+            new OxidizableStairsBlock(Oxidizable.OxidationLevel.OXIDIZED, ModBlocks.OXIDIZED_SMOOTH_COPPER.getDefaultState(), FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(3.0f).requiresTool()));
+
+    public static final Block WAXED_SMOOTH_COPPER_STAIRS = registerBlock("waxed_smooth_copper_stairs",
+            new StairsBlock(ModBlocks.WAXED_SMOOTH_COPPER.getDefaultState(), FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(3.0f).requiresTool()));
+
+    public static final Block WAXED_EXPOSED_SMOOTH_COPPER_STAIRS = registerBlock("waxed_exposed_smooth_copper_stairs",
+            new StairsBlock(ModBlocks.WAXED_EXPOSED_SMOOTH_COPPER.getDefaultState(), FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(3.0f).requiresTool()));
+
+    public static final Block WAXED_WEATHERED_SMOOTH_COPPER_STAIRS = registerBlock("waxed_weathered_smooth_copper_stairs",
+            new StairsBlock(ModBlocks.WAXED_WEATHERED_SMOOTH_COPPER.getDefaultState(), FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(3.0f).requiresTool()));
+
+    public static final Block WAXED_OXIDIZED_SMOOTH_COPPER_STAIRS = registerBlock("waxed_oxidized_smooth_copper_stairs",
+            new StairsBlock(ModBlocks.WAXED_OXIDIZED_SMOOTH_COPPER.getDefaultState(), FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(3.0f).requiresTool()));
+
+    public static final Block SMOOTH_COPPER_SLAB = registerBlock("smooth_copper_slab",
+            new OxidizableSlabBlock(Oxidizable.OxidationLevel.UNAFFECTED, FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(3.0f).requiresTool()));
+
+    public static final Block EXPOSED_SMOOTH_COPPER_SLAB = registerBlock("exposed_smooth_copper_slab",
+            new OxidizableSlabBlock(Oxidizable.OxidationLevel.EXPOSED, FabricBlockSettings.copyOf(Blocks.EXPOSED_COPPER).strength(3.0f).requiresTool()));
+
+    public static final Block WEATHERED_SMOOTH_COPPER_SLAB = registerBlock("weathered_smooth_copper_slab",
+            new OxidizableSlabBlock(Oxidizable.OxidationLevel.WEATHERED, FabricBlockSettings.copyOf(Blocks.WEATHERED_COPPER).strength(3.0f).requiresTool()));
+
+    public static final Block OXIDIZED_SMOOTH_COPPER_SLAB = registerBlock("oxidized_smooth_copper_slab",
+            new OxidizableSlabBlock(Oxidizable.OxidationLevel.OXIDIZED, FabricBlockSettings.copyOf(Blocks.OXIDIZED_COPPER).strength(3.0f).requiresTool()));
+
+    public static final Block WAXED_SMOOTH_COPPER_SLAB = registerBlock("waxed_smooth_copper_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(3.0f).requiresTool()));
+
+    public static final Block WAXED_EXPOSED_SMOOTH_COPPER_SLAB = registerBlock("waxed_exposed_smooth_copper_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(3.0f).requiresTool()));
+
+    public static final Block WAXED_WEATHERED_SMOOTH_COPPER_SLAB = registerBlock("waxed_weathered_smooth_copper_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(3.0f).requiresTool()));
+
+    public static final Block WAXED_OXIDIZED_SMOOTH_COPPER_SLAB = registerBlock("waxed_oxidized_smooth_copper_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(3.0f).requiresTool()));
+
+    // Registering all the types of edgy copper blocks
     public static final Block EDGY_COPPER = registerBlock("edgy_copper",
             new OxidizableBlock(Oxidizable.OxidationLevel.UNAFFECTED, FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(3.0f).requiresTool()));
 
     public static final Block EXPOSED_EDGY_COPPER = registerBlock("exposed_edgy_copper",
-            new OxidizableBlock(Oxidizable.OxidationLevel.EXPOSED, FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(3.0f).requiresTool()));
+            new OxidizableBlock(Oxidizable.OxidationLevel.EXPOSED, FabricBlockSettings.copyOf(Blocks.EXPOSED_COPPER).strength(3.0f).requiresTool()));
 
     public static final Block WEATHERED_EDGY_COPPER = registerBlock("weathered_edgy_copper",
-            new OxidizableBlock(Oxidizable.OxidationLevel.WEATHERED, FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(3.0f).requiresTool()));
+            new OxidizableBlock(Oxidizable.OxidationLevel.WEATHERED, FabricBlockSettings.copyOf(Blocks.WEATHERED_COPPER).strength(3.0f).requiresTool()));
 
     public static final Block OXIDIZED_EDGY_COPPER = registerBlock("oxidized_edgy_copper",
-            new OxidizableBlock(Oxidizable.OxidationLevel.OXIDIZED, FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(3.0f).requiresTool()));
+            new OxidizableBlock(Oxidizable.OxidationLevel.OXIDIZED, FabricBlockSettings.copyOf(Blocks.OXIDIZED_COPPER).strength(3.0f).requiresTool()));
 
     public static final Block WAXED_EDGY_COPPER = registerBlock("waxed_edgy_copper",
             new Block(FabricBlockSettings.copyOf(Blocks.WAXED_COPPER_BLOCK).strength(3.0f).requiresTool()));
@@ -67,7 +113,93 @@ public class ModBlocks {
     public static final Block WAXED_OXIDIZED_EDGY_COPPER = registerBlock("waxed_oxidized_edgy_copper",
             new Block(FabricBlockSettings.copyOf(Blocks.WAXED_COPPER_BLOCK).strength(3.0f).requiresTool()));
 
+    public static final Block EDGY_COPPER_STAIRS = registerBlock("edgy_copper_stairs",
+            new OxidizableStairsBlock(Oxidizable.OxidationLevel.UNAFFECTED, ModBlocks.EDGY_COPPER.getDefaultState(),
+                    FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(3.0f).requiresTool()));
 
+    public static final Block EXPOSED_EDGY_COPPER_STAIRS = registerBlock("exposed_edgy_copper_stairs",
+            new OxidizableStairsBlock(Oxidizable.OxidationLevel.EXPOSED, ModBlocks.EDGY_COPPER.getDefaultState(),
+                    FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(3.0f).requiresTool()));
+
+    public static final Block WEATHERED_EDGY_COPPER_STAIRS = registerBlock("weathered_edgy_copper_stairs",
+            new OxidizableStairsBlock(Oxidizable.OxidationLevel.WEATHERED, ModBlocks.EDGY_COPPER.getDefaultState(),
+                    FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(3.0f).requiresTool()));
+
+    public static final Block OXIDIZED_EDGY_COPPER_STAIRS = registerBlock("oxidized_edgy_copper_stairs",
+            new OxidizableStairsBlock(Oxidizable.OxidationLevel.OXIDIZED, ModBlocks.EDGY_COPPER.getDefaultState(),
+                    FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(3.0f).requiresTool()));
+
+    public static final Block WAXED_EDGY_COPPER_STAIRS = registerBlock("waxed_edgy_copper_stairs",
+            new StairsBlock(ModBlocks.EDGY_COPPER.getDefaultState(), FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(3.0f).requiresTool()));
+
+    public static final Block WAXED_EXPOSED_EDGY_COPPER_STAIRS = registerBlock("waxed_exposed_edgy_copper_stairs",
+            new StairsBlock(ModBlocks.EXPOSED_EDGY_COPPER.getDefaultState(), FabricBlockSettings.copyOf(Blocks.EXPOSED_COPPER).strength(3.0f).requiresTool()));
+
+    public static final Block WAXED_WEATHERED_EDGY_COPPER_STAIRS = registerBlock("waxed_weathered_edgy_copper_stairs",
+            new StairsBlock(ModBlocks.WEATHERED_EDGY_COPPER.getDefaultState(), FabricBlockSettings.copyOf(Blocks.WEATHERED_COPPER).strength(3.0f).requiresTool()));
+
+    public static final Block WAXED_OXIDIZED_EDGY_COPPER_STAIRS = registerBlock("waxed_oxidized_edgy_copper_stairs",
+            new StairsBlock(ModBlocks.OXIDIZED_EDGY_COPPER.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OXIDIZED_COPPER).strength(3.0f).requiresTool()));
+
+    public static final Block EDGY_COPPER_SLAB = registerBlock("edgy_copper_slab",
+            new OxidizableSlabBlock(Oxidizable.OxidationLevel.UNAFFECTED, FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(3.0f).requiresTool()));
+
+    public static final Block EXPOSED_EDGY_COPPER_SLAB = registerBlock("exposed_edgy_copper_slab",
+            new OxidizableSlabBlock(Oxidizable.OxidationLevel.UNAFFECTED, FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(3.0f).requiresTool()));
+
+    public static final Block WEATHERED_EDGY_COPPER_SLAB = registerBlock("weathered_edgy_copper_slab",
+            new OxidizableSlabBlock(Oxidizable.OxidationLevel.UNAFFECTED, FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(3.0f).requiresTool()));
+
+    public static final Block OXIDIZED_EDGY_COPPER_SLAB = registerBlock("oxidized_edgy_copper_slab",
+            new OxidizableSlabBlock(Oxidizable.OxidationLevel.UNAFFECTED, FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(3.0f).requiresTool()));
+
+    public static final Block WAXED_EDGY_COPPER_SLAB = registerBlock("waxed_edgy_copper_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(3.0f).requiresTool()));
+
+    public static final Block WAXED_EXPOSED_EDGY_COPPER_SLAB = registerBlock("waxed_exposed_edgy_copper_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(3.0f).requiresTool()));
+
+    public static final Block WAXED_WEATHERED_EDGY_COPPER_SLAB = registerBlock("waxed_weathered_edgy_copper_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(3.0f).requiresTool()));
+
+    public static final Block WAXED_OXIDIZED_EDGY_COPPER_SLAB = registerBlock("waxed_oxidized_edgy_copper_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(3.0f).requiresTool()));
+
+    // Registering all the types of lined copper lamp blocks
+    public static final Block LINED_COPPER_LAMP = registerBlock("lined_copper_lamp",
+            new CopperLampBlock(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(3.0f).requiresTool()
+                    .luminance(state -> state.get(CopperLampBlock.LIT) ? 15 : 0)));
+
+    public static final Block EXPOSED_LINED_COPPER_LAMP = registerBlock("exposed_lined_copper_lamp",
+            new CopperLampBlock(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(3.0f).requiresTool()
+                    .luminance(state -> state.get(CopperLampBlock.LIT) ? 15 : 0)));
+
+    public static final Block WEATHERED_LINED_COPPER_LAMP = registerBlock("weathered_lined_copper_lamp",
+            new CopperLampBlock(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(3.0f).requiresTool()
+                    .luminance(state -> state.get(CopperLampBlock.LIT) ? 15 : 0)));
+
+    public static final Block OXIDIZED_LINED_COPPER_LAMP = registerBlock("oxidized_lined_copper_lamp",
+            new CopperLampBlock(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(3.0f).requiresTool()
+                    .luminance(state -> state.get(CopperLampBlock.LIT) ? 15 : 0)));
+
+    public static final Block WAXED_LINED_COPPER_LAMP = registerBlock("waxed_lined_copper_lamp",
+            new CopperLampBlock(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(3.0f).requiresTool()
+                    .luminance(state -> state.get(CopperLampBlock.LIT) ? 15 : 0)));
+
+    public static final Block WAXED_EXPOSED_LINED_COPPER_LAMP = registerBlock("waxed_exposed_lined_copper_lamp",
+            new CopperLampBlock(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(3.0f).requiresTool()
+                    .luminance(state -> state.get(CopperLampBlock.LIT) ? 15 : 0)));
+
+    public static final Block WAXED_WEATHERED_LINED_COPPER_LAMP = registerBlock("waxed_weathered_lined_copper_lamp",
+            new CopperLampBlock(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(3.0f).requiresTool()
+                    .luminance(state -> state.get(CopperLampBlock.LIT) ? 15 : 0)));
+
+    public static final Block WAXED_OXIDIZED_LINED_COPPER_LAMP = registerBlock("waxed_oxidized_lined_copper_lamp",
+            new CopperLampBlock(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(3.0f).requiresTool()
+                    .luminance(state -> state.get(CopperLampBlock.LIT) ? 15 : 0)));
+
+
+    // Registering all the types of levitator blocks
     public static final Block LEVITATOR_BLOCK = registerBlock("levitator_block",
             new LevitatorBlock(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(3.0f).requiresTool()));
 

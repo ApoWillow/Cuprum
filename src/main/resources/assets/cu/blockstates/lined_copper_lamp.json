@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=true": {
+      "model": "cu:block/lined_copper_lamp_on"
+    },
+    "lit=false": {
+      "model": "cu:block/lined_copper_lamp_off"
+    }
+  }
+}

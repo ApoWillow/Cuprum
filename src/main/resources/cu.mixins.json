@@ -3,7 +3,9 @@
 	"package": "net.apowillow.cu.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"CUMixin"
+		"MixinOxidizableBlock",
+		"MixinOxidizableSlab",
+		"MixinOxidizableStairs"
 	],
 	"injectors": {
 		"defaultRequire": 1

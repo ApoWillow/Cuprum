@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "C": {
+      "item": "minecraft:copper_ingot"
+    },
+    "G": {
+      "item": "minecraft:glowstone"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "pattern": [
+    "CRC",
+    "RGR",
+    "CRC"
+  ],
+  "result": {
+    "item": "cu:lined_copper_lamp"
+  },
+  "show_notification": true
+}

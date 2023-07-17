@@ -1,7 +1,6 @@
 package net.apowillow.cu.data;
 
 import net.apowillow.cu.block.ModBlocks;
-import net.apowillow.cu.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.block.Blocks;
@@ -22,8 +21,17 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
     public void generate(Consumer<RecipeJsonProvider> exporter) {
 
         //Adds the recipes for smooth copper and edgy copper inside the stone cutter
-        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.COPPER_BLOCK, ModBlocks.SMOOTH_COPPER);
-        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.COPPER_BLOCK, ModBlocks.EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_COPPER, Blocks.COPPER_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_COPPER_SLAB, Blocks.COPPER_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_COPPER_STAIRS, Blocks.COPPER_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_COPPER_SLAB, ModBlocks.EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_COPPER_STAIRS, ModBlocks.EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EDGY_COPPER, Blocks.COPPER_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EDGY_COPPER_SLAB, Blocks.COPPER_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EDGY_COPPER_STAIRS, Blocks.COPPER_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EDGY_COPPER_SLAB, ModBlocks.EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EDGY_COPPER_STAIRS, ModBlocks.EDGY_COPPER);
+
 
         //Adds the recipe for Levitator block
         ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, ModBlocks.LEVITATOR_BLOCK)
@@ -41,17 +49,20 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                         FabricRecipeProvider.conditionsFromItem(Items.SHULKER_SHELL))
                 .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModBlocks.LEVITATOR_BLOCK)));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.COPPER_COIN)
-                .pattern(" C ")
-                .pattern("CDC")
-                .pattern(" C ")
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, ModBlocks.LINED_COPPER_LAMP)
+                .pattern("CRC")
+                .pattern("RGR")
+                .pattern("CRC")
                 .input('C', Items.COPPER_INGOT)
-                .input('D', Items.DIAMOND)
+                .input('R', Items.REDSTONE)
+                .input('G', Items.GLOWSTONE)
                 .criterion(FabricRecipeProvider.hasItem(Items.COPPER_INGOT),
                         FabricRecipeProvider.conditionsFromItem(Items.COPPER_INGOT))
-                .criterion(FabricRecipeProvider.hasItem(Items.DIAMOND),
-                        FabricRecipeProvider.conditionsFromItem(Items.DIAMOND))
-                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.COPPER_COIN)));
-
+                .criterion(FabricRecipeProvider.hasItem(Items.REDSTONE),
+                        FabricRecipeProvider.conditionsFromItem(Items.REDSTONE))
+                .criterion(FabricRecipeProvider.hasItem(Items.GLOWSTONE),
+                        FabricRecipeProvider.conditionsFromItem(Items.GLOWSTONE))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModBlocks.LINED_COPPER_LAMP)));
     }
 }

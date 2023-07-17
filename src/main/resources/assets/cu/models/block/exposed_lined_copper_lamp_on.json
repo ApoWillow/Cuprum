@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "cu:block/exposed_lined_copper_lamp_on"
+  }
+}

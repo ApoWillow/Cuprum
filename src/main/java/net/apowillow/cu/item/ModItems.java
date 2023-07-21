@@ -9,8 +9,6 @@ import net.minecraft.util.Identifier;
 
 public class ModItems {
 
-
-
     private static Item registeritem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(CUMod.MOD_ID, name), item);
 

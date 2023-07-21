@@ -22,23 +22,23 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.WAXED_WEATHERED_SMOOTH_COPPER);
         addDrop(ModBlocks.WAXED_OXIDIZED_SMOOTH_COPPER);
 
-        addDrop(ModBlocks.SMOOTH_COPPER_STAIRS);
-        addDrop(ModBlocks.EXPOSED_SMOOTH_COPPER_STAIRS);
-        addDrop(ModBlocks.WEATHERED_SMOOTH_COPPER_STAIRS);
-        addDrop(ModBlocks.OXIDIZED_SMOOTH_COPPER_STAIRS);
-        addDrop(ModBlocks.WAXED_SMOOTH_COPPER_STAIRS);
-        addDrop(ModBlocks.WAXED_EXPOSED_SMOOTH_COPPER_STAIRS);
-        addDrop(ModBlocks.WAXED_WEATHERED_SMOOTH_COPPER_STAIRS);
-        addDrop(ModBlocks.WAXED_OXIDIZED_SMOOTH_COPPER_STAIRS);
+        addDrop(ModBlocks.SMOOTH_COPPER_SLAB, slabDrops(ModBlocks.SMOOTH_COPPER_SLAB));
+        addDrop(ModBlocks.EXPOSED_SMOOTH_COPPER_SLAB, slabDrops(ModBlocks.EXPOSED_SMOOTH_COPPER_SLAB));
+        addDrop(ModBlocks.WEATHERED_SMOOTH_COPPER_SLAB, slabDrops(ModBlocks.WEATHERED_SMOOTH_COPPER_SLAB));
+        addDrop(ModBlocks.OXIDIZED_SMOOTH_COPPER_SLAB, slabDrops(ModBlocks.OXIDIZED_SMOOTH_COPPER_SLAB));
+        addDrop(ModBlocks.WAXED_SMOOTH_COPPER_SLAB, slabDrops(ModBlocks.WAXED_SMOOTH_COPPER_SLAB));
+        addDrop(ModBlocks.WAXED_EXPOSED_SMOOTH_COPPER_SLAB, slabDrops(ModBlocks.WAXED_EXPOSED_SMOOTH_COPPER_SLAB));
+        addDrop(ModBlocks.WAXED_WEATHERED_SMOOTH_COPPER_SLAB, slabDrops(ModBlocks.WAXED_WEATHERED_SMOOTH_COPPER_SLAB));
+        addDrop(ModBlocks.WAXED_OXIDIZED_SMOOTH_COPPER_SLAB, slabDrops(ModBlocks.WAXED_OXIDIZED_SMOOTH_COPPER_SLAB));
 
-        addDrop(ModBlocks.SMOOTH_COPPER_SLAB);
-        addDrop(ModBlocks.EXPOSED_SMOOTH_COPPER_SLAB);
-        addDrop(ModBlocks.WEATHERED_SMOOTH_COPPER_SLAB);
-        addDrop(ModBlocks.OXIDIZED_SMOOTH_COPPER_SLAB);
-        addDrop(ModBlocks.WAXED_SMOOTH_COPPER_SLAB);
-        addDrop(ModBlocks.WAXED_EXPOSED_SMOOTH_COPPER_SLAB);
-        addDrop(ModBlocks.WAXED_WEATHERED_SMOOTH_COPPER_SLAB);
-        addDrop(ModBlocks.WAXED_OXIDIZED_SMOOTH_COPPER_SLAB);
+        addDrop(ModBlocks.SMOOTH_COPPER_STAIRS, slabDrops(ModBlocks.SMOOTH_COPPER_STAIRS));
+        addDrop(ModBlocks.EXPOSED_SMOOTH_COPPER_STAIRS, slabDrops(ModBlocks.EXPOSED_SMOOTH_COPPER_STAIRS));
+        addDrop(ModBlocks.WEATHERED_SMOOTH_COPPER_STAIRS, slabDrops(ModBlocks.WEATHERED_SMOOTH_COPPER_STAIRS));
+        addDrop(ModBlocks.OXIDIZED_SMOOTH_COPPER_STAIRS, slabDrops(ModBlocks.OXIDIZED_SMOOTH_COPPER_STAIRS));
+        addDrop(ModBlocks.WAXED_SMOOTH_COPPER_STAIRS, slabDrops(ModBlocks.WAXED_SMOOTH_COPPER_STAIRS));
+        addDrop(ModBlocks.WAXED_EXPOSED_SMOOTH_COPPER_STAIRS, slabDrops(ModBlocks.WAXED_EXPOSED_SMOOTH_COPPER_STAIRS));
+        addDrop(ModBlocks.WAXED_WEATHERED_SMOOTH_COPPER_STAIRS, slabDrops(ModBlocks.WAXED_WEATHERED_SMOOTH_COPPER_STAIRS));
+        addDrop(ModBlocks.WAXED_OXIDIZED_SMOOTH_COPPER_STAIRS, slabDrops(ModBlocks.WAXED_OXIDIZED_SMOOTH_COPPER_STAIRS));
 
         //Adds the drops for the edgy copper variants and it's waxed version
         addDrop(ModBlocks.EDGY_COPPER);
@@ -50,23 +50,23 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.WAXED_WEATHERED_EDGY_COPPER);
         addDrop(ModBlocks.WAXED_OXIDIZED_EDGY_COPPER);
 
-        addDrop(ModBlocks.EDGY_COPPER_STAIRS);
-        addDrop(ModBlocks.EXPOSED_EDGY_COPPER_STAIRS);
-        addDrop(ModBlocks.WEATHERED_EDGY_COPPER_STAIRS);
-        addDrop(ModBlocks.OXIDIZED_EDGY_COPPER_STAIRS);
-        addDrop(ModBlocks.WAXED_EDGY_COPPER_STAIRS);
-        addDrop(ModBlocks.WAXED_EXPOSED_EDGY_COPPER_STAIRS);
-        addDrop(ModBlocks.WAXED_WEATHERED_EDGY_COPPER_STAIRS);
-        addDrop(ModBlocks.WAXED_OXIDIZED_EDGY_COPPER_STAIRS);
+        addDrop(ModBlocks.EDGY_COPPER_SLAB, slabDrops(ModBlocks.EDGY_COPPER_SLAB));
+        addDrop(ModBlocks.EXPOSED_EDGY_COPPER_SLAB, slabDrops(ModBlocks.EXPOSED_EDGY_COPPER_SLAB));
+        addDrop(ModBlocks.WEATHERED_EDGY_COPPER_SLAB, slabDrops(ModBlocks.WEATHERED_EDGY_COPPER_SLAB));
+        addDrop(ModBlocks.OXIDIZED_EDGY_COPPER_SLAB, slabDrops(ModBlocks.OXIDIZED_EDGY_COPPER_SLAB));
+        addDrop(ModBlocks.WAXED_EDGY_COPPER_SLAB, slabDrops(ModBlocks.WAXED_EDGY_COPPER_SLAB));
+        addDrop(ModBlocks.WAXED_EXPOSED_EDGY_COPPER_SLAB, slabDrops(ModBlocks.WAXED_EXPOSED_EDGY_COPPER_SLAB));
+        addDrop(ModBlocks.WAXED_WEATHERED_EDGY_COPPER_SLAB, slabDrops(ModBlocks.WAXED_WEATHERED_EDGY_COPPER_SLAB));
+        addDrop(ModBlocks.WAXED_OXIDIZED_EDGY_COPPER_SLAB, slabDrops(ModBlocks.WAXED_OXIDIZED_EDGY_COPPER_SLAB));
 
-        addDrop(ModBlocks.EDGY_COPPER_SLAB);
-        addDrop(ModBlocks.EXPOSED_EDGY_COPPER_SLAB);
-        addDrop(ModBlocks.WEATHERED_EDGY_COPPER_SLAB);
-        addDrop(ModBlocks.OXIDIZED_EDGY_COPPER_SLAB);
-        addDrop(ModBlocks.WAXED_EDGY_COPPER_SLAB);
-        addDrop(ModBlocks.WAXED_EXPOSED_EDGY_COPPER_SLAB);
-        addDrop(ModBlocks.WAXED_WEATHERED_EDGY_COPPER_SLAB);
-        addDrop(ModBlocks.WAXED_OXIDIZED_EDGY_COPPER_SLAB);
+        addDrop(ModBlocks.EDGY_COPPER_STAIRS, slabDrops(ModBlocks.EDGY_COPPER_STAIRS));
+        addDrop(ModBlocks.EXPOSED_EDGY_COPPER_STAIRS, slabDrops(ModBlocks.EXPOSED_EDGY_COPPER_STAIRS));
+        addDrop(ModBlocks.WEATHERED_EDGY_COPPER_STAIRS, slabDrops(ModBlocks.WEATHERED_EDGY_COPPER_STAIRS));
+        addDrop(ModBlocks.OXIDIZED_EDGY_COPPER_STAIRS, slabDrops(ModBlocks.OXIDIZED_EDGY_COPPER_STAIRS));
+        addDrop(ModBlocks.WAXED_EDGY_COPPER_STAIRS, slabDrops(ModBlocks.WAXED_EDGY_COPPER_STAIRS));
+        addDrop(ModBlocks.WAXED_EXPOSED_EDGY_COPPER_STAIRS, slabDrops(ModBlocks.WAXED_EXPOSED_EDGY_COPPER_STAIRS));
+        addDrop(ModBlocks.WAXED_WEATHERED_EDGY_COPPER_STAIRS, slabDrops(ModBlocks.WAXED_WEATHERED_EDGY_COPPER_STAIRS));
+        addDrop(ModBlocks.WAXED_OXIDIZED_EDGY_COPPER_STAIRS, slabDrops(ModBlocks.WAXED_OXIDIZED_EDGY_COPPER_STAIRS));
 
         //Adds all the drops for the lined copper lamp variants including the waxed version
         addDrop(ModBlocks.LINED_COPPER_LAMP);

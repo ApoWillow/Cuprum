@@ -1,4 +1,14 @@
 {
+
+  "item.cu.rose_gold_ingot": "Rose Gold Ingot",
+  "item.cu.rose_gold_sword": "Rose Gold Sword",
+  "item.cu.rose_gold_shovel": "Rose Gold Shovel",
+  "item.cu.rose_gold_pickaxe": "Rose Gold Pickaxe",
+  "item.cu.rose_gold_axe": "Rose Gold Axe",
+  "item.cu.rose_gold_hoe": "Rose Gold Hoe",
+
+  "item.cu.copper_anchor": "Copper Anchor",
+
   "itemgroup.cu": "Copper Undergo",
 
   "block.cu.smooth_copper": "Smooth Copper",
@@ -27,6 +37,15 @@
   "block.cu.waxed_exposed_smooth_copper_slab": "Waxed Exposed Smooth Copper Slab",
   "block.cu.waxed_weathered_smooth_copper_slab": "Waxed Weathered Smooth Copper Slab",
   "block.cu.waxed_oxidized_smooth_copper_slab": "Waxed Oxidized Smooth Copper Slab",
+
+  "block.cu.copper_lamp": "Copper Lamp",
+  "block.cu.exposed_copper_lamp": "Exposed Copper Lamp",
+  "block.cu.weathered_copper_lamp": "Weathered Copper Lamp",
+  "block.cu.oxidized_copper_lamp": "Oxidized Copper Lamp",
+  "block.cu.waxed_copper_lamp": "Waxed Copper Lamp",
+  "block.cu.waxed_exposed_copper_lamp": "Waxed Exposed Copper Lamp",
+  "block.cu.waxed_weathered_copper_lamp": "Waxed Weathered Copper Lamp",
+  "block.cu.waxed_oxidized_copper_lamp": "Waxed Oxidized Copper Lamp",
 
   "block.cu.lined_copper_lamp": "Lined Copper Lamp",
   "block.cu.exposed_lined_copper_lamp": "Exposed Lined Copper Lamp",

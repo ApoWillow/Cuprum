@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "cu:block/oxidized_copper_lamp_off"
+  }
+}

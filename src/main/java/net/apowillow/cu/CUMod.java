@@ -3,12 +3,9 @@ package net.apowillow.cu;
 import net.apowillow.cu.block.ModBlocks;
 import net.apowillow.cu.item.ModItemGroup;
 import net.apowillow.cu.item.ModItems;
-import net.apowillow.cu.sound.ModSounds;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -84,6 +81,14 @@ public class CUMod implements ModInitializer {
 		OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.WEATHERED_LEVITATOR_BLOCK, ModBlocks.WAXED_WEATHERED_LEVITATOR_BLOCK);
 		OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.OXIDIZED_LEVITATOR_BLOCK, ModBlocks.WAXED_OXIDIZED_LEVITATOR_BLOCK);
 
+		// Adds the ability to oxidize and wax the copper lamp and all it's variants
+		OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.COPPER_LAMP, ModBlocks.EXPOSED_COPPER_LAMP);
+		OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.EXPOSED_COPPER_LAMP, ModBlocks.WEATHERED_COPPER_LAMP);
+		OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.WEATHERED_COPPER_LAMP, ModBlocks.OXIDIZED_COPPER_LAMP);
+		OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.COPPER_LAMP, ModBlocks.WAXED_COPPER_LAMP);
+		OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.EXPOSED_COPPER_LAMP, ModBlocks.WAXED_EXPOSED_COPPER_LAMP);
+		OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.WEATHERED_COPPER_LAMP, ModBlocks.WAXED_WEATHERED_COPPER_LAMP);
+		OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.OXIDIZED_COPPER_LAMP, ModBlocks.WAXED_OXIDIZED_COPPER_LAMP);
 
 		// Adds the ability to oxidize and wax the lined copper lamp and all it's variants
 		OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.LINED_COPPER_LAMP, ModBlocks.EXPOSED_LINED_COPPER_LAMP);

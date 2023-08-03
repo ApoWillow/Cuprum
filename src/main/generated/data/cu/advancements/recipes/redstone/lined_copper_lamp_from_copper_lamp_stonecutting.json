@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_copper_lamp": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cu:copper_lamp"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:lined_copper_lamp_from_copper_lamp_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_copper_lamp",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:lined_copper_lamp_from_copper_lamp_stonecutting"
+    ]
+  },
+  "sends_telemetry_event": false
+}

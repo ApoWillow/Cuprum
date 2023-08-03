@@ -16,6 +16,15 @@ public class ModItemGroup {
     public static ItemGroup CU_GROUP = Registry.register(Registries.ITEM_GROUP, new Identifier(CUMod.MOD_ID, "cu"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.cu"))
                     .icon(() -> new ItemStack(ModBlocks.LEVITATOR_BLOCK)).entries((displayContext, entries) -> {
+                        entries.add(ModItems.ROSE_GOLD_INGOT);
+                        entries.add(ModItems.ROSE_GOLD_SWORD);
+                        entries.add(ModItems.ROSE_GOLD_AXE);
+                        entries.add(ModItems.ROSE_GOLD_PICKAXE);
+                        entries.add(ModItems.ROSE_GOLD_SHOVEL);
+                        entries.add(ModItems.ROSE_GOLD_HOE);
+
+                        entries.add(ModItems.COPPER_ANCHOR);
+
                         entries.add(ModBlocks.SMOOTH_COPPER);
                         entries.add(ModBlocks.EXPOSED_SMOOTH_COPPER);
                         entries.add(ModBlocks.WEATHERED_SMOOTH_COPPER);
@@ -69,6 +78,8 @@ public class ModItemGroup {
                         entries.add(ModBlocks.WAXED_EXPOSED_EDGY_COPPER_STAIRS);
                         entries.add(ModBlocks.WAXED_WEATHERED_EDGY_COPPER_STAIRS);
                         entries.add(ModBlocks.WAXED_OXIDIZED_EDGY_COPPER_STAIRS);
+
+                        entries.add(ModBlocks.COPPER_LAMP);
 
                         entries.add(ModBlocks.LINED_COPPER_LAMP);
                         entries.add(ModBlocks.EXPOSED_LINED_COPPER_LAMP);

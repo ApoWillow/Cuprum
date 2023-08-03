@@ -165,6 +165,40 @@ public class ModBlocks {
     public static final Block WAXED_OXIDIZED_EDGY_COPPER_SLAB = registerBlock("waxed_oxidized_edgy_copper_slab",
             new SlabBlock(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(3.0f).requiresTool()));
 
+    //Registering all the normal copper lamps and it's variants
+    public static final Block COPPER_LAMP = registerBlock("copper_lamp",
+            new CopperLampBlock(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(3.0f).requiresTool()
+                    .luminance(state -> state.get(CopperLampBlock.LIT) ? 15 : 0)));
+
+    public static final Block EXPOSED_COPPER_LAMP = registerBlock("exposed_copper_lamp",
+            new CopperLampBlock(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(3.0f).requiresTool()
+                    .luminance(state -> state.get(CopperLampBlock.LIT) ? 15 : 0)));
+
+    public static final Block WEATHERED_COPPER_LAMP = registerBlock("weathered_copper_lamp",
+            new CopperLampBlock(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(3.0f).requiresTool()
+                    .luminance(state -> state.get(CopperLampBlock.LIT) ? 15 : 0)));
+
+    public static final Block OXIDIZED_COPPER_LAMP = registerBlock("oxidized_copper_lamp",
+            new CopperLampBlock(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(3.0f).requiresTool()
+                    .luminance(state -> state.get(CopperLampBlock.LIT) ? 15 : 0)));
+
+    public static final Block WAXED_COPPER_LAMP = registerBlock("waxed_copper_lamp",
+            new CopperLampBlock(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(3.0f).requiresTool()
+                    .luminance(state -> state.get(CopperLampBlock.LIT) ? 15 : 0)));
+
+    public static final Block WAXED_EXPOSED_COPPER_LAMP = registerBlock("waxed_exposed_copper_lamp",
+            new CopperLampBlock(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(3.0f).requiresTool()
+                    .luminance(state -> state.get(CopperLampBlock.LIT) ? 15 : 0)));
+
+    public static final Block WAXED_WEATHERED_COPPER_LAMP = registerBlock("waxed_weathered_copper_lamp",
+            new CopperLampBlock(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(3.0f).requiresTool()
+                    .luminance(state -> state.get(CopperLampBlock.LIT) ? 15 : 0)));
+
+    public static final Block WAXED_OXIDIZED_COPPER_LAMP = registerBlock("waxed_oxidized_copper_lamp",
+            new CopperLampBlock(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(3.0f).requiresTool()
+                    .luminance(state -> state.get(CopperLampBlock.LIT) ? 15 : 0)));
+
+
     // Registering all the types of lined copper lamp blocks
     public static final Block LINED_COPPER_LAMP = registerBlock("lined_copper_lamp",
             new CopperLampBlock(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(3.0f).requiresTool()

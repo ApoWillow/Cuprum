@@ -68,7 +68,10 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.WAXED_WEATHERED_EDGY_COPPER_STAIRS, slabDrops(ModBlocks.WAXED_WEATHERED_EDGY_COPPER_STAIRS));
         addDrop(ModBlocks.WAXED_OXIDIZED_EDGY_COPPER_STAIRS, slabDrops(ModBlocks.WAXED_OXIDIZED_EDGY_COPPER_STAIRS));
 
-        //Adds all the drops for the lined copper lamp variants including the waxed version
+        //Adds all the drops for the copper lamp variants including the waxed versions
+        addDrop(ModBlocks.COPPER_LAMP);
+
+        //Adds all the drops for the lined copper lamp variants including the waxed versions
         addDrop(ModBlocks.LINED_COPPER_LAMP);
         addDrop(ModBlocks.EXPOSED_LINED_COPPER_LAMP);
         addDrop(ModBlocks.WEATHERED_LINED_COPPER_LAMP);

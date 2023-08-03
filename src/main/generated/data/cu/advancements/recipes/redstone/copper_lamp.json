@@ -39,7 +39,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:lined_copper_lamp"
+        "recipe": "minecraft:copper_lamp"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -54,7 +54,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:lined_copper_lamp"
+      "minecraft:copper_lamp"
     ]
   },
   "sends_telemetry_event": false

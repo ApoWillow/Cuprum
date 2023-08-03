@@ -5,20 +5,17 @@
     "C": {
       "item": "minecraft:copper_ingot"
     },
-    "G": {
-      "item": "minecraft:glowstone"
-    },
     "R": {
-      "item": "minecraft:redstone"
+      "item": "minecraft:redstone_lamp"
     }
   },
   "pattern": [
+    " C ",
     "CRC",
-    "RGR",
-    "CRC"
+    " C "
   ],
   "result": {
-    "item": "cu:lined_copper_lamp"
+    "item": "cu:copper_lamp"
   },
   "show_notification": true
 }

@@ -4,7 +4,6 @@ import net.apowillow.cu.block.ModBlocks;
 import net.apowillow.cu.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
-import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
@@ -78,5 +77,19 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(Blocks.COPPER_BLOCK),
                         FabricRecipeProvider.conditionsFromItem(Blocks.COPPER_BLOCK))
                 .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.COPPER_ANCHOR)));
+
+        // Copper Scaffholding Recipe
+        /* ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.COPPER_SCAFFHOLDING)
+                .pattern("CCC")
+                .pattern("S S")
+                .pattern("CCC")
+                .input('C', Items.COPPER_INGOT)
+                .input('S', Blocks.SCAFFOLDING)
+                .criterion(FabricRecipeProvider.hasItem(Items.COPPER_INGOT),
+                        FabricRecipeProvider.conditionsFromItem(Items.COPPER_INGOT))
+                .criterion(FabricRecipeProvider.hasItem(Blocks.SCAFFOLDING),
+                        FabricRecipeProvider.conditionsFromItem(Blocks.SCAFFOLDING))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModBlocks.COPPER_SCAFFHOLDING)));
+         */
     }
 }

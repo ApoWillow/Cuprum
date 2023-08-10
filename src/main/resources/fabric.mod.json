@@ -18,6 +18,9 @@
 		"main": [
 			"net.apowillow.cu.CUMod"
 		],
+		"client": [
+			"net.apowillow.cu.CUModClient"
+		],
 		"fabric-datagen": [
 			"net.apowillow.cu.CUModDataGenerator"
 		]

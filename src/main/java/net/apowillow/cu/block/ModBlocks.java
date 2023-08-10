@@ -2,6 +2,7 @@ package net.apowillow.cu.block;
 
 import net.apowillow.cu.CUMod;
 import net.apowillow.cu.block.custom.CopperLampBlock;
+import net.apowillow.cu.block.custom.CopperScaffholdingBlock;
 import net.apowillow.cu.block.custom.levitatorblocks.*;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -10,6 +11,7 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
 public class ModBlocks {
@@ -256,8 +258,16 @@ public class ModBlocks {
             new WeatheredLevitatorBlock(FabricBlockSettings.copyOf(Blocks.WAXED_WEATHERED_COPPER).strength(3.0f).requiresTool()));
 
     public static final Block WAXED_OXIDIZED_LEVITATOR_BLOCK = registerBlock("waxed_oxidized_levitator_block",
-            new OxidizedLevitatorBlock(FabricBlockSettings.copyOf(Blocks.WAXED_WEATHERED_COPPER).strength(3.0f).requiresTool()));
+            new OxidizedLevitatorBlock(FabricBlockSettings.copyOf(Blocks.WAXED_OXIDIZED_COPPER).strength(3.0f).requiresTool()));
 
+    // Copper Sulfate related blocks
+    public static final TorchBlock SULFATE_TORCH = registerBlock("sulfate_torch",
+            new TorchBlock(FabricBlockSettings.copyOf(Blocks.TORCH).strength(3.0f).requiresTool(), ));
+
+
+    // Copper Scaffholding Block
+    //public static final Block COPPER_SCAFFHOLDING = registerBlock("copper_scaffholding",
+           // new CopperScaffholdingBlock(FabricBlockSettings.copyOf(Blocks.SCAFFOLDING).strength(3.0f).sounds(BlockSoundGroup.COPPER)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

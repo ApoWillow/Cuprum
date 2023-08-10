@@ -7,6 +7,8 @@
   "item.cu.rose_gold_axe": "Rose Gold Axe",
   "item.cu.rose_gold_hoe": "Rose Gold Hoe",
 
+  "item.cu.copper_oxide": "Copper Oxide",
+
   "item.cu.copper_anchor": "Copper Anchor",
 
   "itemgroup.cu": "Copper Undergo",
@@ -91,7 +93,7 @@
   "block.cu.waxed_levitator_block": "Waxed Levitator",
   "block.cu.waxed_exposed_levitator_block": "Waxed Exposed Levitator",
   "block.cu.waxed_weathered_levitator_block": "Waxed Weathered Levitator",
-  "block.cu.waxed_oxidized_levitator_block": "Waxed Oxidized Levitator"
+  "block.cu.waxed_oxidized_levitator_block": "Waxed Oxidized Levitator",
 
-
+  "block.cu.copper_scaffholding": "Copper Scaffholding"
 }

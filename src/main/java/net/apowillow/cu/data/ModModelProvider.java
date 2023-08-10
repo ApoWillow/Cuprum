@@ -72,12 +72,14 @@ public class ModModelProvider extends FabricModelProvider {
         waxedexposededgycopper.stairs(ModBlocks.WAXED_EXPOSED_EDGY_COPPER_STAIRS);
         waxedweatherededgycopper.stairs(ModBlocks.WAXED_WEATHERED_EDGY_COPPER_STAIRS);
         waxedoxidizededgycopper.stairs(ModBlocks.WAXED_OXIDIZED_EDGY_COPPER_STAIRS);
+
+        //blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.COPPER_SCAFFHOLDING);
     }
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
 
-        itemModelGenerator.register(ModItems.ROSE_GOLD_INGOT, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.ROSE_GOLD_INGOT, Models.GENERATED);
         itemModelGenerator.register(ModItems.ROSE_GOLD_SWORD, Models.HANDHELD);
         itemModelGenerator.register(ModItems.ROSE_GOLD_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.ROSE_GOLD_PICKAXE, Models.HANDHELD);

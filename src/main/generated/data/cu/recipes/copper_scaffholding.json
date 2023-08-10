@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "C": {
+      "item": "minecraft:copper_ingot"
+    },
+    "S": {
+      "item": "minecraft:scaffolding"
+    }
+  },
+  "pattern": [
+    "CCC",
+    "S S",
+    "CCC"
+  ],
+  "result": {
+    "item": "cu:copper_scaffholding"
+  },
+  "show_notification": true
+}

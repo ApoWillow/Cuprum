@@ -70,6 +70,13 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
 
         //Adds all the drops for the copper lamp variants including the waxed versions
         addDrop(ModBlocks.COPPER_LAMP);
+        addDrop(ModBlocks.EXPOSED_COPPER_LAMP);
+        addDrop(ModBlocks.WEATHERED_COPPER_LAMP);
+        addDrop(ModBlocks.OXIDIZED_COPPER_LAMP);
+        addDrop(ModBlocks.WAXED_COPPER_LAMP);
+        addDrop(ModBlocks.WAXED_EXPOSED_COPPER_LAMP);
+        addDrop(ModBlocks.WAXED_WEATHERED_COPPER_LAMP);
+        addDrop(ModBlocks.WAXED_OXIDIZED_COPPER_LAMP);
 
         //Adds all the drops for the lined copper lamp variants including the waxed versions
         addDrop(ModBlocks.LINED_COPPER_LAMP);
@@ -90,5 +97,8 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.WAXED_EXPOSED_LEVITATOR_BLOCK);
         addDrop(ModBlocks.WAXED_WEATHERED_LEVITATOR_BLOCK);
         addDrop(ModBlocks.WAXED_OXIDIZED_LEVITATOR_BLOCK);
+
+        //Adds all the drops for the Copper Scaffholding block variants including the waxed version
+        //addDrop(ModBlocks.COPPER_SCAFFHOLDING);
     }
 }

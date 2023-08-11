@@ -1,7 +1,7 @@
 package net.apowillow.cu.data;
 
-import net.apowillow.cu.block.ModBlocks;
-import net.apowillow.cu.item.ModItems;
+import net.apowillow.cu.registry.ModBlocks;
+import net.apowillow.cu.registry.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
@@ -74,6 +74,8 @@ public class ModModelProvider extends FabricModelProvider {
         waxedoxidizededgycopper.stairs(ModBlocks.WAXED_OXIDIZED_EDGY_COPPER_STAIRS);
 
         //blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.COPPER_SCAFFHOLDING);
+
+        blockStateModelGenerator.registerTorch(ModBlocks.SULFATE_TORCH, ModBlocks.SULFATE_WALL_TORCH);
     }
 
     @Override

@@ -1,7 +1,7 @@
 package net.apowillow.cu.data;
 
-import net.apowillow.cu.block.ModBlocks;
-import net.apowillow.cu.item.ModItems;
+import net.apowillow.cu.registry.ModBlocks;
+import net.apowillow.cu.registry.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.block.Blocks;

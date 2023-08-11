@@ -68,7 +68,6 @@
   "block.cu.waxed_weathered_edgy_copper": "Waxed Weathered Edgy Copper",
   "block.cu.waxed_oxidized_edgy_copper": "Waxed Oxidized Edgy Copper",
 
-
   "block.cu.edgy_copper_stairs": "Edgy Copper Stairs",
   "block.cu.exposed_edgy_copper_stairs": "Exposed Edgy Copper Stairs",
   "block.cu.weathered_edgy_copper_stairs": "Weathered Edgy Copper Stairs",
@@ -97,7 +96,6 @@
   "block.cu.waxed_oxidized_levitator_block": "Waxed Oxidized Levitator",
 
   "block.cu.sulfate_torch": "Copper Sulfate Torch",
-  "block.cu.sulfate_wall_torch": "Copper Sulfate Wall Torch",
+  "block.cu.sulfate_wall_torch": "Copper Sulfate Wall Torch"
 
-  "block.cu.copper_scaffholding": "Copper Scaffholding"
 }

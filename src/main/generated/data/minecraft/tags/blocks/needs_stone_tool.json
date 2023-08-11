@@ -9,16 +9,6 @@
     "cu:waxed_exposed_smooth_copper",
     "cu:waxed_weathered_smooth_copper",
     "cu:waxed_oxidized_smooth_copper",
-
-    "cu:smooth_copper_slab",
-    "cu:exposed_smooth_copper_slab",
-    "cu:weathered_smooth_copper_slab",
-    "cu:oxidized_smooth_copper_slab",
-    "cu:waxed_smooth_copper_slab",
-    "cu:waxed_exposed_smooth_copper_slab",
-    "cu:waxed_weathered_smooth_copper_slab",
-    "cu:waxed_oxidized_smooth_copper_slab",
-
     "cu:smooth_copper_stairs",
     "cu:exposed_smooth_copper_stairs",
     "cu:weathered_smooth_copper_stairs",
@@ -27,7 +17,14 @@
     "cu:waxed_exposed_smooth_copper_stairs",
     "cu:waxed_weathered_smooth_copper_stairs",
     "cu:waxed_oxidized_smooth_copper_stairs",
-
+    "cu:smooth_copper_slab",
+    "cu:exposed_smooth_copper_slab",
+    "cu:weathered_smooth_copper_slab",
+    "cu:oxidized_smooth_copper_slab",
+    "cu:waxed_smooth_copper_slab",
+    "cu:waxed_exposed_smooth_copper_slab",
+    "cu:waxed_weathered_smooth_copper_slab",
+    "cu:waxed_oxidized_smooth_copper_slab",
     "cu:edgy_copper",
     "cu:exposed_edgy_copper",
     "cu:weathered_edgy_copper",
@@ -36,16 +33,6 @@
     "cu:waxed_exposed_edgy_copper",
     "cu:waxed_weathered_edgy_copper",
     "cu:waxed_oxidized_edgy_copper",
-
-    "cu:edgy_copper_slab",
-    "cu:exposed_edgy_copper_slab",
-    "cu:weathered_edgy_copper_slab",
-    "cu:oxidized_edgy_copper_slab",
-    "cu:waxed_edgy_copper_slab",
-    "cu:waxed_exposed_edgy_copper_slab",
-    "cu:waxed_weathered_edgy_copper_slab",
-    "cu:waxed_oxidized_edgy_copper_slab",
-
     "cu:edgy_copper_stairs",
     "cu:exposed_edgy_copper_stairs",
     "cu:weathered_edgy_copper_stairs",
@@ -54,7 +41,14 @@
     "cu:waxed_exposed_edgy_copper_stairs",
     "cu:waxed_weathered_edgy_copper_stairs",
     "cu:waxed_oxidized_edgy_copper_stairs",
-
+    "cu:edgy_copper_slab",
+    "cu:exposed_edgy_copper_slab",
+    "cu:weathered_edgy_copper_slab",
+    "cu:oxidized_edgy_copper_slab",
+    "cu:waxed_edgy_copper_slab",
+    "cu:waxed_exposed_edgy_copper_slab",
+    "cu:waxed_weathered_edgy_copper_slab",
+    "cu:waxed_oxidized_edgy_copper_slab",
     "cu:copper_lamp",
     "cu:exposed_copper_lamp",
     "cu:weathered_copper_lamp",
@@ -63,7 +57,6 @@
     "cu:waxed_exposed_copper_lamp",
     "cu:waxed_weathered_copper_lamp",
     "cu:waxed_oxidized_copper_lamp",
-
     "cu:lined_copper_lamp",
     "cu:exposed_lined_copper_lamp",
     "cu:weathered_lined_copper_lamp",
@@ -72,7 +65,6 @@
     "cu:waxed_exposed_lined_copper_lamp",
     "cu:waxed_weathered_lined_copper_lamp",
     "cu:waxed_oxidized_lined_copper_lamp",
-
     "cu:levitator_block",
     "cu:exposed_levitator_block",
     "cu:weathered_levitator_block",
@@ -80,8 +72,6 @@
     "cu:waxed_levitator_block",
     "cu:waxed_exposed_levitator_block",
     "cu:waxed_weathered_levitator_block",
-    "cu:waxed_oxidized_levitator_block",
-
-    "cu:copper_scaffholding"
+    "cu:waxed_oxidized_levitator_block"
   ]
 }

@@ -3,6 +3,7 @@ package net.apowillow.cu.item;
 import net.apowillow.cu.CUMod;
 import net.apowillow.cu.ModToolMaterials;
 import net.apowillow.cu.item.custom.CopperAnchor;
+import net.apowillow.cu.item.custom.CopperWrenchItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
@@ -33,11 +34,17 @@ public class ModItems {
 
     // Copper Oxide
     public static Item COPPER_OXIDE = registerItem("copper_oxide",
-            new Item(new FabricItemSettings().maxCount(64)));
+            new Item(new FabricItemSettings()));
+
+    // Copper Wrench
+    public static Item COPPER_WRENCH = registerItem("copper_wrench",
+            new CopperWrenchItem(new FabricItemSettings().maxCount(1).maxDamage(2)));
 
     // Copper Anchor
     public static SwordItem COPPER_ANCHOR = (SwordItem) registerItem("copper_anchor",
             new CopperAnchor(ModToolMaterials.COPPER,6, 1.1f, new FabricItemSettings()));
+
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(CUMod.MOD_ID, name), item);
     }

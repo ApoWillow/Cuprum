@@ -1,6 +1,5 @@
 package net.apowillow.cu.block.custom;
 
-import net.apowillow.cu.block.ModBlocks;
 import net.minecraft.block.*;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
@@ -26,7 +25,7 @@ import java.util.Iterator;
 public class CopperScaffholdingBlock extends OxidizableBlock implements Waterloggable {
     public CopperScaffholdingBlock(Settings settings) {
         super(OxidationLevel.UNAFFECTED, settings);
-        this.setDefaultState((BlockState)((BlockState)((BlockState)((BlockState)this.stateManager.getDefaultState()).with(DISTANCE, 7)).with(WATERLOGGED, false)).with(BOTTOM, false));
+        this.setDefaultState((((this.stateManager.getDefaultState()).with(DISTANCE, 7)).with(WATERLOGGED, false)).with(BOTTOM, false));
     }
         private static final int field_31238 = 1;
         private static final VoxelShape NORMAL_OUTLINE_SHAPE;
@@ -46,7 +45,7 @@ public class CopperScaffholdingBlock extends OxidizableBlock implements Waterlog
         @Override
         public VoxelShape getOutlineShape (BlockState state, BlockView world, BlockPos pos, ShapeContext context){
             if (!context.isHolding(state.getBlock().asItem())) {
-                return state.get(BOTTOM) != false ? BOTTOM_OUTLINE_SHAPE : NORMAL_OUTLINE_SHAPE;
+                return state.get(BOTTOM) ? BOTTOM_OUTLINE_SHAPE : NORMAL_OUTLINE_SHAPE;
             }
             return VoxelShapes.fullCube();
         }
@@ -66,7 +65,7 @@ public class CopperScaffholdingBlock extends OxidizableBlock implements Waterlog
             BlockPos blockPos = ctx.getBlockPos();
             World world = ctx.getWorld();
             int i = CopperScaffholdingBlock.calculateDistance(world, blockPos);
-            return (BlockState) ((BlockState) ((BlockState) this.getDefaultState().with(WATERLOGGED, world.getFluidState(blockPos).getFluid() == Fluids.WATER)).with(DISTANCE, i)).with(BOTTOM, this.shouldBeBottom(world, blockPos, i));
+            return ((this.getDefaultState().with(WATERLOGGED, world.getFluidState(blockPos).getFluid() == Fluids.WATER)).with(DISTANCE, i)).with(BOTTOM, this.shouldBeBottom(world, blockPos, i));
         }
 
         @Override
@@ -79,7 +78,7 @@ public class CopperScaffholdingBlock extends OxidizableBlock implements Waterlog
         @Override
         public BlockState getStateForNeighborUpdate (BlockState state, Direction direction, BlockState
         neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos){
-            if (state.get(WATERLOGGED).booleanValue()) {
+            if (state.get(WATERLOGGED)) {
                 world.scheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
             }
             if (!world.isClient()) {
@@ -91,7 +90,7 @@ public class CopperScaffholdingBlock extends OxidizableBlock implements Waterlog
         @Override
         public void scheduledTick (BlockState state, ServerWorld world, BlockPos pos, Random random){
             int i = CopperScaffholdingBlock.calculateDistance(world, pos);
-            BlockState blockState = (BlockState) ((BlockState) state.with(DISTANCE, i)).with(BOTTOM, this.shouldBeBottom(world, pos, i));
+            BlockState blockState = (state.with(DISTANCE, i)).with(BOTTOM, this.shouldBeBottom(world, pos, i));
             if (state != blockState) {
                 world.setBlockState(pos, blockState, Block.NOTIFY_ALL);
             }
@@ -105,7 +104,7 @@ public class CopperScaffholdingBlock extends OxidizableBlock implements Waterlog
         @Override
         public VoxelShape getCollisionShape (BlockState state, BlockView world, BlockPos pos, ShapeContext context){
             if (!context.isAbove(VoxelShapes.fullCube(), pos, true) || context.isDescending()) {
-                if (state.get(DISTANCE) != 0 && state.get(BOTTOM).booleanValue() && context.isAbove(OUTLINE_SHAPE, pos, true)) {
+                if (state.get(DISTANCE) != 0 && state.get(BOTTOM) && context.isAbove(OUTLINE_SHAPE, pos, true)) {
                     return COLLISION_SHAPE;
                 }
                 return VoxelShapes.empty();
@@ -115,7 +114,7 @@ public class CopperScaffholdingBlock extends OxidizableBlock implements Waterlog
 
         @Override
         public FluidState getFluidState (BlockState state){
-            if (state.get(WATERLOGGED).booleanValue()) {
+            if (state.get(WATERLOGGED)) {
                 return Fluids.WATER.getStill(false);
             }
             return super.getFluidState(state);

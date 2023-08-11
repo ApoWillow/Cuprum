@@ -1,6 +1,7 @@
 package net.apowillow.cu;
 
 import net.apowillow.cu.block.ModBlocks;
+import net.apowillow.cu.enchantment.ModEnchantments;
 import net.apowillow.cu.item.ModItemGroup;
 import net.apowillow.cu.item.ModItems;
 import net.fabricmc.api.ModInitializer;
@@ -17,6 +18,8 @@ public class CUMod implements ModInitializer {
 	public void onInitialize() {
 		ModItems.registerModItems();
 		ModItemGroup.registerItemGroups();
+
+		ModEnchantments.registerModEnchantments();
 
 		ModBlocks.registerModBlocks();
 

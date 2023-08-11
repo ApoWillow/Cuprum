@@ -2,7 +2,6 @@ package net.apowillow.cu.block;
 
 import net.apowillow.cu.CUMod;
 import net.apowillow.cu.block.custom.CopperLampBlock;
-import net.apowillow.cu.block.custom.CopperScaffholdingBlock;
 import net.apowillow.cu.block.custom.levitatorblocks.*;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -11,11 +10,9 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
 public class ModBlocks {
-
 
     // Registering all the types of smooth copper blocks
     public static final Block SMOOTH_COPPER = registerBlock("smooth_copper",
@@ -260,9 +257,9 @@ public class ModBlocks {
     public static final Block WAXED_OXIDIZED_LEVITATOR_BLOCK = registerBlock("waxed_oxidized_levitator_block",
             new OxidizedLevitatorBlock(FabricBlockSettings.copyOf(Blocks.WAXED_OXIDIZED_COPPER).strength(3.0f).requiresTool()));
 
-    // Copper Sulfate related blocks
+    /*// Copper Sulfate related blocks
     public static final TorchBlock SULFATE_TORCH = registerBlock("sulfate_torch",
-            new TorchBlock(FabricBlockSettings.copyOf(Blocks.TORCH).strength(3.0f).requiresTool(), ));
+            new TorchBlock(FabricBlockSettings.copyOf(Blocks.TORCH).strength(3.0f).requiresTool(), ));*/
 
 
     // Copper Scaffholding Block
@@ -275,12 +272,11 @@ public class ModBlocks {
     }
 
     private static Item registerBlockItem(String name, Block block) {
-        Item item = Registry.register(Registries.ITEM, new Identifier(CUMod.MOD_ID, name),
+        return Registry.register(Registries.ITEM, new Identifier(CUMod.MOD_ID, name),
                 new BlockItem(block, new FabricItemSettings()));
-        return item;
     }
 
     public static void registerModBlocks() {
-        CUMod.LOGGER.info("Registering CUBlocks");
+        CUMod.LOGGER.info("Registering ModBlocks for " + CUMod.MOD_ID);
     }
 }

@@ -80,11 +80,13 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
 
         itemModelGenerator.register(ModItems.ROSE_GOLD_INGOT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.COPPER_OXIDE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.COPPER_WRENCH, Models.HANDHELD);
+
         itemModelGenerator.register(ModItems.ROSE_GOLD_SWORD, Models.HANDHELD);
         itemModelGenerator.register(ModItems.ROSE_GOLD_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.ROSE_GOLD_PICKAXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.ROSE_GOLD_AXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.ROSE_GOLD_HOE, Models.HANDHELD);
-
     }
 }

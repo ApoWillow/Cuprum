@@ -3,7 +3,6 @@ package net.apowillow.cu.enchantment;
 import net.apowillow.cu.item.custom.CopperAnchor;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
-import net.minecraft.entity.EntityGroup;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ItemStack;
 

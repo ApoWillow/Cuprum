@@ -24,6 +24,8 @@ public class ModItemGroup {
                         entries.add(ModItems.ROSE_GOLD_HOE);
 
                         entries.add(ModItems.COPPER_ANCHOR);
+                        entries.add(ModItems.COPPER_OXIDE);
+                        entries.add(ModItems.COPPER_WRENCH);
 
                         entries.add(ModBlocks.SMOOTH_COPPER);
                         entries.add(ModBlocks.EXPOSED_SMOOTH_COPPER);
@@ -103,7 +105,6 @@ public class ModItemGroup {
                     }).build());
 
     public static void registerItemGroups() {
-
+        CUMod.LOGGER.info("Registering ModItemGroups for " + CUMod.MOD_ID);
     }
-
 }

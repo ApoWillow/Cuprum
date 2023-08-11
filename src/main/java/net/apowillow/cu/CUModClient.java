@@ -8,6 +8,6 @@ import net.minecraft.client.render.RenderLayer;
 public class CUModClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.COPPER_SCAFFHOLDING, RenderLayer.getCutout());
+        //BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.COPPER_SCAFFHOLDING, RenderLayer.getCutout());
     }
 }

@@ -23,7 +23,7 @@ public class CopperLampBlock extends OxidizableBlock {
     @Nullable
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
-        return (BlockState)this.getDefaultState().with(LIT, ctx.getWorld().isReceivingRedstonePower(ctx.getBlockPos()));
+        return this.getDefaultState().with(LIT, ctx.getWorld().isReceivingRedstonePower(ctx.getBlockPos()));
     }
 
     @Override
@@ -36,7 +36,7 @@ public class CopperLampBlock extends OxidizableBlock {
             if (bl) {
                 world.scheduleBlockTick(pos, this, 4);
             } else {
-                world.setBlockState(pos, (BlockState)state.cycle(LIT), Block.NOTIFY_LISTENERS);
+                world.setBlockState(pos, state.cycle(LIT), Block.NOTIFY_LISTENERS);
             }
         }
     }
@@ -44,7 +44,7 @@ public class CopperLampBlock extends OxidizableBlock {
     @Override
     public void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         if (state.get(LIT).booleanValue() && !world.isReceivingRedstonePower(pos)) {
-            world.setBlockState(pos, (BlockState)state.cycle(LIT), Block.NOTIFY_LISTENERS);
+            world.setBlockState(pos, state.cycle(LIT), Block.NOTIFY_LISTENERS);
         }
     }
 

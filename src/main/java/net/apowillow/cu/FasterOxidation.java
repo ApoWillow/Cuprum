@@ -18,10 +18,8 @@ public class FasterOxidation {
         boolean bl = false;
         BlockPos.Mutable mutable = pos.mutableCopy();
         Direction[] var4 = Direction.values();
-        int var5 = var4.length;
 
-        for (int var6 = 0; var6 < var5; ++var6) {
-            Direction direction = var4[var6];
+        for (Direction direction : var4) {
             BlockState blockState = world.getBlockState(mutable);
             if (direction != Direction.DOWN || oxideBooleanTag(blockState)) {
                 mutable.set(pos, direction);

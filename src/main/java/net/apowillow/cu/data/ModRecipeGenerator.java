@@ -78,6 +78,16 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                         FabricRecipeProvider.conditionsFromItem(Blocks.COPPER_BLOCK))
                 .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.COPPER_ANCHOR)));
 
+        // Copper Wrench Recipe
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.COPPER_WRENCH)
+                .pattern(" C ")
+                .pattern(" CC")
+                .pattern("C  ")
+                .input('C', Items.COPPER_INGOT)
+                .criterion(FabricRecipeProvider.hasItem(Items.COPPER_INGOT),
+                        FabricRecipeProvider.conditionsFromItem(Items.COPPER_INGOT))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.COPPER_WRENCH)));
+
         // Copper Scaffholding Recipe
         /* ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.COPPER_SCAFFHOLDING)
                 .pattern("CCC")

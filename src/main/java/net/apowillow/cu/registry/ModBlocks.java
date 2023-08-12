@@ -11,6 +11,8 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.particle.ParticleType;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -262,10 +264,10 @@ public class ModBlocks {
 
     // Copper Sulfate related blocks
     public static final TorchBlock SULFATE_TORCH = (TorchBlock) registerCustomBlock("sulfate_torch",
-            new TorchBlock(FabricBlockSettings.copyOf(Blocks.TORCH).strength(3.0f).requiresTool(), ModParticles.GREEN_FLAME_PARTICLE));
+            new TorchBlock(FabricBlockSettings.copyOf(Blocks.TORCH).breakInstantly(), ModParticles.GREEN_FLAME_PARTICLE));
 
     public static final TorchBlock SULFATE_WALL_TORCH = (TorchBlock) registerCustomBlock("sulfate_wall_torch",
-            new WallTorchBlock(FabricBlockSettings.copyOf(Blocks.TORCH).strength(3.0f).requiresTool(), ModParticles.GREEN_FLAME_PARTICLE));
+            new WallTorchBlock(FabricBlockSettings.copyOf(Blocks.TORCH).breakInstantly(), ModParticles.GREEN_FLAME_PARTICLE));
 
 
     // Copper Scaffholding Block

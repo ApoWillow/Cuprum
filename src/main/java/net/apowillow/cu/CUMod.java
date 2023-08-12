@@ -1,9 +1,9 @@
 package net.apowillow.cu;
 
-import net.apowillow.cu.block.ModBlocks;
-import net.apowillow.cu.enchantment.ModEnchantments;
-import net.apowillow.cu.item.ModItemGroup;
-import net.apowillow.cu.item.ModItems;
+import net.apowillow.cu.registry.ModBlocks;
+import net.apowillow.cu.registry.ModItemGroup;
+import net.apowillow.cu.registry.ModItems;
+import net.apowillow.cu.registry.ModParticles;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry;
@@ -19,7 +19,7 @@ public class CUMod implements ModInitializer {
 		ModItems.registerModItems();
 		ModItemGroup.registerItemGroups();
 
-		ModEnchantments.registerModEnchantments();
+		ModParticles.registerParticles();
 
 		ModBlocks.registerModBlocks();
 

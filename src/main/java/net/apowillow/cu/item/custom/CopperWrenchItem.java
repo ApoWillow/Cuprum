@@ -1,4 +1,4 @@
-package net.apowillow.cu.item;
+package net.apowillow.cu.item.custom;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.item.Item;
@@ -44,6 +44,7 @@ public class CopperWrenchItem extends Item {
 
                 try {
                     context.getPlayer().getItemCooldownManager().set(this, cooldownInTicks);
+                    context.getStack().damage(1, context.getPlayer(), p -> p.sendToolBreakStatus(context.getHand()));
                 } catch (NullPointerException ignored) {}
 
                 context.getWorld().setBlockState(context.getBlockPos(), state2);
@@ -56,17 +57,17 @@ public class CopperWrenchItem extends Item {
     }
 
 
-    private boolean hasFacingProperty(BlockState state) {
+    public static boolean hasFacingProperty(BlockState state) {
         return state.getProperties().contains(Properties.FACING) || state.getProperties().contains(Properties.HOPPER_FACING)
                 || state.getProperties().contains(Properties.HORIZONTAL_FACING) || state.getProperties().contains(Properties.AXIS)
                 || state.getProperties().contains(Properties.HORIZONTAL_AXIS);
     }
 
-    private static <T extends Comparable<T>> BlockState cycle(BlockState state, Property<T> property, boolean inverse) {
+    public static <T extends Comparable<T>> BlockState cycle(BlockState state, Property<T> property, boolean inverse) {
         return state.with(property, CopperWrenchItem.cycle(property.getValues(), state.get(property), inverse));
     }
 
-    private static <T> T cycle(Iterable<T> elements, @Nullable T current, boolean inverse) {
+    public static <T> T cycle(Iterable<T> elements, @Nullable T current, boolean inverse) {
         return inverse ? Util.previous(elements, current) : Util.next(elements, current);
     }
 }

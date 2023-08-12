@@ -1,4 +1,4 @@
-package net.apowillow.cu.block.levitatorblocks;
+package net.apowillow.cu.block.custom.levitatorblocks;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;

@@ -1,6 +1,6 @@
-package net.apowillow.cu.item;
+package net.apowillow.cu.item.custom;
 
-import net.apowillow.cu.block.CopperScaffholdingBlock;
+import net.apowillow.cu.block.custom.CopperScaffholdingBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;

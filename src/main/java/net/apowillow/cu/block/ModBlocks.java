@@ -1,18 +1,17 @@
-package net.apowillow.cu.registry;
+package net.apowillow.cu.block;
 
 import net.apowillow.cu.CUMod;
-import net.apowillow.cu.block.CopperLampBlock;
-import net.apowillow.cu.block.levitatorblocks.ExposedLevitatorBlock;
-import net.apowillow.cu.block.levitatorblocks.LevitatorBlock;
-import net.apowillow.cu.block.levitatorblocks.OxidizedLevitatorBlock;
-import net.apowillow.cu.block.levitatorblocks.WeatheredLevitatorBlock;
+import net.apowillow.cu.block.custom.CopperLampBlock;
+import net.apowillow.cu.block.custom.levitatorblocks.ExposedLevitatorBlock;
+import net.apowillow.cu.block.custom.levitatorblocks.LevitatorBlock;
+import net.apowillow.cu.block.custom.levitatorblocks.OxidizedLevitatorBlock;
+import net.apowillow.cu.block.custom.levitatorblocks.WeatheredLevitatorBlock;
+import net.apowillow.cu.particle.ModParticles;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.particle.ParticleType;
-import net.minecraft.particle.ParticleTypes;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;

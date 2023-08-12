@@ -1,4 +1,4 @@
-package net.apowillow.cu.particle;
+package net.apowillow.cu.particle.custom;
 
 
 import net.fabricmc.api.EnvType;
@@ -6,7 +6,6 @@ import net.fabricmc.api.Environment;
 import net.minecraft.client.particle.*;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.particle.DefaultParticleType;
-import net.minecraft.particle.ParticleEffect;
 import net.minecraft.util.math.MathHelper;
 import org.jetbrains.annotations.Nullable;
 

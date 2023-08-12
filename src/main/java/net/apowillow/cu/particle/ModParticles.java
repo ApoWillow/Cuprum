@@ -1,4 +1,4 @@
-package net.apowillow.cu.registry;
+package net.apowillow.cu.particle;
 
 import net.apowillow.cu.CUMod;
 import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;

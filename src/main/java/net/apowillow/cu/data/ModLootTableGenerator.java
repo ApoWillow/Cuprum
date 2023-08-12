@@ -1,6 +1,6 @@
 package net.apowillow.cu.data;
 
-import net.apowillow.cu.registry.ModBlocks;
+import net.apowillow.cu.block.ModBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 

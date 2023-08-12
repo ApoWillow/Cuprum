@@ -1,4 +1,4 @@
-package net.apowillow.cu.block;
+package net.apowillow.cu.block.custom;
 
 import net.minecraft.block.*;
 import net.minecraft.fluid.FluidState;

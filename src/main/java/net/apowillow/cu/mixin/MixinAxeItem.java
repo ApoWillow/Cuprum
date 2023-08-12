@@ -1,6 +1,6 @@
 package net.apowillow.cu.mixin;
 
-import net.apowillow.cu.registry.ModItems;
+import net.apowillow.cu.item.ModItems;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;

@@ -1,4 +1,4 @@
-package net.apowillow.cu.registry;
+package net.apowillow.cu.sound;
 
 import net.apowillow.cu.CUMod;
 import net.minecraft.registry.Registries;

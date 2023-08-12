@@ -1,6 +1,6 @@
 package net.apowillow.cu;
 
-import net.apowillow.cu.registry.ModItems;
+import net.apowillow.cu.item.ModItems;
 import net.fabricmc.yarn.constants.MiningLevels;
 import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;

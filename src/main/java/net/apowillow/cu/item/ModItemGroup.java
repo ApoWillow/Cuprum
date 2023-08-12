@@ -1,7 +1,8 @@
-package net.apowillow.cu.registry;
+package net.apowillow.cu.item;
 
 
 import net.apowillow.cu.CUMod;
+import net.apowillow.cu.block.ModBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;

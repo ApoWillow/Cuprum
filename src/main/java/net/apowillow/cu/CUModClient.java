@@ -1,8 +1,8 @@
 package net.apowillow.cu;
 
-import net.apowillow.cu.registry.ModBlocks;
-import net.apowillow.cu.registry.ModParticles;
-import net.apowillow.cu.particle.GreenFlameParticle;
+import net.apowillow.cu.block.ModBlocks;
+import net.apowillow.cu.particle.ModParticles;
+import net.apowillow.cu.particle.custom.GreenFlameParticle;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;

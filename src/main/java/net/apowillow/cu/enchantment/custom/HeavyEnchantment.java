@@ -1,17 +1,15 @@
-package net.apowillow.cu.enchantment;
+package net.apowillow.cu.enchantment.custom;
 
-import net.apowillow.cu.item.CopperAnchor;
+import net.apowillow.cu.item.custom.CopperAnchorItem;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ItemStack;
 
-public class Heavy extends Enchantment {
-
-    protected Heavy(Rarity weight, EnchantmentTarget target, EquipmentSlot[] slotTypes) {
+public class HeavyEnchantment extends Enchantment {
+    public HeavyEnchantment(Rarity weight, EnchantmentTarget target, EquipmentSlot[] slotTypes) {
         super(weight, target, slotTypes);
     }
-
 
     @Override
     public boolean isAvailableForEnchantedBookOffer() {
@@ -45,6 +43,6 @@ public class Heavy extends Enchantment {
 
     @Override
     public boolean isAcceptableItem(ItemStack stack) {
-        return stack.getItem() instanceof CopperAnchor;
+        return stack.getItem() instanceof CopperAnchorItem;
     }
 }

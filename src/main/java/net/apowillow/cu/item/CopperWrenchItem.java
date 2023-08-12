@@ -12,7 +12,7 @@ import org.jetbrains.annotations.Nullable;
 
 public class CopperWrenchItem extends Item {
     //you can change item cooldown here
-    public final int cooldownInTicks = 10;
+    public final int cooldownInTicks = 5;
     public CopperWrenchItem(Settings settings) {
         super(settings);
     }

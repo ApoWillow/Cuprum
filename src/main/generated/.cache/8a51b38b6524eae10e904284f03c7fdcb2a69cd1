@@ -1,4 +1,4 @@
-// 1.20.1	2023-08-12T17:23:03.8370818	Copper Undergo/Recipes
+// 1.20.1	2023-08-12T17:54:37.6072099	Copper Undergo/Recipes
 f7b44e4931f7ae7c3ff9e1d4cbd4f38653801ed6 data\cu\advancements\recipes\building_blocks\edgy_copper_stairs_from_copper_block_stonecutting.json
 b902522bf823538874073196f715b6bba7713006 data\cu\advancements\recipes\tools\copper_wrench.json
 3b33037f4f71d692f68c4cc19c29ed9d972095d4 data\cu\recipes\lined_copper_lamp_from_copper_lamp_stonecutting.json
@@ -27,5 +27,5 @@ d2bdef725f91a0f730429feca1c78d804e9d7a4d data\cu\recipes\smooth_copper_stairs_fr
 ab6cab61d0a5c885ac49f36c3c98cc680d47818f data\cu\recipes\edgy_copper_stairs_from_copper_block_stonecutting.json
 a1b942ca36f5b67b284f78178fbe75854094ebcf data\cu\recipes\smooth_copper_slab_from_copper_block_stonecutting.json
 12cba5a0f3067f0d2261ba0c387f57cbeb0dc180 data\cu\recipes\levitator_block.json
-7d430c4eeccfe004c1241adfbabe3c3071e11378 data\cu\recipes\copper_anchor.json
 204de57681e7fbcd495c298f56f019092b3cdfa2 data\cu\recipes\copper_lamp.json
+7d430c4eeccfe004c1241adfbabe3c3071e11378 data\cu\recipes\copper_anchor.json

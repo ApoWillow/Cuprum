@@ -100,5 +100,9 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
 
         //Adds all the drops for the Copper Scaffholding block variants including the waxed version
         //addDrop(ModBlocks.COPPER_SCAFFHOLDING);
+
+        // Adds all the Copper Sulfate related block drops
+        addDrop(ModBlocks.SULFATE_TORCH);
+        addDrop(ModBlocks.SULFATE_WALL_TORCH);
     }
 }

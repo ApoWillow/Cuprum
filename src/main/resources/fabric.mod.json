@@ -27,7 +27,7 @@
 		]
 	},
 	"mixins": [
-		"cu.mixins.json"
+      "cu.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.14.21",

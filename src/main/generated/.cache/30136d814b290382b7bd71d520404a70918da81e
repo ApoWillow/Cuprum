@@ -1,3 +1,4 @@
-// 1.20.1	2023-08-12T17:54:37.6121976	Copper Undergo/Tags for minecraft:block
-c9e890972993086b7317f451696c6782f589ebd6 data\minecraft\tags\blocks\mineable\pickaxe.json
+// 1.20.1	2023-08-13T16:28:34.865662	Copper Undergo/Tags for minecraft:block
+1cce43027c21c213aaa4cee32cc6b753572b7814 data\cu\tags\blocks\copper_wrench_ignored.json
 c9e890972993086b7317f451696c6782f589ebd6 data\minecraft\tags\blocks\needs_stone_tool.json
+c9e890972993086b7317f451696c6782f589ebd6 data\minecraft\tags\blocks\mineable\pickaxe.json

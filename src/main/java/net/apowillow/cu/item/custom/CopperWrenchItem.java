@@ -1,8 +1,14 @@
 package net.apowillow.cu.item.custom;
 
+import net.apowillow.cu.networking.ModPackets;
+import net.apowillow.cu.util.ModTags;
+import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
+import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.block.BlockState;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemUsageContext;
+import net.minecraft.network.PacketByteBuf;
+import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.state.property.Properties;
 import net.minecraft.state.property.Property;
@@ -10,9 +16,12 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.Util;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.Objects;
+
 public class CopperWrenchItem extends Item {
     //you can change item cooldown here
     public final int cooldownInTicks = 5;
+
     public CopperWrenchItem(Settings settings) {
         super(settings);
     }
@@ -21,36 +30,37 @@ public class CopperWrenchItem extends Item {
     public ActionResult useOnBlock(ItemUsageContext context) {
         BlockState state = context.getWorld().getBlockState(context.getBlockPos());
 
-        if (hasFacingProperty(state)) {
+        if (!state.isIn(ModTags.COPPER_WRENCH_IGNORED) && hasFacingProperty(state)) {
             if (!context.getWorld().isClient) {
                 BlockState state2 = state;
 
-                if (state.getProperties().contains(Properties.FACING)){
+                if (state.getProperties().contains(Properties.FACING)) {
                     state2 = cycle(state, Properties.FACING, false);
-                }else
-                    if (state.getProperties().contains(Properties.HORIZONTAL_FACING)){
+                } else if (state.getProperties().contains(Properties.HORIZONTAL_FACING)) {
                     state2 = cycle(state, Properties.HORIZONTAL_FACING, false);
-                }else
-                    if (state.getProperties().contains(Properties.HOPPER_FACING)){
+                } else if (state.getProperties().contains(Properties.HOPPER_FACING)) {
                     state2 = cycle(state, Properties.HOPPER_FACING, false);
-                }else
-                    if (state.getProperties().contains(Properties.AXIS)){
+                } else if (state.getProperties().contains(Properties.AXIS)) {
                     state2 = cycle(state, Properties.AXIS, false);
-                }else
-                    if (state.getProperties().contains(Properties.HORIZONTAL_AXIS)){
+                } else if (state.getProperties().contains(Properties.HORIZONTAL_AXIS)) {
                     state2 = cycle(state, Properties.HORIZONTAL_AXIS, false);
                 }
 
 
-                try {
-                    context.getPlayer().getItemCooldownManager().set(this, cooldownInTicks);
-                    context.getStack().damage(1, context.getPlayer(), p -> p.sendToolBreakStatus(context.getHand()));
-                } catch (NullPointerException ignored) {}
+                Objects.requireNonNull(context.getPlayer()).getItemCooldownManager().set(this, cooldownInTicks);
+                context.getStack().damage(1, context.getPlayer(), p -> p.sendToolBreakStatus(context.getHand()));
 
                 context.getWorld().setBlockState(context.getBlockPos(), state2);
                 context.getWorld().playSound(null, context.getBlockPos(), state.getSoundGroup().getPlaceSound(), SoundCategory.BLOCKS, 1.0f, 1.0f);
+
+                context.getWorld().getPlayers().forEach(player -> {
+
+                    PacketByteBuf buffer = PacketByteBufs.create();
+                    buffer.writeBlockPos(context.getBlockPos());
+                    ServerPlayNetworking.send((ServerPlayerEntity) Objects.requireNonNull(context.getPlayer()), ModPackets.BLOCK_BREAK_PARTICLES_SPAWN, buffer);
+
+                });
             }
-            context.getWorld().addBlockBreakParticles(context.getBlockPos(), state);
             return ActionResult.SUCCESS;
         }
         return ActionResult.PASS;

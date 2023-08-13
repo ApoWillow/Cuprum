@@ -1,20 +1,20 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "cu:body",
-		"2": "cu:tail",
-		"3": "cu:tail_two",
-		"4": "cu:head",
-		"5": "cu:blade_one",
-		"6": "cu:blade_two",
-		"7": "cu:blade_three",
-		"8": "cu:blade_four",
-		"9": "cu:blade_five",
-		"10": "cu:blade_six",
-		"11": "cu:blade_seven",
-		"12": "cu:blade_eight",
-		"13": "cu:tail_lower",
-		"particle": "cu:body"
+		"0": "cu:item/anchor/body",
+		"2": "cu:item/anchor/tail",
+		"3": "cu:item/anchor/tail_two",
+		"4": "cu:item/anchor/head",
+		"5": "cu:item/anchor/blade_one",
+		"6": "cu:item/anchor/blade_two",
+		"7": "cu:item/anchor/blade_three",
+		"8": "cu:item/anchor/blade_four",
+		"9": "cu:item/anchor/blade_five",
+		"10": "cu:item/anchor/blade_six",
+		"11": "cu:item/anchor/blade_seven",
+		"12": "cu:item/anchor/blade_eight",
+		"13": "cu:item/anchor/tail_lower",
+		"particle": "cu:item/anchor/body"
 	},
 	"elements": [
 		{

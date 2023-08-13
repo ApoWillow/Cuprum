@@ -18,7 +18,7 @@ public class GreenFlameParticle extends AbstractSlowingParticle {
         this.x = xd;
         this.y = yd;
         this.z = zd;
-        //this.scale *= 0.75F;
+        //this.scale *= 0.5F;
         //this.maxAge = 20;
         //this.setSpriteForAge(spriteSet);
 

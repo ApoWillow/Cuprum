@@ -109,6 +109,7 @@ public class ModItemGroup {
                         entries.add(ModBlocks.WAXED_OXIDIZED_LEVITATOR_BLOCK);
 
                         entries.add(ModItems.SULFATE_TORCH);
+                        entries.add(ModBlocks.SULFATE_CAMPFIRE);
 
 
                     }).build());

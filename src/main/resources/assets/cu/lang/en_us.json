@@ -96,6 +96,7 @@
   "block.cu.waxed_oxidized_levitator_block": "Waxed Oxidized Levitator",
 
   "block.cu.sulfate_torch": "Copper Sulfate Torch",
-  "block.cu.sulfate_wall_torch": "Copper Sulfate Wall Torch"
+  "block.cu.sulfate_wall_torch": "Copper Sulfate Wall Torch",
+  "block.cu.sulfate_campfire": "Copper Sulfate Campfire"
 
 }

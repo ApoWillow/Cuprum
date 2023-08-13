@@ -4,8 +4,10 @@ import net.apowillow.cu.block.ModBlocks;
 import net.apowillow.cu.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
+import net.minecraft.block.Blocks;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
+import net.minecraft.data.client.ModelIds;
 import net.minecraft.data.client.Models;
 
 
@@ -75,7 +77,9 @@ public class ModModelProvider extends FabricModelProvider {
 
         //blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.COPPER_SCAFFHOLDING);
 
+        // Sulfate related blocks
         blockStateModelGenerator.registerTorch(ModBlocks.SULFATE_TORCH, ModBlocks.SULFATE_WALL_TORCH);
+        blockStateModelGenerator.registerCampfire(ModBlocks.SULFATE_CAMPFIRE);
     }
 
     @Override

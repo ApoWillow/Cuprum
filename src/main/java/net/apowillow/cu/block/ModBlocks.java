@@ -235,6 +235,35 @@ public class ModBlocks {
             new CopperLampBlock(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(3.0f).requiresTool()
                     .luminance(state -> state.get(CopperLampBlock.LIT) ? 15 : 0)));
 
+    // Registering all the chain blocks
+    /*
+    public static final Block COPPER_CHAIN = registerBlock("copper_chain",
+            new CopperChainBlock(Oxidizable.OxidationLevel.UNAFFECTED, FabricBlockSettings.copyOf(Blocks.CHAIN).strength(3.0f).requiresTool()));
+
+    public static final Block EXPOSED_COPPER_CHAIN = registerBlock("exposed_copper_chain",
+            new CopperChainBlock(Oxidizable.OxidationLevel.EXPOSED, FabricBlockSettings.copyOf(Blocks.CHAIN).strength(3.0f).requiresTool()));
+
+    public static final Block WEATHERED_COPPER_CHAIN = registerBlock("weathered_copper_chain",
+            new CopperChainBlock(Oxidizable.OxidationLevel.WEATHERED, FabricBlockSettings.copyOf(Blocks.CHAIN).strength(3.0f).requiresTool()));
+
+    public static final Block OXIDIZED_COPPER_CHAIN = registerBlock("oxidized_copper_chain",
+            new CopperChainBlock(Oxidizable.OxidationLevel.OXIDIZED, FabricBlockSettings.copyOf(Blocks.CHAIN).strength(3.0f).requiresTool()));
+
+    public static final Block WAXED_COPPER_CHAIN = registerBlock("waxed_copper_chain",
+            new CopperChainBlock(Oxidizable.OxidationLevel.UNAFFECTED, FabricBlockSettings.copyOf(Blocks.CHAIN).strength(3.0f).requiresTool()));
+
+    public static final Block WAXED_EXPOSED_COPPER_CHAIN = registerBlock("waxed_exposed_copper_chain",
+            new CopperChainBlock(Oxidizable.OxidationLevel.EXPOSED, FabricBlockSettings.copyOf(Blocks.CHAIN).strength(3.0f).requiresTool()));
+
+    public static final Block WAXED_WEATHERED_COPPER_CHAIN = registerBlock("waxed_weathered_copper_chain",
+            new CopperChainBlock(Oxidizable.OxidationLevel.WEATHERED, FabricBlockSettings.copyOf(Blocks.CHAIN).strength(3.0f).requiresTool()));
+
+    public static final Block WAXED_OXIDIZED_COPPER_CHAIN = registerBlock("waxed_oxidized_copper_chain",
+            new CopperChainBlock(Oxidizable.OxidationLevel.OXIDIZED, FabricBlockSettings.copyOf(Blocks.CHAIN).strength(3.0f).requiresTool()));
+
+     */
+
+
 
     // Registering all the types of levitator blocks
     public static final Block LEVITATOR_BLOCK = registerBlock("levitator_block",
@@ -268,6 +297,8 @@ public class ModBlocks {
     public static final TorchBlock SULFATE_WALL_TORCH = (TorchBlock) registerCustomBlock("sulfate_wall_torch",
             new WallTorchBlock(FabricBlockSettings.copyOf(Blocks.TORCH).breakInstantly(), ModParticles.GREEN_FLAME_PARTICLE));
 
+    public static final CampfireBlock SULFATE_CAMPFIRE = (CampfireBlock) registerBlock("sulfate_campfire",
+            new CampfireBlock(false, 1, FabricBlockSettings.copyOf(Blocks.CAMPFIRE)));
 
     // Copper Scaffholding Block
     //public static final Block COPPER_SCAFFHOLDING = registerBlock("copper_scaffholding",

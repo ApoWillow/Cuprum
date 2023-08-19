@@ -35,6 +35,7 @@ public class ModItemGroup {
                         entries.add(ModItems.COPPER_SULFATE);
                         entries.add(ModItems.SULFATE_TORCH);
                         entries.add(ModBlocks.SULFATE_CAMPFIRE);
+                        entries.add(ModBlocks.SULFATE_LANTERN);
 
                         entries.add(ModBlocks.SMOOTH_COPPER);
                         entries.add(ModBlocks.EXPOSED_SMOOTH_COPPER);

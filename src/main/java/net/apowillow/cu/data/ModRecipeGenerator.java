@@ -7,8 +7,11 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
+import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.Items;
+import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
+import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.util.Identifier;
 
 import java.util.function.Consumer;
@@ -101,5 +104,39 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                         FabricRecipeProvider.conditionsFromItem(Blocks.SCAFFOLDING))
                 .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModBlocks.COPPER_SCAFFHOLDING)));
          */
+        // Copper Sulfate Recipe and everything that's related to it
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.COPPER_SULFATE)
+                .input(ModItems.COPPER_OXIDE)
+                .input(Items.GUNPOWDER)
+                .criterion(FabricRecipeProvider.hasItem(Items.GUNPOWDER),
+                        FabricRecipeProvider.conditionsFromItem(Items.GUNPOWDER))
+                .criterion(FabricRecipeProvider.hasItem(ModItems.COPPER_OXIDE),
+                        FabricRecipeProvider.conditionsFromItem(Items.COPPER_INGOT))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.COPPER_SULFATE)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SULFATE_CAMPFIRE)
+                .pattern(" S ")
+                .pattern("SCS")
+                .pattern("LLL")
+                .input('S', Items.STICK)
+                .input('L', Ingredient.fromTag(ItemTags.LOGS_THAT_BURN))
+                .input('C', ModItems.COPPER_SULFATE)
+                .criterion(FabricRecipeProvider.hasItem(Items.STICK),
+                        FabricRecipeProvider.conditionsFromItem(Items.STICK))
+                .criterion(FabricRecipeProvider.hasItem(ModItems.COPPER_SULFATE),
+                        FabricRecipeProvider.conditionsFromItem(Items.COPPER_INGOT))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModBlocks.SULFATE_CAMPFIRE)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SULFATE_LANTERN)
+                .pattern("III")
+                .pattern("ITI")
+                .pattern("III")
+                .input('T', ModItems.SULFATE_TORCH)
+                .input('I', Items.IRON_NUGGET)
+                .criterion(FabricRecipeProvider.hasItem(Items.IRON_NUGGET),
+                        FabricRecipeProvider.conditionsFromItem(Items.IRON_NUGGET))
+                .criterion(FabricRecipeProvider.hasItem(ModItems.SULFATE_TORCH),
+                        FabricRecipeProvider.conditionsFromItem(Items.TORCH))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModBlocks.SULFATE_LANTERN)));
     }
 }

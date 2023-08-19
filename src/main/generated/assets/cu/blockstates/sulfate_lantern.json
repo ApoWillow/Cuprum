@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "cu:block/sulfate_lantern"
+    },
+    "hanging=true": {
+      "model": "cu:block/sulfate_lantern_hanging"
+    }
+  }
+}

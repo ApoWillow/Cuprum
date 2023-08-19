@@ -1,4 +1,4 @@
-package net.apowillow.cu;
+package net.apowillow.cu.registry;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Oxidizable;

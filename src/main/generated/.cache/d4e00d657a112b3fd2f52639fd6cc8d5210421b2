@@ -1,8 +1,8 @@
-// 1.20.1	2023-08-13T20:55:26.255194	Copper Undergo/Block Loot Tables
+// 1.20.1	2023-08-18T13:51:58.0714176	Copper Undergo/Block Loot Tables
 001fba52189dce76e7427e79f2599eb3898dcf12 data\cu\loot_tables\blocks\waxed_oxidized_edgy_copper.json
 f3961750cdfa301ab70f9aff43e3e374e90af152 data\cu\loot_tables\blocks\exposed_copper_lamp.json
-97533b089f49f5cc78c154f4f77ebcabeff43307 data\cu\loot_tables\blocks\smooth_copper.json
 d85bdb2ce4d4cdba417a75ad4c2a0f7359876fb3 data\cu\loot_tables\blocks\exposed_edgy_copper_slab.json
+97533b089f49f5cc78c154f4f77ebcabeff43307 data\cu\loot_tables\blocks\smooth_copper.json
 f7e98834dc0eecb8651f3a54f7137f0832bf572f data\cu\loot_tables\blocks\waxed_oxidized_lined_copper_lamp.json
 785253f39c0a3b1b40afbe1f77f5112a021023f0 data\cu\loot_tables\blocks\waxed_edgy_copper.json
 c6206980843df6612ccfb2d7173e75fe009989ec data\cu\loot_tables\blocks\waxed_exposed_edgy_copper.json
@@ -41,8 +41,8 @@ f475819b1810335912a281f50419bfa82d96c3ae data\cu\loot_tables\blocks\oxidized_edg
 2d4dd2c0f0bcca7da01b9ea0a0ee00367a784b24 data\cu\loot_tables\blocks\waxed_levitator_block.json
 252aebc84618edbd0da8d75ab28a8e90d5f0def5 data\cu\loot_tables\blocks\exposed_edgy_copper_stairs.json
 68bfc55717fa19d929cb2656c8e1338b272d255c data\cu\loot_tables\blocks\lined_copper_lamp.json
-6aedc1b47024a94fd6ddef99a65376692eb8cae0 data\cu\loot_tables\blocks\weathered_smooth_copper_slab.json
 4bfca10ad084cfbaf81c7c3f06348f003e940467 data\cu\loot_tables\blocks\oxidized_smooth_copper_stairs.json
+6aedc1b47024a94fd6ddef99a65376692eb8cae0 data\cu\loot_tables\blocks\weathered_smooth_copper_slab.json
 688ed13e90d5f489125b2fa44eba8b22d04df28a data\cu\loot_tables\blocks\waxed_smooth_copper_stairs.json
 889a6fb77195dfa09691e13e4e65993cbc6364aa data\cu\loot_tables\blocks\waxed_oxidized_levitator_block.json
 b3f562098f52b202af2a2c56cfce35abac3861e3 data\cu\loot_tables\blocks\waxed_exposed_lined_copper_lamp.json
@@ -71,6 +71,6 @@ dd7b0f20b21146448c3d2b3c2ba6c4932fe90ad2 data\cu\loot_tables\blocks\oxidized_lin
 c3d9576a6e5d941bb7a3d8101ee5e8d974437fbb data\cu\loot_tables\blocks\waxed_weathered_smooth_copper_stairs.json
 7b275362b8a137b35fbdcba66f86a32fbd31360e data\cu\loot_tables\blocks\edgy_copper_stairs.json
 310e2220fef979377eb71aca29ecbb503f9ddd86 data\cu\loot_tables\blocks\waxed_oxidized_edgy_copper_stairs.json
-9d07b11ff58ae124be38c7b089a3c710fca28929 data\cu\loot_tables\blocks\smooth_copper_stairs.json
 c3bb347813dc29ae4fd59f78d4af8daab42c2237 data\cu\loot_tables\blocks\smooth_copper_slab.json
+9d07b11ff58ae124be38c7b089a3c710fca28929 data\cu\loot_tables\blocks\smooth_copper_stairs.json
 7acda46523a6627e6d0fe48c7ca946478c00eb9e data\cu\loot_tables\blocks\waxed_oxidized_smooth_copper_slab.json

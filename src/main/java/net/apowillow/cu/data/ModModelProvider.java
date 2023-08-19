@@ -4,10 +4,8 @@ import net.apowillow.cu.block.ModBlocks;
 import net.apowillow.cu.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
-import net.minecraft.block.Blocks;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
-import net.minecraft.data.client.ModelIds;
 import net.minecraft.data.client.Models;
 
 
@@ -80,13 +78,15 @@ public class ModModelProvider extends FabricModelProvider {
         // Sulfate related blocks
         blockStateModelGenerator.registerTorch(ModBlocks.SULFATE_TORCH, ModBlocks.SULFATE_WALL_TORCH);
         blockStateModelGenerator.registerCampfire(ModBlocks.SULFATE_CAMPFIRE);
+        blockStateModelGenerator.registerLantern(ModBlocks.SULFATE_LANTERN);
     }
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
 
-        itemModelGenerator.register(ModItems.ROSE_GOLD_INGOT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.COPPER_SULFATE, Models.GENERATED);
         itemModelGenerator.register(ModItems.COPPER_OXIDE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ROSE_GOLD_INGOT, Models.GENERATED);
         itemModelGenerator.register(ModItems.COPPER_WRENCH, Models.HANDHELD);
 
         itemModelGenerator.register(ModItems.ROSE_GOLD_SWORD, Models.HANDHELD);

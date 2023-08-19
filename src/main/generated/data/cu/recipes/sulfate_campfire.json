@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "C": {
+      "item": "cu:copper_sulfate"
+    },
+    "L": {
+      "tag": "minecraft:logs_that_burn"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    " S ",
+    "SCS",
+    "LLL"
+  ],
+  "result": {
+    "item": "cu:sulfate_campfire"
+  },
+  "show_notification": true
+}

@@ -7,6 +7,11 @@
   "item.cu.rose_gold_axe": "Rose Gold Axe",
   "item.cu.rose_gold_hoe": "Rose Gold Hoe",
 
+  "item.cu.rose_gold_helmet": "Rose Gold Helmet",
+  "item.cu.rose_gold_chestplate": "Rose Gold Chestplate",
+  "item.cu.rose_gold_leggings": "Rose Gold Leggings",
+  "item.cu.rose_gold_boots": "Rose Gold Boots",
+
   "item.cu.copper_oxide": "Copper Oxide",
   "item.cu.copper_wrench": "Copper Wrench",
 
@@ -95,8 +100,9 @@
   "block.cu.waxed_weathered_levitator_block": "Waxed Weathered Levitator",
   "block.cu.waxed_oxidized_levitator_block": "Waxed Oxidized Levitator",
 
+  "item.cu.copper_sulfate": "Copper Sulfate",
   "block.cu.sulfate_torch": "Copper Sulfate Torch",
   "block.cu.sulfate_wall_torch": "Copper Sulfate Wall Torch",
-  "block.cu.sulfate_campfire": "Copper Sulfate Campfire"
-
+  "block.cu.sulfate_campfire": "Copper Sulfate Campfire",
+  "block.cu.sulfate_lantern": "Copper Sulfate Lantern"
 }

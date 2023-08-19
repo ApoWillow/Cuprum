@@ -1,6 +1,6 @@
 package net.apowillow.cu.mixin;
 
-import net.apowillow.cu.FasterOxidation;
+import net.apowillow.cu.registry.FasterOxidation;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;

@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "C": [
+      {
+        "item": "minecraft:coal"
+      },
+      {
+        "item": "minecraft:charcoal"
+      }
+    ],
+    "S": {
+      "item": "cu:copper_sulfate"
+    },
+    "T": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    " C ",
+    " T ",
+    " S "
+  ],
+  "result": {
+    "item": "cu:sulfate_torch"
+  },
+  "show_notification": true
+}

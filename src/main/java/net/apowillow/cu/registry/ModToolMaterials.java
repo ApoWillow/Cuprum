@@ -1,4 +1,4 @@
-package net.apowillow.cu;
+package net.apowillow.cu.registry;
 
 import net.apowillow.cu.item.ModItems;
 import net.fabricmc.yarn.constants.MiningLevels;

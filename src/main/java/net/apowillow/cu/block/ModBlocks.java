@@ -300,6 +300,10 @@ public class ModBlocks {
     public static final CampfireBlock SULFATE_CAMPFIRE = (CampfireBlock) registerBlock("sulfate_campfire",
             new CampfireBlock(false, 1, FabricBlockSettings.copyOf(Blocks.CAMPFIRE)));
 
+    public static final LanternBlock SULFATE_LANTERN = (LanternBlock) registerBlock("sulfate_lantern",
+            new LanternBlock(FabricBlockSettings.copyOf(Blocks.LANTERN).requiresTool()));
+
+
     // Copper Scaffholding Block
     //public static final Block COPPER_SCAFFHOLDING = registerBlock("copper_scaffholding",
            // new CopperScaffholdingBlock(FabricBlockSettings.copyOf(Blocks.SCAFFOLDING).strength(3.0f).sounds(BlockSoundGroup.COPPER)));

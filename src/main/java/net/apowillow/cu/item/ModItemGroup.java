@@ -15,7 +15,7 @@ public class ModItemGroup {
 
     public static ItemGroup CU_GROUP = Registry.register(Registries.ITEM_GROUP, new Identifier(CUMod.MOD_ID, "cu"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.cu"))
-                    .icon(() -> new ItemStack(ModBlocks.LEVITATOR_BLOCK)).entries((displayContext, entries) -> {
+                    .icon(() -> new ItemStack(ModBlocks.EDGY_COPPER)).entries((displayContext, entries) -> {
                         entries.add(ModItems.ROSE_GOLD_INGOT);
                         entries.add(ModItems.ROSE_GOLD_SWORD);
                         entries.add(ModItems.ROSE_GOLD_AXE);
@@ -23,9 +23,18 @@ public class ModItemGroup {
                         entries.add(ModItems.ROSE_GOLD_SHOVEL);
                         entries.add(ModItems.ROSE_GOLD_HOE);
 
+                        entries.add(ModItems.ROSE_GOLD_HELMET);
+                        entries.add(ModItems.ROSE_GOLD_CHESTPLATE);
+                        entries.add(ModItems.ROSE_GOLD_LEGGINGS);
+                        entries.add(ModItems.ROSE_GOLD_BOOTS);
+
                         entries.add(ModItems.COPPER_ANCHOR);
-                        entries.add(ModItems.COPPER_OXIDE);
                         entries.add(ModItems.COPPER_WRENCH);
+
+                        entries.add(ModItems.COPPER_OXIDE);
+                        entries.add(ModItems.COPPER_SULFATE);
+                        entries.add(ModItems.SULFATE_TORCH);
+                        entries.add(ModBlocks.SULFATE_CAMPFIRE);
 
                         entries.add(ModBlocks.SMOOTH_COPPER);
                         entries.add(ModBlocks.EXPOSED_SMOOTH_COPPER);
@@ -107,10 +116,6 @@ public class ModItemGroup {
                         entries.add(ModBlocks.WAXED_EXPOSED_LEVITATOR_BLOCK);
                         entries.add(ModBlocks.WAXED_WEATHERED_LEVITATOR_BLOCK);
                         entries.add(ModBlocks.WAXED_OXIDIZED_LEVITATOR_BLOCK);
-
-                        entries.add(ModItems.SULFATE_TORCH);
-                        entries.add(ModBlocks.SULFATE_CAMPFIRE);
-
 
                     }).build());
 

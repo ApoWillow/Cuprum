@@ -1,6 +1,6 @@
 package net.apowillow.cu.mixin;
 
-import net.apowillow.cu.FasterOxidation;
+import net.apowillow.cu.registry.FasterOxidation;
 import net.minecraft.block.*;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;

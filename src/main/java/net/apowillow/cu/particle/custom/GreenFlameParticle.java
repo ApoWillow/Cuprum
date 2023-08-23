@@ -11,23 +11,10 @@ import net.minecraft.util.math.MathHelper;
 import org.jetbrains.annotations.Nullable;
 
 public class GreenFlameParticle extends AbstractSlowingParticle {
-    protected GreenFlameParticle(ClientWorld clientWorld, double xCoord, double yCoord, double zCoord,
+    public GreenFlameParticle(ClientWorld clientWorld, double xCoord, double yCoord, double zCoord,
                                  double xd, double yd, double zd) {
         super(clientWorld, xCoord, yCoord, zCoord, xd, yd, zd);
-
-        this.velocityMultiplier = 0F;
-        this.x = xd;
-        this.y = yd;
-        this.z = zd;
-        this.scale *= 0.5F;
-        this.maxAge = 20;
-        //this.setSpriteForAge(spriteSet);
-
-        this.red = 1f;
-        this.green = 1f;
-        this.blue = 1f;
     }
-
 
 
     @Override
@@ -61,25 +48,6 @@ public class GreenFlameParticle extends AbstractSlowingParticle {
     }
 
     @Environment(value=EnvType.CLIENT)
-    public static class SmallFactory
-            implements ParticleFactory<DefaultParticleType> {
-        private final SpriteProvider spriteProvider;
-
-        public SmallFactory(SpriteProvider spriteProvider) {
-            this.spriteProvider = spriteProvider;
-        }
-
-        @Nullable
-        @Override
-        public Particle createParticle(DefaultParticleType defaultParticleType, ClientWorld clientWorld, double xCoord, double yCoord, double zCoord, double xd, double yd, double zd) {
-            GreenFlameParticle greenFlameParticle = new GreenFlameParticle(clientWorld, xCoord, yCoord, zCoord, xd, yd, zd);
-            greenFlameParticle.setSprite(this.spriteProvider);
-            greenFlameParticle.scale(0.5f);
-            return greenFlameParticle;
-        }
-    }
-    
-    @Environment(EnvType.CLIENT)
     public static class Factory implements ParticleFactory<DefaultParticleType> {
         private final SpriteProvider spriteProvider;
 
@@ -87,13 +55,11 @@ public class GreenFlameParticle extends AbstractSlowingParticle {
             this.spriteProvider = spriteProvider;
         }
 
-
-        @Nullable
         @Override
-        public Particle createParticle(DefaultParticleType defaultParticleType, ClientWorld world, double xCoord, double yCoord, double zCoord, double xd, double yd, double zd) {
-            GreenFlameParticle greenFlameParticle = new GreenFlameParticle(world, xCoord, yCoord, zCoord, xd, yd, zd);
-            greenFlameParticle.setSprite(this.spriteProvider);
-            return greenFlameParticle;
+        public Particle createParticle(DefaultParticleType defaultParticleType, ClientWorld clientWorld, double d, double e, double f, double g, double h, double i) {
+            GreenFlameParticle flameParticle = new GreenFlameParticle(clientWorld, d, e, f, g, h, i);
+            flameParticle.setSprite(this.spriteProvider);
+            return flameParticle;
         }
     }
 }

@@ -3,6 +3,7 @@
   "package": "net.apowillow.cu.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "CopperSulfateCampFireRegisterMixin",
     "MixinAxeItem",
     "MixinOxidizableBlock",
     "MixinOxidizableSlab",

@@ -10,11 +10,15 @@ import net.apowillow.cu.particle.ModParticles;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
+import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
+
+import java.util.function.ToIntFunction;
 
 public class ModBlocks {
 
@@ -320,6 +324,10 @@ public class ModBlocks {
     private static Item registerBlockItem(String name, Block block) {
         return Registry.register(Registries.ITEM, new Identifier(CUMod.MOD_ID, name),
                 new BlockItem(block, new FabricItemSettings()));
+    }
+
+    private static ToIntFunction<BlockState> createLightLevelFromLitBlockState(int litLevel) {
+        return state -> state.get(Properties.LIT) ? litLevel : 0;
     }
 
     public static void registerModBlocks() {

@@ -21,6 +21,8 @@ public class CUMod implements ModInitializer {
         ModItems.registerModItems();
         ModItemGroup.registerItemGroups();
 
+        //ModBlockEntities.registerAllBlockEntities();
+
         ModPackets.registerC2SPackets();
         ModPackets.registerS2CPackets();
 

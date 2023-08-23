@@ -15,7 +15,6 @@ public class CUModClient implements ClientModInitializer {
 
         // Sulfate related clientside stuff
         ParticleFactoryRegistry.getInstance().register(ModParticles.GREEN_FLAME_PARTICLE, GreenFlameParticle.Factory::new);
-        ParticleFactoryRegistry.getInstance().register(ModParticles.GREEN_FLAME_PARTICLE, GreenFlameParticle.SmallFactory::new);
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SULFATE_TORCH, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SULFATE_WALL_TORCH, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SULFATE_CAMPFIRE, RenderLayer.getCutout());

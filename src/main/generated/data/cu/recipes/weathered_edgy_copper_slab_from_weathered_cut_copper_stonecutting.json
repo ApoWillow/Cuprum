@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "minecraft:weathered_cut_copper"
+  },
+  "result": "cu:weathered_edgy_copper_slab"
+}

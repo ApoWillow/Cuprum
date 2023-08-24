@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "cu:waxed_oxidized_smooth_copper"
+  },
+  "result": "cu:waxed_oxidized_vertical_cut_copper_stairs"
+}

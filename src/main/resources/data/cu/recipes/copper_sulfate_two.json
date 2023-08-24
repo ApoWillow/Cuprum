@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "cu:block_of_copper_sulfate"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "cu:copper_sulfate"
+  }
+}

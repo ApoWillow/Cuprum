@@ -24,18 +24,740 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
     @Override
     public void generate(Consumer<RecipeJsonProvider> exporter) {
 
-        //Adds the recipes for smooth copper and edgy copper inside the stone cutter
+        // Adds recipes for cut copper that doesn't already exist
+        // Blocks
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.CUT_COPPER, ModBlocks.EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.EXPOSED_CUT_COPPER, ModBlocks.EXPOSED_EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WEATHERED_CUT_COPPER, ModBlocks.WEATHERED_EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.OXIDIZED_CUT_COPPER, ModBlocks.OXIDIZED_EDGY_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_CUT_COPPER, ModBlocks.WAXED_EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_EXPOSED_CUT_COPPER, ModBlocks.WAXED_EXPOSED_EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_WEATHERED_CUT_COPPER, ModBlocks.WAXED_WEATHERED_EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_OXIDIZED_CUT_COPPER, ModBlocks.WAXED_OXIDIZED_EDGY_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.CUT_COPPER, ModBlocks.SMOOTH_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.EXPOSED_CUT_COPPER, ModBlocks.EXPOSED_SMOOTH_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WEATHERED_CUT_COPPER, ModBlocks.WEATHERED_SMOOTH_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.OXIDIZED_CUT_COPPER, ModBlocks.OXIDIZED_SMOOTH_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_CUT_COPPER, ModBlocks.WAXED_SMOOTH_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_EXPOSED_CUT_COPPER, ModBlocks.WAXED_EXPOSED_SMOOTH_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_WEATHERED_CUT_COPPER, ModBlocks.WAXED_WEATHERED_SMOOTH_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_OXIDIZED_CUT_COPPER, ModBlocks.WAXED_OXIDIZED_SMOOTH_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.CUT_COPPER, ModBlocks.VERTICAL_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.EXPOSED_CUT_COPPER, ModBlocks.EXPOSED_VERTICAL_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WEATHERED_CUT_COPPER, ModBlocks.WEATHERED_VERTICAL_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.OXIDIZED_CUT_COPPER, ModBlocks.OXIDIZED_VERTICAL_CUT_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_CUT_COPPER, ModBlocks.WAXED_VERTICAL_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_EXPOSED_CUT_COPPER, ModBlocks.WAXED_EXPOSED_VERTICAL_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_WEATHERED_CUT_COPPER, ModBlocks.WAXED_WEATHERED_VERTICAL_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_OXIDIZED_CUT_COPPER, ModBlocks.WAXED_OXIDIZED_VERTICAL_CUT_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.CUT_COPPER, ModBlocks.CHISELED_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.EXPOSED_CUT_COPPER, ModBlocks.EXPOSED_CHISELED_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WEATHERED_CUT_COPPER, ModBlocks.WEATHERED_CHISELED_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.OXIDIZED_CUT_COPPER, ModBlocks.OXIDIZED_CHISELED_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_CUT_COPPER, ModBlocks.WAXED_CHISELED_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_EXPOSED_CUT_COPPER, ModBlocks.WAXED_EXPOSED_CHISELED_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_WEATHERED_CUT_COPPER, ModBlocks.WAXED_WEATHERED_CHISELED_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_OXIDIZED_CUT_COPPER, ModBlocks.WAXED_OXIDIZED_CHISELED_COPPER);
+
+        // Slabs
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.CUT_COPPER_SLAB, ModBlocks.SMOOTH_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.EXPOSED_CUT_COPPER_SLAB, ModBlocks.EXPOSED_SMOOTH_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WEATHERED_CUT_COPPER_SLAB, ModBlocks.WEATHERED_SMOOTH_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.OXIDIZED_CUT_COPPER_SLAB, ModBlocks.OXIDIZED_SMOOTH_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_CUT_COPPER_SLAB, ModBlocks.WAXED_SMOOTH_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_EXPOSED_CUT_COPPER_SLAB, ModBlocks.WAXED_EXPOSED_SMOOTH_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_WEATHERED_CUT_COPPER_SLAB, ModBlocks.WAXED_WEATHERED_SMOOTH_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_OXIDIZED_CUT_COPPER_SLAB, ModBlocks.WAXED_OXIDIZED_SMOOTH_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.CUT_COPPER_SLAB, ModBlocks.SMOOTH_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.EXPOSED_CUT_COPPER_SLAB, ModBlocks.EXPOSED_SMOOTH_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WEATHERED_CUT_COPPER_SLAB, ModBlocks.WEATHERED_SMOOTH_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.OXIDIZED_CUT_COPPER_SLAB, ModBlocks.OXIDIZED_SMOOTH_COPPER_SLAB);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_CUT_COPPER_SLAB, ModBlocks.WAXED_SMOOTH_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_EXPOSED_CUT_COPPER_SLAB, ModBlocks.WAXED_EXPOSED_SMOOTH_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_WEATHERED_CUT_COPPER_SLAB, ModBlocks.WAXED_WEATHERED_SMOOTH_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_OXIDIZED_CUT_COPPER_SLAB, ModBlocks.WAXED_OXIDIZED_SMOOTH_COPPER_SLAB);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.CUT_COPPER_SLAB, ModBlocks.EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.EXPOSED_CUT_COPPER_SLAB, ModBlocks.EXPOSED_EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WEATHERED_CUT_COPPER_SLAB, ModBlocks.WEATHERED_EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.OXIDIZED_CUT_COPPER_SLAB, ModBlocks.OXIDIZED_EDGY_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_CUT_COPPER_SLAB, ModBlocks.WAXED_EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_EXPOSED_CUT_COPPER_SLAB, ModBlocks.WAXED_EXPOSED_EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_WEATHERED_CUT_COPPER_SLAB, ModBlocks.WAXED_WEATHERED_EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_OXIDIZED_CUT_COPPER_SLAB, ModBlocks.WAXED_OXIDIZED_EDGY_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.CUT_COPPER_SLAB, ModBlocks.EDGY_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.EXPOSED_CUT_COPPER_SLAB, ModBlocks.EXPOSED_EDGY_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WEATHERED_CUT_COPPER_SLAB, ModBlocks.WEATHERED_EDGY_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.OXIDIZED_CUT_COPPER_SLAB, ModBlocks.OXIDIZED_EDGY_COPPER_SLAB);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_CUT_COPPER_SLAB, ModBlocks.WAXED_EDGY_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_EXPOSED_CUT_COPPER_SLAB, ModBlocks.WAXED_EXPOSED_EDGY_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_WEATHERED_CUT_COPPER_SLAB, ModBlocks.WAXED_WEATHERED_EDGY_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_OXIDIZED_CUT_COPPER_SLAB, ModBlocks.WAXED_OXIDIZED_EDGY_COPPER_SLAB);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.CUT_COPPER_SLAB, ModBlocks.VERTICAL_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.EXPOSED_CUT_COPPER_SLAB, ModBlocks.EXPOSED_VERTICAL_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WEATHERED_CUT_COPPER_SLAB, ModBlocks.WEATHERED_VERTICAL_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.OXIDIZED_CUT_COPPER_SLAB, ModBlocks.OXIDIZED_VERTICAL_CUT_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_CUT_COPPER_SLAB, ModBlocks.WAXED_VERTICAL_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_EXPOSED_CUT_COPPER_SLAB, ModBlocks.WAXED_EXPOSED_VERTICAL_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_WEATHERED_CUT_COPPER_SLAB, ModBlocks.WAXED_WEATHERED_VERTICAL_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_OXIDIZED_CUT_COPPER_SLAB, ModBlocks.WAXED_OXIDIZED_VERTICAL_CUT_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.CUT_COPPER_SLAB, ModBlocks.VERTICAL_CUT_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.EXPOSED_CUT_COPPER_SLAB, ModBlocks.EXPOSED_VERTICAL_CUT_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WEATHERED_CUT_COPPER_SLAB, ModBlocks.WEATHERED_VERTICAL_CUT_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.OXIDIZED_CUT_COPPER_SLAB, ModBlocks.OXIDIZED_VERTICAL_CUT_COPPER_SLAB);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_CUT_COPPER_SLAB, ModBlocks.WAXED_VERTICAL_CUT_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_EXPOSED_CUT_COPPER_SLAB, ModBlocks.WAXED_EXPOSED_VERTICAL_CUT_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_WEATHERED_CUT_COPPER_SLAB, ModBlocks.WAXED_WEATHERED_VERTICAL_CUT_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_OXIDIZED_CUT_COPPER_SLAB, ModBlocks.WAXED_OXIDIZED_VERTICAL_CUT_COPPER_SLAB);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.CUT_COPPER_SLAB, ModBlocks.CHISELED_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.EXPOSED_CUT_COPPER_SLAB, ModBlocks.EXPOSED_CHISELED_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WEATHERED_CUT_COPPER_SLAB, ModBlocks.WEATHERED_CHISELED_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.OXIDIZED_CUT_COPPER_SLAB, ModBlocks.OXIDIZED_CHISELED_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_CUT_COPPER_SLAB, ModBlocks.WAXED_CHISELED_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_EXPOSED_CUT_COPPER_SLAB, ModBlocks.WAXED_EXPOSED_CHISELED_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_WEATHERED_CUT_COPPER_SLAB, ModBlocks.WAXED_WEATHERED_CHISELED_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_OXIDIZED_CUT_COPPER_SLAB, ModBlocks.WAXED_OXIDIZED_CHISELED_COPPER);
+
+        // Stairs
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.CUT_COPPER_STAIRS, ModBlocks.EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.EXPOSED_CUT_COPPER_STAIRS, ModBlocks.EXPOSED_EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WEATHERED_CUT_COPPER_STAIRS, ModBlocks.WEATHERED_EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.OXIDIZED_CUT_COPPER_STAIRS, ModBlocks.OXIDIZED_EDGY_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_CUT_COPPER_STAIRS, ModBlocks.WAXED_EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_EXPOSED_CUT_COPPER_STAIRS, ModBlocks.WAXED_EXPOSED_EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_WEATHERED_CUT_COPPER_STAIRS, ModBlocks.WAXED_WEATHERED_EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_OXIDIZED_CUT_COPPER_STAIRS, ModBlocks.WAXED_OXIDIZED_EDGY_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.CUT_COPPER_STAIRS, ModBlocks.EDGY_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.EXPOSED_CUT_COPPER_STAIRS, ModBlocks.EXPOSED_EDGY_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WEATHERED_CUT_COPPER_STAIRS, ModBlocks.WEATHERED_EDGY_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.OXIDIZED_CUT_COPPER_STAIRS, ModBlocks.OXIDIZED_EDGY_COPPER_STAIRS);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_CUT_COPPER_STAIRS, ModBlocks.WAXED_EDGY_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_EXPOSED_CUT_COPPER_STAIRS, ModBlocks.WAXED_EXPOSED_EDGY_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_WEATHERED_CUT_COPPER_STAIRS, ModBlocks.WAXED_WEATHERED_EDGY_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_OXIDIZED_CUT_COPPER_STAIRS, ModBlocks.WAXED_OXIDIZED_EDGY_COPPER_STAIRS);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.CUT_COPPER_STAIRS, ModBlocks.SMOOTH_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.EXPOSED_CUT_COPPER_STAIRS, ModBlocks.EXPOSED_SMOOTH_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WEATHERED_CUT_COPPER_STAIRS, ModBlocks.WEATHERED_SMOOTH_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.OXIDIZED_CUT_COPPER_STAIRS, ModBlocks.OXIDIZED_SMOOTH_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_CUT_COPPER_STAIRS, ModBlocks.WAXED_SMOOTH_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_EXPOSED_CUT_COPPER_STAIRS, ModBlocks.WAXED_EXPOSED_SMOOTH_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_WEATHERED_CUT_COPPER_STAIRS, ModBlocks.WAXED_WEATHERED_SMOOTH_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_OXIDIZED_CUT_COPPER_STAIRS, ModBlocks.WAXED_OXIDIZED_SMOOTH_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.CUT_COPPER_STAIRS, ModBlocks.SMOOTH_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.EXPOSED_CUT_COPPER_STAIRS, ModBlocks.EXPOSED_SMOOTH_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WEATHERED_CUT_COPPER_STAIRS, ModBlocks.WEATHERED_SMOOTH_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.OXIDIZED_CUT_COPPER_STAIRS, ModBlocks.OXIDIZED_SMOOTH_COPPER_STAIRS);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_CUT_COPPER_STAIRS, ModBlocks.WAXED_SMOOTH_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_EXPOSED_CUT_COPPER_STAIRS, ModBlocks.WAXED_EXPOSED_SMOOTH_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_WEATHERED_CUT_COPPER_STAIRS, ModBlocks.WAXED_WEATHERED_SMOOTH_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_OXIDIZED_CUT_COPPER_STAIRS, ModBlocks.WAXED_OXIDIZED_SMOOTH_COPPER_STAIRS);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.CUT_COPPER_STAIRS, ModBlocks.VERTICAL_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.EXPOSED_CUT_COPPER_STAIRS, ModBlocks.EXPOSED_VERTICAL_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WEATHERED_CUT_COPPER_STAIRS, ModBlocks.WEATHERED_VERTICAL_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.OXIDIZED_CUT_COPPER_STAIRS, ModBlocks.OXIDIZED_VERTICAL_CUT_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_CUT_COPPER_STAIRS, ModBlocks.WAXED_VERTICAL_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_EXPOSED_CUT_COPPER_STAIRS, ModBlocks.WAXED_EXPOSED_VERTICAL_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_WEATHERED_CUT_COPPER_STAIRS, ModBlocks.WAXED_WEATHERED_VERTICAL_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_OXIDIZED_CUT_COPPER_STAIRS, ModBlocks.WAXED_OXIDIZED_VERTICAL_CUT_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.CUT_COPPER_STAIRS, ModBlocks.VERTICAL_CUT_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.EXPOSED_CUT_COPPER_STAIRS, ModBlocks.EXPOSED_VERTICAL_CUT_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WEATHERED_CUT_COPPER_STAIRS, ModBlocks.WEATHERED_VERTICAL_CUT_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.OXIDIZED_CUT_COPPER_STAIRS, ModBlocks.OXIDIZED_VERTICAL_CUT_COPPER_STAIRS);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_CUT_COPPER_STAIRS, ModBlocks.WAXED_VERTICAL_CUT_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_EXPOSED_CUT_COPPER_STAIRS, ModBlocks.WAXED_EXPOSED_VERTICAL_CUT_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_WEATHERED_CUT_COPPER_STAIRS, ModBlocks.WAXED_WEATHERED_VERTICAL_CUT_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_OXIDIZED_CUT_COPPER_STAIRS, ModBlocks.WAXED_OXIDIZED_VERTICAL_CUT_COPPER_STAIRS);
+
+        // Adds the recipes for Smooth Copper inside the stone cutter
+        // Blocks
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_COPPER, Blocks.COPPER_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXPOSED_SMOOTH_COPPER, Blocks.EXPOSED_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WEATHERED_SMOOTH_COPPER, Blocks.WEATHERED_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OXIDIZED_SMOOTH_COPPER, Blocks.OXIDIZED_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_SMOOTH_COPPER, Blocks.WAXED_COPPER_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EXPOSED_SMOOTH_COPPER, Blocks.WAXED_EXPOSED_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_WEATHERED_SMOOTH_COPPER, Blocks.WAXED_WEATHERED_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_OXIDIZED_SMOOTH_COPPER, Blocks.WAXED_OXIDIZED_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_COPPER, ModBlocks.EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXPOSED_SMOOTH_COPPER, ModBlocks.EXPOSED_EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WEATHERED_SMOOTH_COPPER, ModBlocks.WEATHERED_EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OXIDIZED_SMOOTH_COPPER, ModBlocks.OXIDIZED_EDGY_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_SMOOTH_COPPER, ModBlocks.WAXED_EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EXPOSED_SMOOTH_COPPER, ModBlocks.WAXED_EXPOSED_EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_WEATHERED_SMOOTH_COPPER, ModBlocks.WAXED_WEATHERED_EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_OXIDIZED_SMOOTH_COPPER, ModBlocks.WAXED_OXIDIZED_EDGY_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_COPPER, Blocks.CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXPOSED_SMOOTH_COPPER, Blocks.EXPOSED_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WEATHERED_SMOOTH_COPPER, Blocks.WEATHERED_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OXIDIZED_SMOOTH_COPPER, Blocks.OXIDIZED_CUT_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_SMOOTH_COPPER, Blocks.WAXED_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EXPOSED_SMOOTH_COPPER, Blocks.WAXED_EXPOSED_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_WEATHERED_SMOOTH_COPPER, Blocks.WAXED_WEATHERED_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_OXIDIZED_SMOOTH_COPPER, Blocks.WAXED_OXIDIZED_CUT_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_COPPER, ModBlocks.VERTICAL_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXPOSED_SMOOTH_COPPER, ModBlocks.EXPOSED_VERTICAL_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WEATHERED_SMOOTH_COPPER, ModBlocks.WEATHERED_VERTICAL_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OXIDIZED_SMOOTH_COPPER, ModBlocks.OXIDIZED_VERTICAL_CUT_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_SMOOTH_COPPER, ModBlocks.WAXED_VERTICAL_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EXPOSED_SMOOTH_COPPER, ModBlocks.WAXED_EXPOSED_VERTICAL_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_WEATHERED_SMOOTH_COPPER, ModBlocks.WAXED_WEATHERED_VERTICAL_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_OXIDIZED_SMOOTH_COPPER, ModBlocks.WAXED_OXIDIZED_VERTICAL_CUT_COPPER);
+
+        // Slabs
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_COPPER_SLAB, Blocks.COPPER_BLOCK);
-        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_COPPER_STAIRS, Blocks.COPPER_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXPOSED_SMOOTH_COPPER_SLAB, Blocks.EXPOSED_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WEATHERED_SMOOTH_COPPER_SLAB, Blocks.WEATHERED_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OXIDIZED_SMOOTH_COPPER_SLAB, Blocks.OXIDIZED_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_SMOOTH_COPPER_SLAB, Blocks.WAXED_COPPER_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EXPOSED_SMOOTH_COPPER_SLAB, Blocks.WAXED_EXPOSED_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_WEATHERED_SMOOTH_COPPER_SLAB, Blocks.WAXED_WEATHERED_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_OXIDIZED_SMOOTH_COPPER_SLAB, Blocks.WAXED_OXIDIZED_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_COPPER_SLAB, Blocks.CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXPOSED_SMOOTH_COPPER_SLAB, Blocks.EXPOSED_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WEATHERED_SMOOTH_COPPER_SLAB, Blocks.WEATHERED_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OXIDIZED_SMOOTH_COPPER_SLAB, Blocks.OXIDIZED_CUT_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_SMOOTH_COPPER_SLAB, Blocks.WAXED_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EXPOSED_SMOOTH_COPPER_SLAB, Blocks.WAXED_EXPOSED_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_WEATHERED_SMOOTH_COPPER_SLAB, Blocks.WAXED_WEATHERED_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_OXIDIZED_SMOOTH_COPPER_SLAB, Blocks.WAXED_OXIDIZED_CUT_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_COPPER_SLAB, Blocks.CUT_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXPOSED_SMOOTH_COPPER_SLAB, Blocks.EXPOSED_CUT_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WEATHERED_SMOOTH_COPPER_SLAB, Blocks.WEATHERED_CUT_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OXIDIZED_SMOOTH_COPPER_SLAB, Blocks.OXIDIZED_CUT_COPPER_SLAB);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_SMOOTH_COPPER_SLAB, Blocks.WAXED_CUT_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EXPOSED_SMOOTH_COPPER_SLAB, Blocks.WAXED_EXPOSED_CUT_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_WEATHERED_SMOOTH_COPPER_SLAB, Blocks.WAXED_WEATHERED_CUT_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_OXIDIZED_SMOOTH_COPPER_SLAB, Blocks.WAXED_OXIDIZED_CUT_COPPER_SLAB);
+
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_COPPER_SLAB, ModBlocks.EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXPOSED_SMOOTH_COPPER_SLAB, ModBlocks.EXPOSED_EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WEATHERED_SMOOTH_COPPER_SLAB, ModBlocks.WEATHERED_EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OXIDIZED_SMOOTH_COPPER_SLAB, ModBlocks.OXIDIZED_EDGY_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_SMOOTH_COPPER_SLAB, ModBlocks.WAXED_EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EXPOSED_SMOOTH_COPPER_SLAB, ModBlocks.WAXED_EXPOSED_EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_WEATHERED_SMOOTH_COPPER_SLAB, ModBlocks.WAXED_WEATHERED_EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_OXIDIZED_SMOOTH_COPPER_SLAB, ModBlocks.WAXED_OXIDIZED_EDGY_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_COPPER_SLAB, ModBlocks.EDGY_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXPOSED_SMOOTH_COPPER_SLAB, ModBlocks.EXPOSED_EDGY_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WEATHERED_SMOOTH_COPPER_SLAB, ModBlocks.WEATHERED_EDGY_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OXIDIZED_SMOOTH_COPPER_SLAB, ModBlocks.OXIDIZED_EDGY_COPPER_SLAB);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_SMOOTH_COPPER_SLAB, ModBlocks.WAXED_EDGY_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EXPOSED_SMOOTH_COPPER_SLAB, ModBlocks.WAXED_EXPOSED_EDGY_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_WEATHERED_SMOOTH_COPPER_SLAB, ModBlocks.WAXED_WEATHERED_EDGY_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_OXIDIZED_SMOOTH_COPPER_SLAB, ModBlocks.WAXED_OXIDIZED_EDGY_COPPER_SLAB);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_COPPER_SLAB, ModBlocks.VERTICAL_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXPOSED_SMOOTH_COPPER_SLAB, ModBlocks.EXPOSED_VERTICAL_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WEATHERED_SMOOTH_COPPER_SLAB, ModBlocks.WEATHERED_VERTICAL_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OXIDIZED_SMOOTH_COPPER_SLAB, ModBlocks.OXIDIZED_VERTICAL_CUT_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_SMOOTH_COPPER_SLAB, ModBlocks.WAXED_VERTICAL_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EXPOSED_SMOOTH_COPPER_SLAB, ModBlocks.WAXED_EXPOSED_VERTICAL_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_WEATHERED_SMOOTH_COPPER_SLAB, ModBlocks.WAXED_WEATHERED_VERTICAL_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_OXIDIZED_SMOOTH_COPPER_SLAB, ModBlocks.WAXED_OXIDIZED_VERTICAL_CUT_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_COPPER_SLAB, ModBlocks.VERTICAL_CUT_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXPOSED_SMOOTH_COPPER_SLAB, ModBlocks.EXPOSED_VERTICAL_CUT_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WEATHERED_SMOOTH_COPPER_SLAB, ModBlocks.WEATHERED_VERTICAL_CUT_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OXIDIZED_SMOOTH_COPPER_SLAB, ModBlocks.OXIDIZED_VERTICAL_CUT_COPPER_SLAB);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_SMOOTH_COPPER_SLAB, ModBlocks.WAXED_VERTICAL_CUT_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EXPOSED_SMOOTH_COPPER_SLAB, ModBlocks.WAXED_EXPOSED_VERTICAL_CUT_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_WEATHERED_SMOOTH_COPPER_SLAB, ModBlocks.WAXED_WEATHERED_VERTICAL_CUT_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_OXIDIZED_SMOOTH_COPPER_SLAB, ModBlocks.WAXED_OXIDIZED_VERTICAL_CUT_COPPER_SLAB);
+
+        // Stairs
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_COPPER_STAIRS, Blocks.COPPER_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXPOSED_SMOOTH_COPPER_STAIRS, Blocks.EXPOSED_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WEATHERED_SMOOTH_COPPER_STAIRS, Blocks.WEATHERED_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OXIDIZED_SMOOTH_COPPER_STAIRS, Blocks.OXIDIZED_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_SMOOTH_COPPER_STAIRS, Blocks.WAXED_COPPER_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EXPOSED_SMOOTH_COPPER_STAIRS, Blocks.WAXED_EXPOSED_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_WEATHERED_SMOOTH_COPPER_STAIRS, Blocks.WAXED_WEATHERED_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_OXIDIZED_SMOOTH_COPPER_STAIRS, Blocks.WAXED_OXIDIZED_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_COPPER_STAIRS, Blocks.CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXPOSED_SMOOTH_COPPER_STAIRS, Blocks.EXPOSED_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WEATHERED_SMOOTH_COPPER_STAIRS, Blocks.WEATHERED_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OXIDIZED_SMOOTH_COPPER_STAIRS, Blocks.OXIDIZED_CUT_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_SMOOTH_COPPER_STAIRS, Blocks.WAXED_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EXPOSED_SMOOTH_COPPER_STAIRS, Blocks.WAXED_EXPOSED_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_WEATHERED_SMOOTH_COPPER_STAIRS, Blocks.WAXED_WEATHERED_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_OXIDIZED_SMOOTH_COPPER_STAIRS, Blocks.WAXED_OXIDIZED_CUT_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_COPPER_STAIRS, Blocks.CUT_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXPOSED_SMOOTH_COPPER_STAIRS, Blocks.EXPOSED_CUT_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WEATHERED_SMOOTH_COPPER_STAIRS, Blocks.WEATHERED_CUT_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OXIDIZED_SMOOTH_COPPER_STAIRS, Blocks.OXIDIZED_CUT_COPPER_STAIRS);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_SMOOTH_COPPER_STAIRS, Blocks.WAXED_CUT_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EXPOSED_SMOOTH_COPPER_STAIRS, Blocks.WAXED_EXPOSED_CUT_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_WEATHERED_SMOOTH_COPPER_STAIRS, Blocks.WAXED_WEATHERED_CUT_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_OXIDIZED_SMOOTH_COPPER_STAIRS, Blocks.WAXED_OXIDIZED_CUT_COPPER_STAIRS);
+
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_COPPER_STAIRS, ModBlocks.EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXPOSED_SMOOTH_COPPER_STAIRS, ModBlocks.EXPOSED_EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WEATHERED_SMOOTH_COPPER_STAIRS, ModBlocks.WEATHERED_EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OXIDIZED_SMOOTH_COPPER_STAIRS, ModBlocks.OXIDIZED_EDGY_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_SMOOTH_COPPER_STAIRS, ModBlocks.WAXED_EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EXPOSED_SMOOTH_COPPER_STAIRS, ModBlocks.WAXED_EXPOSED_EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_WEATHERED_SMOOTH_COPPER_STAIRS, ModBlocks.WAXED_WEATHERED_EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_OXIDIZED_SMOOTH_COPPER_STAIRS, ModBlocks.WAXED_OXIDIZED_EDGY_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_COPPER_STAIRS, ModBlocks.EDGY_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXPOSED_SMOOTH_COPPER_STAIRS, ModBlocks.EXPOSED_EDGY_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WEATHERED_SMOOTH_COPPER_STAIRS, ModBlocks.WEATHERED_EDGY_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OXIDIZED_SMOOTH_COPPER_STAIRS, ModBlocks.OXIDIZED_EDGY_COPPER_STAIRS);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_SMOOTH_COPPER_STAIRS, ModBlocks.WAXED_EDGY_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EXPOSED_SMOOTH_COPPER_STAIRS, ModBlocks.WAXED_EXPOSED_EDGY_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_WEATHERED_SMOOTH_COPPER_STAIRS, ModBlocks.WAXED_WEATHERED_EDGY_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_OXIDIZED_SMOOTH_COPPER_STAIRS, ModBlocks.WAXED_OXIDIZED_EDGY_COPPER_STAIRS);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_COPPER_STAIRS, ModBlocks.VERTICAL_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXPOSED_SMOOTH_COPPER_STAIRS, ModBlocks.EXPOSED_VERTICAL_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WEATHERED_SMOOTH_COPPER_STAIRS, ModBlocks.WEATHERED_VERTICAL_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OXIDIZED_SMOOTH_COPPER_STAIRS, ModBlocks.OXIDIZED_VERTICAL_CUT_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_SMOOTH_COPPER_STAIRS, ModBlocks.WAXED_VERTICAL_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EXPOSED_SMOOTH_COPPER_STAIRS, ModBlocks.WAXED_EXPOSED_VERTICAL_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_WEATHERED_SMOOTH_COPPER_STAIRS, ModBlocks.WAXED_WEATHERED_VERTICAL_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_OXIDIZED_SMOOTH_COPPER_STAIRS, ModBlocks.WAXED_OXIDIZED_VERTICAL_CUT_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_COPPER_STAIRS, ModBlocks.VERTICAL_CUT_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXPOSED_SMOOTH_COPPER_STAIRS, ModBlocks.EXPOSED_VERTICAL_CUT_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WEATHERED_SMOOTH_COPPER_STAIRS, ModBlocks.WEATHERED_VERTICAL_CUT_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OXIDIZED_SMOOTH_COPPER_STAIRS, ModBlocks.OXIDIZED_VERTICAL_CUT_COPPER_STAIRS);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_SMOOTH_COPPER_STAIRS, ModBlocks.WAXED_VERTICAL_CUT_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EXPOSED_SMOOTH_COPPER_STAIRS, ModBlocks.WAXED_EXPOSED_VERTICAL_CUT_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_WEATHERED_SMOOTH_COPPER_STAIRS, ModBlocks.WAXED_WEATHERED_VERTICAL_CUT_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_OXIDIZED_SMOOTH_COPPER_STAIRS, ModBlocks.WAXED_OXIDIZED_VERTICAL_CUT_COPPER_STAIRS);
+        // Adds the recipes for Edgy Copper inside the stone cutter
+        // Blocks
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EDGY_COPPER, Blocks.COPPER_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXPOSED_EDGY_COPPER, Blocks.EXPOSED_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WEATHERED_EDGY_COPPER, Blocks.WEATHERED_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OXIDIZED_EDGY_COPPER, Blocks.OXIDIZED_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EDGY_COPPER, Blocks.WAXED_COPPER_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EXPOSED_EDGY_COPPER, Blocks.WAXED_EXPOSED_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_WEATHERED_EDGY_COPPER, Blocks.WAXED_WEATHERED_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_OXIDIZED_EDGY_COPPER, Blocks.WAXED_OXIDIZED_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EDGY_COPPER, Blocks.CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXPOSED_EDGY_COPPER, Blocks.EXPOSED_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WEATHERED_EDGY_COPPER, Blocks.WEATHERED_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OXIDIZED_EDGY_COPPER, Blocks.OXIDIZED_CUT_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EDGY_COPPER, Blocks.WAXED_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EXPOSED_EDGY_COPPER, Blocks.WAXED_EXPOSED_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_WEATHERED_EDGY_COPPER, Blocks.WAXED_WEATHERED_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_OXIDIZED_EDGY_COPPER, Blocks.WAXED_OXIDIZED_CUT_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EDGY_COPPER, ModBlocks.SMOOTH_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXPOSED_EDGY_COPPER, ModBlocks.EXPOSED_SMOOTH_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WEATHERED_EDGY_COPPER, ModBlocks.WEATHERED_SMOOTH_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OXIDIZED_EDGY_COPPER, ModBlocks.OXIDIZED_SMOOTH_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EDGY_COPPER, ModBlocks.WAXED_SMOOTH_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EXPOSED_EDGY_COPPER, ModBlocks.WAXED_EXPOSED_SMOOTH_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_WEATHERED_EDGY_COPPER, ModBlocks.WAXED_WEATHERED_SMOOTH_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_OXIDIZED_EDGY_COPPER, ModBlocks.WAXED_OXIDIZED_SMOOTH_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EDGY_COPPER, ModBlocks.VERTICAL_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXPOSED_EDGY_COPPER, ModBlocks.EXPOSED_VERTICAL_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WEATHERED_EDGY_COPPER, ModBlocks.WEATHERED_VERTICAL_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OXIDIZED_EDGY_COPPER, ModBlocks.OXIDIZED_VERTICAL_CUT_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EDGY_COPPER, ModBlocks.WAXED_VERTICAL_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EXPOSED_EDGY_COPPER, ModBlocks.WAXED_EXPOSED_VERTICAL_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_WEATHERED_EDGY_COPPER, ModBlocks.WAXED_WEATHERED_VERTICAL_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_OXIDIZED_EDGY_COPPER, ModBlocks.WAXED_OXIDIZED_VERTICAL_CUT_COPPER);
+
+        // Slabs
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EDGY_COPPER_SLAB, Blocks.COPPER_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXPOSED_EDGY_COPPER_SLAB, Blocks.EXPOSED_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WEATHERED_EDGY_COPPER_SLAB, Blocks.WEATHERED_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OXIDIZED_EDGY_COPPER_SLAB, Blocks.OXIDIZED_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EDGY_COPPER_SLAB, Blocks.WAXED_COPPER_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EXPOSED_EDGY_COPPER_SLAB, Blocks.WAXED_EXPOSED_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_WEATHERED_EDGY_COPPER_SLAB, Blocks.WAXED_WEATHERED_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_OXIDIZED_EDGY_COPPER_SLAB, Blocks.WAXED_OXIDIZED_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EDGY_COPPER_SLAB, Blocks.CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXPOSED_EDGY_COPPER_SLAB, Blocks.EXPOSED_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WEATHERED_EDGY_COPPER_SLAB, Blocks.WEATHERED_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OXIDIZED_EDGY_COPPER_SLAB, Blocks.OXIDIZED_CUT_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EDGY_COPPER_SLAB, Blocks.WAXED_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EXPOSED_EDGY_COPPER_SLAB, Blocks.WAXED_EXPOSED_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_WEATHERED_EDGY_COPPER_SLAB, Blocks.WAXED_WEATHERED_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_OXIDIZED_EDGY_COPPER_SLAB, Blocks.WAXED_OXIDIZED_CUT_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EDGY_COPPER_SLAB, Blocks.CUT_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXPOSED_EDGY_COPPER_SLAB, Blocks.EXPOSED_CUT_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WEATHERED_EDGY_COPPER_SLAB, Blocks.WEATHERED_CUT_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OXIDIZED_EDGY_COPPER_SLAB, Blocks.OXIDIZED_CUT_COPPER_SLAB);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EDGY_COPPER_SLAB, Blocks.WAXED_CUT_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EXPOSED_EDGY_COPPER_SLAB, Blocks.WAXED_EXPOSED_CUT_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_WEATHERED_EDGY_COPPER_SLAB, Blocks.WAXED_WEATHERED_CUT_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_OXIDIZED_EDGY_COPPER_SLAB, Blocks.WAXED_OXIDIZED_CUT_COPPER_SLAB);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EDGY_COPPER_SLAB, ModBlocks.SMOOTH_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXPOSED_EDGY_COPPER_SLAB, ModBlocks.EXPOSED_SMOOTH_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WEATHERED_EDGY_COPPER_SLAB, ModBlocks.WEATHERED_SMOOTH_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OXIDIZED_EDGY_COPPER_SLAB, ModBlocks.OXIDIZED_SMOOTH_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EDGY_COPPER_SLAB, ModBlocks.WAXED_SMOOTH_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EXPOSED_EDGY_COPPER_SLAB, ModBlocks.WAXED_EXPOSED_SMOOTH_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_WEATHERED_EDGY_COPPER_SLAB, ModBlocks.WAXED_WEATHERED_SMOOTH_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_OXIDIZED_EDGY_COPPER_SLAB, ModBlocks.WAXED_OXIDIZED_SMOOTH_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EDGY_COPPER_SLAB, ModBlocks.SMOOTH_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXPOSED_EDGY_COPPER_SLAB, ModBlocks.EXPOSED_SMOOTH_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WEATHERED_EDGY_COPPER_SLAB, ModBlocks.WEATHERED_SMOOTH_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OXIDIZED_EDGY_COPPER_SLAB, ModBlocks.OXIDIZED_SMOOTH_COPPER_SLAB);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EDGY_COPPER_SLAB, ModBlocks.WAXED_SMOOTH_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EXPOSED_EDGY_COPPER_SLAB, ModBlocks.WAXED_EXPOSED_SMOOTH_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_WEATHERED_EDGY_COPPER_SLAB, ModBlocks.WAXED_WEATHERED_SMOOTH_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_OXIDIZED_EDGY_COPPER_SLAB, ModBlocks.WAXED_OXIDIZED_SMOOTH_COPPER_SLAB);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EDGY_COPPER_SLAB, ModBlocks.VERTICAL_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXPOSED_EDGY_COPPER_SLAB, ModBlocks.EXPOSED_VERTICAL_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WEATHERED_EDGY_COPPER_SLAB, ModBlocks.WEATHERED_VERTICAL_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OXIDIZED_EDGY_COPPER_SLAB, ModBlocks.OXIDIZED_VERTICAL_CUT_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EDGY_COPPER_SLAB, ModBlocks.WAXED_VERTICAL_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EXPOSED_EDGY_COPPER_SLAB, ModBlocks.WAXED_EXPOSED_VERTICAL_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_WEATHERED_EDGY_COPPER_SLAB, ModBlocks.WAXED_WEATHERED_VERTICAL_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_OXIDIZED_EDGY_COPPER_SLAB, ModBlocks.WAXED_OXIDIZED_VERTICAL_CUT_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EDGY_COPPER_SLAB, ModBlocks.VERTICAL_CUT_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXPOSED_EDGY_COPPER_SLAB, ModBlocks.EXPOSED_VERTICAL_CUT_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WEATHERED_EDGY_COPPER_SLAB, ModBlocks.WEATHERED_VERTICAL_CUT_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OXIDIZED_EDGY_COPPER_SLAB, ModBlocks.OXIDIZED_VERTICAL_CUT_COPPER_SLAB);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EDGY_COPPER_SLAB, ModBlocks.WAXED_VERTICAL_CUT_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EXPOSED_EDGY_COPPER_SLAB, ModBlocks.WAXED_EXPOSED_VERTICAL_CUT_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_WEATHERED_EDGY_COPPER_SLAB, ModBlocks.WAXED_WEATHERED_VERTICAL_CUT_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_OXIDIZED_EDGY_COPPER_SLAB, ModBlocks.WAXED_OXIDIZED_VERTICAL_CUT_COPPER_SLAB);
+
+        // Stairs
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EDGY_COPPER_STAIRS, Blocks.COPPER_BLOCK);
-        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EDGY_COPPER_SLAB, ModBlocks.EDGY_COPPER);
-        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EDGY_COPPER_STAIRS, ModBlocks.EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXPOSED_EDGY_COPPER_STAIRS, Blocks.EXPOSED_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WEATHERED_EDGY_COPPER_STAIRS, Blocks.WEATHERED_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OXIDIZED_EDGY_COPPER_STAIRS, Blocks.OXIDIZED_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EDGY_COPPER_STAIRS, Blocks.WAXED_COPPER_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EXPOSED_EDGY_COPPER_STAIRS, Blocks.WAXED_EXPOSED_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_WEATHERED_EDGY_COPPER_STAIRS, Blocks.WAXED_WEATHERED_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_OXIDIZED_EDGY_COPPER_STAIRS, Blocks.WAXED_OXIDIZED_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EDGY_COPPER_STAIRS, Blocks.CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXPOSED_EDGY_COPPER_STAIRS, Blocks.EXPOSED_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WEATHERED_EDGY_COPPER_STAIRS, Blocks.WEATHERED_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OXIDIZED_EDGY_COPPER_STAIRS, Blocks.OXIDIZED_CUT_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EDGY_COPPER_STAIRS, Blocks.WAXED_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EXPOSED_EDGY_COPPER_STAIRS, Blocks.WAXED_EXPOSED_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_WEATHERED_EDGY_COPPER_STAIRS, Blocks.WAXED_WEATHERED_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_OXIDIZED_EDGY_COPPER_STAIRS, Blocks.WAXED_OXIDIZED_CUT_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EDGY_COPPER_STAIRS, Blocks.CUT_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXPOSED_EDGY_COPPER_STAIRS, Blocks.EXPOSED_CUT_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WEATHERED_EDGY_COPPER_STAIRS, Blocks.WEATHERED_CUT_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OXIDIZED_EDGY_COPPER_STAIRS, Blocks.OXIDIZED_CUT_COPPER_STAIRS);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EDGY_COPPER_STAIRS, Blocks.WAXED_CUT_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EXPOSED_EDGY_COPPER_STAIRS, Blocks.WAXED_EXPOSED_CUT_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_WEATHERED_EDGY_COPPER_STAIRS, Blocks.WAXED_WEATHERED_CUT_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_OXIDIZED_EDGY_COPPER_STAIRS, Blocks.WAXED_OXIDIZED_CUT_COPPER_STAIRS);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EDGY_COPPER_STAIRS, ModBlocks.SMOOTH_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXPOSED_EDGY_COPPER_STAIRS, ModBlocks.EXPOSED_SMOOTH_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WEATHERED_EDGY_COPPER_STAIRS, ModBlocks.WEATHERED_SMOOTH_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OXIDIZED_EDGY_COPPER_STAIRS, ModBlocks.OXIDIZED_SMOOTH_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EDGY_COPPER_STAIRS, ModBlocks.WAXED_SMOOTH_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EXPOSED_EDGY_COPPER_STAIRS, ModBlocks.WAXED_EXPOSED_SMOOTH_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_WEATHERED_EDGY_COPPER_STAIRS, ModBlocks.WAXED_WEATHERED_SMOOTH_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_OXIDIZED_EDGY_COPPER_STAIRS, ModBlocks.WAXED_OXIDIZED_SMOOTH_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EDGY_COPPER_STAIRS, ModBlocks.SMOOTH_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXPOSED_EDGY_COPPER_STAIRS, ModBlocks.EXPOSED_SMOOTH_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WEATHERED_EDGY_COPPER_STAIRS, ModBlocks.WEATHERED_SMOOTH_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OXIDIZED_EDGY_COPPER_STAIRS, ModBlocks.OXIDIZED_SMOOTH_COPPER_STAIRS);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EDGY_COPPER_STAIRS, ModBlocks.WAXED_SMOOTH_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EXPOSED_EDGY_COPPER_STAIRS, ModBlocks.WAXED_EXPOSED_SMOOTH_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_WEATHERED_EDGY_COPPER_STAIRS, ModBlocks.WAXED_WEATHERED_SMOOTH_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_OXIDIZED_EDGY_COPPER_STAIRS, ModBlocks.WAXED_OXIDIZED_SMOOTH_COPPER_STAIRS);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EDGY_COPPER_STAIRS, ModBlocks.VERTICAL_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXPOSED_EDGY_COPPER_STAIRS, ModBlocks.EXPOSED_VERTICAL_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WEATHERED_EDGY_COPPER_STAIRS, ModBlocks.WEATHERED_VERTICAL_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OXIDIZED_EDGY_COPPER_STAIRS, ModBlocks.OXIDIZED_VERTICAL_CUT_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EDGY_COPPER_STAIRS, ModBlocks.WAXED_VERTICAL_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EXPOSED_EDGY_COPPER_STAIRS, ModBlocks.WAXED_EXPOSED_VERTICAL_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_WEATHERED_EDGY_COPPER_STAIRS, ModBlocks.WAXED_WEATHERED_VERTICAL_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_OXIDIZED_EDGY_COPPER_STAIRS, ModBlocks.WAXED_OXIDIZED_VERTICAL_CUT_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EDGY_COPPER_STAIRS, ModBlocks.VERTICAL_CUT_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXPOSED_EDGY_COPPER_STAIRS, ModBlocks.EXPOSED_VERTICAL_CUT_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WEATHERED_EDGY_COPPER_STAIRS, ModBlocks.WEATHERED_VERTICAL_CUT_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OXIDIZED_EDGY_COPPER_STAIRS, ModBlocks.OXIDIZED_VERTICAL_CUT_COPPER_STAIRS);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EDGY_COPPER_STAIRS, ModBlocks.WAXED_VERTICAL_CUT_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EXPOSED_EDGY_COPPER_STAIRS, ModBlocks.WAXED_EXPOSED_VERTICAL_CUT_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_WEATHERED_EDGY_COPPER_STAIRS, ModBlocks.WAXED_WEATHERED_VERTICAL_CUT_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_OXIDIZED_EDGY_COPPER_STAIRS, ModBlocks.WAXED_OXIDIZED_VERTICAL_CUT_COPPER_STAIRS);
+        // Adds the recipes for Vertical Cut Copper inside the stone cutter
+        // Blocks
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.VERTICAL_CUT_COPPER, Blocks.COPPER_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXPOSED_VERTICAL_CUT_COPPER, Blocks.EXPOSED_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WEATHERED_VERTICAL_CUT_COPPER, Blocks.WEATHERED_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OXIDIZED_VERTICAL_CUT_COPPER, Blocks.OXIDIZED_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_VERTICAL_CUT_COPPER, Blocks.WAXED_COPPER_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EXPOSED_VERTICAL_CUT_COPPER, Blocks.WAXED_EXPOSED_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_WEATHERED_VERTICAL_CUT_COPPER, Blocks.WAXED_WEATHERED_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_OXIDIZED_VERTICAL_CUT_COPPER, Blocks.WAXED_OXIDIZED_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.VERTICAL_CUT_COPPER, Blocks.CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXPOSED_VERTICAL_CUT_COPPER, Blocks.EXPOSED_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WEATHERED_VERTICAL_CUT_COPPER, Blocks.WEATHERED_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OXIDIZED_VERTICAL_CUT_COPPER, Blocks.OXIDIZED_CUT_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_VERTICAL_CUT_COPPER, Blocks.WAXED_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EXPOSED_VERTICAL_CUT_COPPER, Blocks.WAXED_EXPOSED_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_WEATHERED_VERTICAL_CUT_COPPER, Blocks.WAXED_WEATHERED_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_OXIDIZED_VERTICAL_CUT_COPPER, Blocks.WAXED_OXIDIZED_CUT_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.VERTICAL_CUT_COPPER, ModBlocks.EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXPOSED_VERTICAL_CUT_COPPER, ModBlocks.EXPOSED_EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WEATHERED_VERTICAL_CUT_COPPER, ModBlocks.WEATHERED_EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OXIDIZED_VERTICAL_CUT_COPPER, ModBlocks.OXIDIZED_EDGY_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_VERTICAL_CUT_COPPER, ModBlocks.WAXED_EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EXPOSED_VERTICAL_CUT_COPPER, ModBlocks.WAXED_EXPOSED_EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_WEATHERED_VERTICAL_CUT_COPPER, ModBlocks.WAXED_WEATHERED_EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_OXIDIZED_VERTICAL_CUT_COPPER, ModBlocks.WAXED_OXIDIZED_EDGY_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.VERTICAL_CUT_COPPER, ModBlocks.SMOOTH_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXPOSED_VERTICAL_CUT_COPPER, ModBlocks.EXPOSED_SMOOTH_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WEATHERED_VERTICAL_CUT_COPPER, ModBlocks.WEATHERED_SMOOTH_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OXIDIZED_VERTICAL_CUT_COPPER, ModBlocks.OXIDIZED_SMOOTH_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_VERTICAL_CUT_COPPER, ModBlocks.WAXED_SMOOTH_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EXPOSED_VERTICAL_CUT_COPPER, ModBlocks.WAXED_EXPOSED_SMOOTH_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_WEATHERED_VERTICAL_CUT_COPPER, ModBlocks.WAXED_WEATHERED_SMOOTH_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_OXIDIZED_VERTICAL_CUT_COPPER, ModBlocks.WAXED_OXIDIZED_SMOOTH_COPPER);
+
+        // Slabs
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.VERTICAL_CUT_COPPER_SLAB, Blocks.COPPER_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXPOSED_VERTICAL_CUT_COPPER_SLAB, Blocks.EXPOSED_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WEATHERED_VERTICAL_CUT_COPPER_SLAB, Blocks.WEATHERED_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OXIDIZED_VERTICAL_CUT_COPPER_SLAB, Blocks.OXIDIZED_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_VERTICAL_CUT_COPPER_SLAB, Blocks.WAXED_COPPER_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EXPOSED_VERTICAL_CUT_COPPER_SLAB, Blocks.WAXED_EXPOSED_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_WEATHERED_VERTICAL_CUT_COPPER_SLAB, Blocks.WAXED_WEATHERED_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_OXIDIZED_VERTICAL_CUT_COPPER_SLAB, Blocks.WAXED_OXIDIZED_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.VERTICAL_CUT_COPPER_SLAB, Blocks.CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXPOSED_VERTICAL_CUT_COPPER_SLAB, Blocks.EXPOSED_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WEATHERED_VERTICAL_CUT_COPPER_SLAB, Blocks.WEATHERED_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OXIDIZED_VERTICAL_CUT_COPPER_SLAB, Blocks.OXIDIZED_CUT_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_VERTICAL_CUT_COPPER_SLAB, Blocks.WAXED_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EXPOSED_VERTICAL_CUT_COPPER_SLAB, Blocks.WAXED_EXPOSED_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_WEATHERED_VERTICAL_CUT_COPPER_SLAB, Blocks.WAXED_WEATHERED_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_OXIDIZED_VERTICAL_CUT_COPPER_SLAB, Blocks.WAXED_OXIDIZED_CUT_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.VERTICAL_CUT_COPPER_SLAB, Blocks.CUT_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXPOSED_VERTICAL_CUT_COPPER_SLAB, Blocks.EXPOSED_CUT_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WEATHERED_VERTICAL_CUT_COPPER_SLAB, Blocks.WEATHERED_CUT_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OXIDIZED_VERTICAL_CUT_COPPER_SLAB, Blocks.OXIDIZED_CUT_COPPER_SLAB);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_VERTICAL_CUT_COPPER_SLAB, Blocks.WAXED_CUT_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EXPOSED_VERTICAL_CUT_COPPER_SLAB, Blocks.WAXED_EXPOSED_CUT_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_WEATHERED_VERTICAL_CUT_COPPER_SLAB, Blocks.WAXED_WEATHERED_CUT_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_OXIDIZED_VERTICAL_CUT_COPPER_SLAB, Blocks.WAXED_OXIDIZED_CUT_COPPER_SLAB);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.VERTICAL_CUT_COPPER_SLAB, ModBlocks.SMOOTH_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXPOSED_VERTICAL_CUT_COPPER_SLAB, ModBlocks.EXPOSED_SMOOTH_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WEATHERED_VERTICAL_CUT_COPPER_SLAB, ModBlocks.WEATHERED_SMOOTH_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OXIDIZED_VERTICAL_CUT_COPPER_SLAB, ModBlocks.OXIDIZED_SMOOTH_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_VERTICAL_CUT_COPPER_SLAB, ModBlocks.WAXED_SMOOTH_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EXPOSED_VERTICAL_CUT_COPPER_SLAB, ModBlocks.WAXED_EXPOSED_SMOOTH_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_WEATHERED_VERTICAL_CUT_COPPER_SLAB, ModBlocks.WAXED_WEATHERED_SMOOTH_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_OXIDIZED_VERTICAL_CUT_COPPER_SLAB, ModBlocks.WAXED_OXIDIZED_SMOOTH_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.VERTICAL_CUT_COPPER_SLAB, ModBlocks.SMOOTH_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXPOSED_VERTICAL_CUT_COPPER_SLAB, ModBlocks.EXPOSED_SMOOTH_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WEATHERED_VERTICAL_CUT_COPPER_SLAB, ModBlocks.WEATHERED_SMOOTH_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OXIDIZED_VERTICAL_CUT_COPPER_SLAB, ModBlocks.OXIDIZED_SMOOTH_COPPER_SLAB);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_VERTICAL_CUT_COPPER_SLAB, ModBlocks.WAXED_SMOOTH_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EXPOSED_VERTICAL_CUT_COPPER_SLAB, ModBlocks.WAXED_EXPOSED_SMOOTH_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_WEATHERED_VERTICAL_CUT_COPPER_SLAB, ModBlocks.WAXED_WEATHERED_SMOOTH_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_OXIDIZED_VERTICAL_CUT_COPPER_SLAB, ModBlocks.WAXED_OXIDIZED_SMOOTH_COPPER_SLAB);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.VERTICAL_CUT_COPPER_SLAB, ModBlocks.EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXPOSED_VERTICAL_CUT_COPPER_SLAB, ModBlocks.EXPOSED_EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WEATHERED_VERTICAL_CUT_COPPER_SLAB, ModBlocks.WEATHERED_EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OXIDIZED_VERTICAL_CUT_COPPER_SLAB, ModBlocks.OXIDIZED_EDGY_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_VERTICAL_CUT_COPPER_SLAB, ModBlocks.WAXED_EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EXPOSED_VERTICAL_CUT_COPPER_SLAB, ModBlocks.WAXED_EXPOSED_EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_WEATHERED_VERTICAL_CUT_COPPER_SLAB, ModBlocks.WAXED_WEATHERED_EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_OXIDIZED_VERTICAL_CUT_COPPER_SLAB, ModBlocks.WAXED_OXIDIZED_EDGY_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.VERTICAL_CUT_COPPER_SLAB, ModBlocks.EDGY_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXPOSED_VERTICAL_CUT_COPPER_SLAB, ModBlocks.EXPOSED_EDGY_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WEATHERED_VERTICAL_CUT_COPPER_SLAB, ModBlocks.WEATHERED_EDGY_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OXIDIZED_VERTICAL_CUT_COPPER_SLAB, ModBlocks.OXIDIZED_EDGY_COPPER_SLAB);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_VERTICAL_CUT_COPPER_SLAB, ModBlocks.WAXED_EDGY_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EXPOSED_VERTICAL_CUT_COPPER_SLAB, ModBlocks.WAXED_EXPOSED_EDGY_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_WEATHERED_VERTICAL_CUT_COPPER_SLAB, ModBlocks.WAXED_WEATHERED_EDGY_COPPER_SLAB);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_OXIDIZED_VERTICAL_CUT_COPPER_SLAB, ModBlocks.WAXED_OXIDIZED_EDGY_COPPER_SLAB);
+
+        // Stairs
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.VERTICAL_CUT_COPPER_STAIRS, Blocks.COPPER_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXPOSED_VERTICAL_CUT_COPPER_STAIRS, Blocks.EXPOSED_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WEATHERED_VERTICAL_CUT_COPPER_STAIRS, Blocks.WEATHERED_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OXIDIZED_VERTICAL_CUT_COPPER_STAIRS, Blocks.OXIDIZED_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_VERTICAL_CUT_COPPER_STAIRS, Blocks.WAXED_COPPER_BLOCK);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EXPOSED_VERTICAL_CUT_COPPER_STAIRS, Blocks.WAXED_EXPOSED_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_WEATHERED_VERTICAL_CUT_COPPER_STAIRS, Blocks.WAXED_WEATHERED_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_OXIDIZED_VERTICAL_CUT_COPPER_STAIRS, Blocks.WAXED_OXIDIZED_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.VERTICAL_CUT_COPPER_STAIRS, Blocks.CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXPOSED_VERTICAL_CUT_COPPER_STAIRS, Blocks.EXPOSED_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WEATHERED_VERTICAL_CUT_COPPER_STAIRS, Blocks.WEATHERED_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OXIDIZED_VERTICAL_CUT_COPPER_STAIRS, Blocks.OXIDIZED_CUT_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_VERTICAL_CUT_COPPER_STAIRS, Blocks.WAXED_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EXPOSED_VERTICAL_CUT_COPPER_STAIRS, Blocks.WAXED_EXPOSED_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_WEATHERED_VERTICAL_CUT_COPPER_STAIRS, Blocks.WAXED_WEATHERED_CUT_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_OXIDIZED_VERTICAL_CUT_COPPER_STAIRS, Blocks.WAXED_OXIDIZED_CUT_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.VERTICAL_CUT_COPPER_STAIRS, Blocks.CUT_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXPOSED_VERTICAL_CUT_COPPER_STAIRS, Blocks.EXPOSED_CUT_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WEATHERED_VERTICAL_CUT_COPPER_STAIRS, Blocks.WEATHERED_CUT_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OXIDIZED_VERTICAL_CUT_COPPER_STAIRS, Blocks.OXIDIZED_CUT_COPPER_STAIRS);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_VERTICAL_CUT_COPPER_STAIRS, Blocks.WAXED_CUT_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EXPOSED_VERTICAL_CUT_COPPER_STAIRS, Blocks.WAXED_EXPOSED_CUT_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_WEATHERED_VERTICAL_CUT_COPPER_STAIRS, Blocks.WAXED_WEATHERED_CUT_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_OXIDIZED_VERTICAL_CUT_COPPER_STAIRS, Blocks.WAXED_OXIDIZED_CUT_COPPER_STAIRS);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.VERTICAL_CUT_COPPER_STAIRS, ModBlocks.EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXPOSED_VERTICAL_CUT_COPPER_STAIRS, ModBlocks.EXPOSED_EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WEATHERED_VERTICAL_CUT_COPPER_STAIRS, ModBlocks.WEATHERED_EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OXIDIZED_VERTICAL_CUT_COPPER_STAIRS, ModBlocks.OXIDIZED_EDGY_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_VERTICAL_CUT_COPPER_STAIRS, ModBlocks.WAXED_EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EXPOSED_VERTICAL_CUT_COPPER_STAIRS, ModBlocks.WAXED_EXPOSED_EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_WEATHERED_VERTICAL_CUT_COPPER_STAIRS, ModBlocks.WAXED_WEATHERED_EDGY_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_OXIDIZED_VERTICAL_CUT_COPPER_STAIRS, ModBlocks.WAXED_OXIDIZED_EDGY_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.VERTICAL_CUT_COPPER_STAIRS, ModBlocks.EDGY_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXPOSED_VERTICAL_CUT_COPPER_STAIRS, ModBlocks.EXPOSED_EDGY_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WEATHERED_VERTICAL_CUT_COPPER_STAIRS, ModBlocks.WEATHERED_EDGY_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OXIDIZED_VERTICAL_CUT_COPPER_STAIRS, ModBlocks.OXIDIZED_EDGY_COPPER_STAIRS);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_VERTICAL_CUT_COPPER_STAIRS, ModBlocks.WAXED_EDGY_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EXPOSED_VERTICAL_CUT_COPPER_STAIRS, ModBlocks.WAXED_EXPOSED_EDGY_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_WEATHERED_VERTICAL_CUT_COPPER_STAIRS, ModBlocks.WAXED_WEATHERED_EDGY_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_OXIDIZED_VERTICAL_CUT_COPPER_STAIRS, ModBlocks.WAXED_OXIDIZED_EDGY_COPPER_STAIRS);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.VERTICAL_CUT_COPPER_STAIRS, ModBlocks.SMOOTH_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXPOSED_VERTICAL_CUT_COPPER_STAIRS, ModBlocks.EXPOSED_SMOOTH_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WEATHERED_VERTICAL_CUT_COPPER_STAIRS, ModBlocks.WEATHERED_SMOOTH_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OXIDIZED_VERTICAL_CUT_COPPER_STAIRS, ModBlocks.OXIDIZED_SMOOTH_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_VERTICAL_CUT_COPPER_STAIRS, ModBlocks.WAXED_SMOOTH_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EXPOSED_VERTICAL_CUT_COPPER_STAIRS, ModBlocks.WAXED_EXPOSED_SMOOTH_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_WEATHERED_VERTICAL_CUT_COPPER_STAIRS, ModBlocks.WAXED_WEATHERED_SMOOTH_COPPER);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_OXIDIZED_VERTICAL_CUT_COPPER_STAIRS, ModBlocks.WAXED_OXIDIZED_SMOOTH_COPPER);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.VERTICAL_CUT_COPPER_STAIRS, ModBlocks.SMOOTH_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXPOSED_VERTICAL_CUT_COPPER_STAIRS, ModBlocks.EXPOSED_SMOOTH_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WEATHERED_VERTICAL_CUT_COPPER_STAIRS, ModBlocks.WEATHERED_SMOOTH_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OXIDIZED_VERTICAL_CUT_COPPER_STAIRS, ModBlocks.OXIDIZED_SMOOTH_COPPER_STAIRS);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_VERTICAL_CUT_COPPER_STAIRS, ModBlocks.WAXED_SMOOTH_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_EXPOSED_VERTICAL_CUT_COPPER_STAIRS, ModBlocks.WAXED_EXPOSED_SMOOTH_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_WEATHERED_VERTICAL_CUT_COPPER_STAIRS, ModBlocks.WAXED_WEATHERED_SMOOTH_COPPER_STAIRS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAXED_OXIDIZED_VERTICAL_CUT_COPPER_STAIRS, ModBlocks.WAXED_OXIDIZED_SMOOTH_COPPER_STAIRS);
+
+        // Adds the recipes for Lined Copper Lamp inside the stone cutter
         offerStonecuttingRecipe(exporter, RecipeCategory.REDSTONE, ModBlocks.LINED_COPPER_LAMP, ModBlocks.COPPER_LAMP);
+        offerStonecuttingRecipe(exporter, RecipeCategory.REDSTONE, ModBlocks.EXPOSED_LINED_COPPER_LAMP, ModBlocks.EXPOSED_COPPER_LAMP);
+        offerStonecuttingRecipe(exporter, RecipeCategory.REDSTONE, ModBlocks.WEATHERED_LINED_COPPER_LAMP, ModBlocks.WEATHERED_COPPER_LAMP);
+        offerStonecuttingRecipe(exporter, RecipeCategory.REDSTONE, ModBlocks.OXIDIZED_LINED_COPPER_LAMP, ModBlocks.OXIDIZED_COPPER_LAMP);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.REDSTONE, ModBlocks.WAXED_LINED_COPPER_LAMP, ModBlocks.WAXED_COPPER_LAMP);
+        offerStonecuttingRecipe(exporter, RecipeCategory.REDSTONE, ModBlocks.WAXED_EXPOSED_LINED_COPPER_LAMP, ModBlocks.WAXED_EXPOSED_COPPER_LAMP);
+        offerStonecuttingRecipe(exporter, RecipeCategory.REDSTONE, ModBlocks.WAXED_WEATHERED_LINED_COPPER_LAMP, ModBlocks.WAXED_WEATHERED_COPPER_LAMP);
+        offerStonecuttingRecipe(exporter, RecipeCategory.REDSTONE, ModBlocks.WAXED_OXIDIZED_LINED_COPPER_LAMP, ModBlocks.WAXED_OXIDIZED_COPPER_LAMP);
 
         //Adds the recipe for Levitator block
         ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, ModBlocks.LEVITATOR_BLOCK)
@@ -138,5 +860,33 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(ModItems.SULFATE_TORCH),
                         FabricRecipeProvider.conditionsFromItem(Items.TORCH))
                 .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModBlocks.SULFATE_LANTERN)));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.COPPER_OXIDE,9)
+                .input(ModBlocks.BLOCK_OF_COPPER_OXIDE)
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.BLOCK_OF_COPPER_OXIDE),
+                        FabricRecipeProvider.conditionsFromItem(Items.COPPER_INGOT))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.COPPER_OXIDE)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.BLOCK_OF_COPPER_OXIDE)
+                .pattern("III")
+                .pattern("III")
+                .pattern("III")
+                .input('I', ModItems.COPPER_OXIDE)
+                .criterion(FabricRecipeProvider.hasItem(ModItems.COPPER_OXIDE),
+                        FabricRecipeProvider.conditionsFromItem(Items.IRON_NUGGET))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModBlocks.BLOCK_OF_COPPER_OXIDE)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.BLOCK_OF_COPPER_SULFATE)
+                .pattern("III")
+                .pattern("III")
+                .pattern("III")
+                .input('I', ModItems.COPPER_SULFATE)
+                .criterion(FabricRecipeProvider.hasItem(ModItems.COPPER_SULFATE),
+                        FabricRecipeProvider.conditionsFromItem(Items.IRON_NUGGET))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModBlocks.BLOCK_OF_COPPER_SULFATE)));
+
+
     }
 }
+
+// Pain.

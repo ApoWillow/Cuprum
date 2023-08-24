@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "cu:exposed_edgy_copper"
+  },
+  "result": "minecraft:exposed_cut_copper_stairs"
+}

@@ -24,7 +24,6 @@ public class ModTagsGenerator extends FabricTagProvider.BlockTagProvider {
     private FabricTagProvider<Block>.FabricTagBuilder addsAxeBlocks(TagKey<Block> tagKey) {
         return getOrCreateTagBuilder(tagKey)
                 .add(ModBlocks.SULFATE_CAMPFIRE);
-
     }
 
     private FabricTagProvider<Block>.FabricTagBuilder addsPickaxeBlocks(TagKey<Block> tagKey){
@@ -83,6 +82,42 @@ public class ModTagsGenerator extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.WAXED_EXPOSED_EDGY_COPPER_SLAB)
                 .add(ModBlocks.WAXED_WEATHERED_EDGY_COPPER_SLAB)
                 .add(ModBlocks.WAXED_OXIDIZED_EDGY_COPPER_SLAB)
+                // Vertical Cut Copper
+                .add(ModBlocks.VERTICAL_CUT_COPPER)
+                .add(ModBlocks.EXPOSED_VERTICAL_CUT_COPPER)
+                .add(ModBlocks.WEATHERED_VERTICAL_CUT_COPPER)
+                .add(ModBlocks.OXIDIZED_VERTICAL_CUT_COPPER)
+                .add(ModBlocks.WAXED_VERTICAL_CUT_COPPER)
+                .add(ModBlocks.WAXED_EXPOSED_VERTICAL_CUT_COPPER)
+                .add(ModBlocks.WAXED_WEATHERED_VERTICAL_CUT_COPPER)
+                .add(ModBlocks.WAXED_OXIDIZED_VERTICAL_CUT_COPPER)
+                // Vertical Cut Copper Stairs
+                .add(ModBlocks.VERTICAL_CUT_COPPER_STAIRS)
+                .add(ModBlocks.EXPOSED_VERTICAL_CUT_COPPER_STAIRS)
+                .add(ModBlocks.WEATHERED_VERTICAL_CUT_COPPER_STAIRS)
+                .add(ModBlocks.OXIDIZED_VERTICAL_CUT_COPPER_STAIRS)
+                .add(ModBlocks.WAXED_VERTICAL_CUT_COPPER_STAIRS)
+                .add(ModBlocks.WAXED_EXPOSED_VERTICAL_CUT_COPPER_STAIRS)
+                .add(ModBlocks.WAXED_WEATHERED_VERTICAL_CUT_COPPER_STAIRS)
+                .add(ModBlocks.WAXED_OXIDIZED_VERTICAL_CUT_COPPER_STAIRS)
+                // Vertical Cut Copper Slab
+                .add(ModBlocks.VERTICAL_CUT_COPPER_SLAB)
+                .add(ModBlocks.EXPOSED_VERTICAL_CUT_COPPER_SLAB)
+                .add(ModBlocks.WEATHERED_VERTICAL_CUT_COPPER_SLAB)
+                .add(ModBlocks.OXIDIZED_VERTICAL_CUT_COPPER_SLAB)
+                .add(ModBlocks.WAXED_VERTICAL_CUT_COPPER_SLAB)
+                .add(ModBlocks.WAXED_EXPOSED_VERTICAL_CUT_COPPER_SLAB)
+                .add(ModBlocks.WAXED_WEATHERED_VERTICAL_CUT_COPPER_SLAB)
+                .add(ModBlocks.WAXED_OXIDIZED_VERTICAL_CUT_COPPER_SLAB)
+                // Chiseled Copper
+                .add(ModBlocks.CHISELED_COPPER)
+                .add(ModBlocks.EXPOSED_CHISELED_COPPER)
+                .add(ModBlocks.WEATHERED_CHISELED_COPPER)
+                .add(ModBlocks.OXIDIZED_CHISELED_COPPER)
+                .add(ModBlocks.WAXED_CHISELED_COPPER)
+                .add(ModBlocks.WAXED_EXPOSED_CHISELED_COPPER)
+                .add(ModBlocks.WAXED_WEATHERED_CHISELED_COPPER)
+                .add(ModBlocks.WAXED_OXIDIZED_CHISELED_COPPER)
                 // Copper Lamp
                 .add(ModBlocks.COPPER_LAMP)
                 .add(ModBlocks.EXPOSED_COPPER_LAMP)
@@ -109,6 +144,11 @@ public class ModTagsGenerator extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.WAXED_LEVITATOR_BLOCK)
                 .add(ModBlocks.WAXED_EXPOSED_LEVITATOR_BLOCK)
                 .add(ModBlocks.WAXED_WEATHERED_LEVITATOR_BLOCK)
-                .add(ModBlocks.WAXED_OXIDIZED_LEVITATOR_BLOCK);
+                .add(ModBlocks.WAXED_OXIDIZED_LEVITATOR_BLOCK)
+                // Compressed Blocks
+                .add(ModBlocks.BLOCK_OF_COPPER_OXIDE)
+                .add(ModBlocks.BLOCK_OF_COPPER_SULFATE)
+                // Sulfate Related Blocks
+                .add(ModBlocks.SULFATE_LANTERN);
     }
 }

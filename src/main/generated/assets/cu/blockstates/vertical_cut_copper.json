@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "cu:block/vertical_cut_copper"
+    }
+  }
+}

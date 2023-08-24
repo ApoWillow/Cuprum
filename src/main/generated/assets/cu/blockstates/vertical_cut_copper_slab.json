@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "cu:block/vertical_cut_copper_slab"
+    },
+    "type=double": {
+      "model": "cu:block/vertical_cut_copper"
+    },
+    "type=top": {
+      "model": "cu:block/vertical_cut_copper_slab_top"
+    }
+  }
+}

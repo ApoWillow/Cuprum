@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "cu:exposed_copper_lamp"
+  },
+  "result": "cu:exposed_lined_copper_lamp"
+}

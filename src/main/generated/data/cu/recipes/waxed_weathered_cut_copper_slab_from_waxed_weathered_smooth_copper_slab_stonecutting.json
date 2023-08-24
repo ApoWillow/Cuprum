@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "cu:waxed_weathered_smooth_copper_slab"
+  },
+  "result": "minecraft:waxed_weathered_cut_copper_slab"
+}

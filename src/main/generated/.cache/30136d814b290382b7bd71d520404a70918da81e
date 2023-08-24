@@ -1,4 +1,4 @@
-// 1.20.1	2023-08-19T17:14:00.9953896	Copper Undergo/Tags for minecraft:block
-c9e890972993086b7317f451696c6782f589ebd6 data\minecraft\tags\blocks\needs_stone_tool.json
-c9e890972993086b7317f451696c6782f589ebd6 data\minecraft\tags\blocks\mineable\pickaxe.json
+// 1.20.1	2023-08-24T20:21:33.1033168	Copper Undergo/Tags for minecraft:block
+3a7834c15a587d7e56cce3c34f205d182b1071aa data\minecraft\tags\blocks\mineable\pickaxe.json
 3fbd7a8429ec82e3a1cb3acfd0254a30c54d7115 data\minecraft\tags\blocks\mineable\axe.json
+3a7834c15a587d7e56cce3c34f205d182b1071aa data\minecraft\tags\blocks\needs_stone_tool.json

@@ -69,6 +69,34 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.WAXED_WEATHERED_EDGY_COPPER_STAIRS, ModBlocks.WAXED_WEATHERED_EDGY_COPPER_STAIRS);
         addDrop(ModBlocks.WAXED_OXIDIZED_EDGY_COPPER_STAIRS, ModBlocks.WAXED_OXIDIZED_EDGY_COPPER_STAIRS);
 
+        //Adds all the drops for the vertical cut copper variants including the waxed version
+        addDrop(ModBlocks.VERTICAL_CUT_COPPER);
+        addDrop(ModBlocks.EXPOSED_VERTICAL_CUT_COPPER);
+        addDrop(ModBlocks.WEATHERED_VERTICAL_CUT_COPPER);
+        addDrop(ModBlocks.OXIDIZED_VERTICAL_CUT_COPPER);
+        addDrop(ModBlocks.WAXED_EDGY_COPPER);
+        addDrop(ModBlocks.WAXED_EXPOSED_EDGY_COPPER);
+        addDrop(ModBlocks.WAXED_WEATHERED_EDGY_COPPER);
+        addDrop(ModBlocks.WAXED_OXIDIZED_EDGY_COPPER);
+
+        addDrop(ModBlocks.VERTICAL_CUT_COPPER_SLAB, slabDrops(ModBlocks.VERTICAL_CUT_COPPER_SLAB));
+        addDrop(ModBlocks.EXPOSED_VERTICAL_CUT_COPPER_SLAB, slabDrops(ModBlocks.EXPOSED_VERTICAL_CUT_COPPER_SLAB));
+        addDrop(ModBlocks.WEATHERED_VERTICAL_CUT_COPPER_SLAB, slabDrops(ModBlocks.WEATHERED_VERTICAL_CUT_COPPER_SLAB));
+        addDrop(ModBlocks.OXIDIZED_VERTICAL_CUT_COPPER_SLAB, slabDrops(ModBlocks.OXIDIZED_VERTICAL_CUT_COPPER_SLAB));
+        addDrop(ModBlocks.WAXED_VERTICAL_CUT_COPPER_SLAB, slabDrops(ModBlocks.WAXED_VERTICAL_CUT_COPPER_SLAB));
+        addDrop(ModBlocks.WAXED_EXPOSED_VERTICAL_CUT_COPPER_SLAB, slabDrops(ModBlocks.WAXED_EXPOSED_VERTICAL_CUT_COPPER_SLAB));
+        addDrop(ModBlocks.WAXED_WEATHERED_VERTICAL_CUT_COPPER_SLAB, slabDrops(ModBlocks.WAXED_WEATHERED_VERTICAL_CUT_COPPER_SLAB));
+        addDrop(ModBlocks.WAXED_OXIDIZED_VERTICAL_CUT_COPPER_SLAB, slabDrops(ModBlocks.WAXED_OXIDIZED_VERTICAL_CUT_COPPER_SLAB));
+
+        addDrop(ModBlocks.VERTICAL_CUT_COPPER_STAIRS);
+        addDrop(ModBlocks.EXPOSED_VERTICAL_CUT_COPPER_STAIRS);
+        addDrop(ModBlocks.WEATHERED_VERTICAL_CUT_COPPER_STAIRS);
+        addDrop(ModBlocks.OXIDIZED_VERTICAL_CUT_COPPER_STAIRS);
+        addDrop(ModBlocks.WAXED_VERTICAL_CUT_COPPER);
+        addDrop(ModBlocks.WAXED_EXPOSED_VERTICAL_CUT_COPPER);
+        addDrop(ModBlocks.WAXED_WEATHERED_VERTICAL_CUT_COPPER);
+        addDrop(ModBlocks.WAXED_OXIDIZED_VERTICAL_CUT_COPPER);
+
         //Adds all the drops for the copper lamp variants including the waxed versions
         addDrop(ModBlocks.COPPER_LAMP);
         addDrop(ModBlocks.EXPOSED_COPPER_LAMP);
@@ -106,5 +134,7 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.SULFATE_TORCH);
         addDrop(ModBlocks.SULFATE_WALL_TORCH);
         addDrop(ModBlocks.SULFATE_CAMPFIRE, ModItems.COPPER_OXIDE);
+        addDrop(ModBlocks.BLOCK_OF_COPPER_OXIDE);
+        addDrop(ModBlocks.BLOCK_OF_COPPER_SULFATE);
     }
 }

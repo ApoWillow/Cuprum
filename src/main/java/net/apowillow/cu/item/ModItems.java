@@ -1,14 +1,13 @@
 package net.apowillow.cu.item;
 
 import net.apowillow.cu.CUMod;
-import net.apowillow.cu.registry.ModToolMaterials;
 import net.apowillow.cu.item.custom.CopperAnchorItem;
 import net.apowillow.cu.item.custom.CopperOxideItem;
 import net.apowillow.cu.item.custom.CopperWrenchItem;
 import net.apowillow.cu.block.ModBlocks;
 import net.apowillow.cu.registry.RoseGoldArmorMaterial;
+import net.apowillow.cu.registry.RoseGoldToolMaterial;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -27,20 +26,20 @@ public class ModItems {
     // Registers all the Rose gold related tools.
     public static Item ROSE_GOLD_INGOT = registerItem("rose_gold_ingot",
             new Item(new FabricItemSettings()));
-    public static SwordItem ROSE_GOLD_SWORD = (SwordItem) registerItem("rose_gold_sword",
-            new SwordItem(ModToolMaterials.ROSE_GOLD, 6,0f,
+    public static Item ROSE_GOLD_SWORD = registerItem("rose_gold_sword",
+            new SwordItem(RoseGoldToolMaterial.ROSE_GOLD, 5,-2.4f,
                     new FabricItemSettings()));
-    public static ShovelItem ROSE_GOLD_SHOVEL = (ShovelItem) registerItem("rose_gold_shovel",
-            new ShovelItem(ModToolMaterials.ROSE_GOLD, 5,0.7f,
+    public static Item ROSE_GOLD_SHOVEL = registerItem("rose_gold_shovel",
+            new ShovelItem(RoseGoldToolMaterial.ROSE_GOLD, 4,-3.0f,
                     new FabricItemSettings()));
-    public static PickaxeItem ROSE_GOLD_PICKAXE = (PickaxeItem) registerItem("rose_gold_pickaxe",
-            new PickaxeItem(ModToolMaterials.ROSE_GOLD, 5,0.9f,
+    public static Item ROSE_GOLD_PICKAXE = registerItem("rose_gold_pickaxe",
+            new PickaxeItem(RoseGoldToolMaterial.ROSE_GOLD, 4,-2.8f,
                     new FabricItemSettings()));
-    public static HoeItem ROSE_GOLD_HOE = (HoeItem) registerItem("rose_gold_hoe",
-            new HoeItem(ModToolMaterials.ROSE_GOLD, 1,0.9f,
+    public static Item ROSE_GOLD_HOE = registerItem("rose_gold_hoe",
+            new HoeItem(RoseGoldToolMaterial.ROSE_GOLD, 0,-1.0f,
                     new FabricItemSettings()));
-    public static AxeItem ROSE_GOLD_AXE = (AxeItem) registerItem("rose_gold_axe",
-            new AxeItem(ModToolMaterials.ROSE_GOLD, 8,0.10f,
+    public static Item ROSE_GOLD_AXE = registerItem("rose_gold_axe",
+            new AxeItem(RoseGoldToolMaterial.ROSE_GOLD, 7,-3.1f,
                     new FabricItemSettings()));
     // Rose Gold Armor Material
     public static final ArmorMaterial ROSE_GOLD_ARMOR_MATERIAL = new RoseGoldArmorMaterial();
@@ -69,7 +68,7 @@ public class ModItems {
 
     // Copper Anchor
     public static SwordItem COPPER_ANCHOR = (SwordItem) registerItem("copper_anchor",
-            new CopperAnchorItem(ModToolMaterials.COPPER,6, 0f, new FabricItemSettings()));
+            new CopperAnchorItem(RoseGoldToolMaterial.COPPER,6,5f, new FabricItemSettings()));
 
 
     private static Item registerItem(String name, Item item) {

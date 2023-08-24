@@ -73,12 +73,52 @@ public class ModModelProvider extends FabricModelProvider {
         waxedweatherededgycopper.stairs(ModBlocks.WAXED_WEATHERED_EDGY_COPPER_STAIRS);
         waxedoxidizededgycopper.stairs(ModBlocks.WAXED_OXIDIZED_EDGY_COPPER_STAIRS);
 
+        // Adds all the models for variants of vertical cut copper and all it's variants including the waxed, stair and slab versions.
+        BlockStateModelGenerator.BlockTexturePool verticalcutcopper =blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VERTICAL_CUT_COPPER);
+        BlockStateModelGenerator.BlockTexturePool exposedverticalcutcopper =blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.EXPOSED_VERTICAL_CUT_COPPER);
+        BlockStateModelGenerator.BlockTexturePool weatheredverticalcutcopper =blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.WEATHERED_VERTICAL_CUT_COPPER);
+        BlockStateModelGenerator.BlockTexturePool oxidizedverticalcutcopper =blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.OXIDIZED_VERTICAL_CUT_COPPER);
+        BlockStateModelGenerator.BlockTexturePool waxedverticalcutcopper =blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.WAXED_VERTICAL_CUT_COPPER);
+        BlockStateModelGenerator.BlockTexturePool waxedexposedverticalcutcopper =blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.WAXED_EXPOSED_VERTICAL_CUT_COPPER);
+        BlockStateModelGenerator.BlockTexturePool waxedweatheredverticalcutcopper =blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.WAXED_WEATHERED_VERTICAL_CUT_COPPER);
+        BlockStateModelGenerator.BlockTexturePool waxedoxidizedverticalcutcopper =blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.WAXED_OXIDIZED_VERTICAL_CUT_COPPER);
+
+        verticalcutcopper.slab(ModBlocks.VERTICAL_CUT_COPPER_SLAB);
+        exposedverticalcutcopper.slab(ModBlocks.EXPOSED_VERTICAL_CUT_COPPER_SLAB);
+        weatheredverticalcutcopper.slab(ModBlocks.WEATHERED_VERTICAL_CUT_COPPER_SLAB);
+        oxidizedverticalcutcopper.slab(ModBlocks.OXIDIZED_VERTICAL_CUT_COPPER_SLAB);
+        waxedverticalcutcopper.slab(ModBlocks.WAXED_VERTICAL_CUT_COPPER_SLAB);
+        waxedexposedverticalcutcopper.slab(ModBlocks.WAXED_EXPOSED_VERTICAL_CUT_COPPER_SLAB);
+        waxedweatheredverticalcutcopper.slab(ModBlocks.WAXED_WEATHERED_VERTICAL_CUT_COPPER_SLAB);
+        waxedoxidizedverticalcutcopper.slab(ModBlocks.WAXED_OXIDIZED_VERTICAL_CUT_COPPER_SLAB);
+
+        verticalcutcopper.stairs(ModBlocks.VERTICAL_CUT_COPPER_STAIRS);
+        exposedverticalcutcopper.stairs(ModBlocks.EXPOSED_VERTICAL_CUT_COPPER_STAIRS);
+        weatheredverticalcutcopper.stairs(ModBlocks.WEATHERED_VERTICAL_CUT_COPPER_STAIRS);
+        oxidizedverticalcutcopper.stairs(ModBlocks.OXIDIZED_VERTICAL_CUT_COPPER_STAIRS);
+        waxedverticalcutcopper.stairs(ModBlocks.WAXED_VERTICAL_CUT_COPPER_STAIRS);
+        waxedexposedverticalcutcopper.stairs(ModBlocks.WAXED_EXPOSED_VERTICAL_CUT_COPPER_STAIRS);
+        waxedweatheredverticalcutcopper.stairs(ModBlocks.WAXED_WEATHERED_VERTICAL_CUT_COPPER_STAIRS);
+        waxedoxidizedverticalcutcopper.stairs(ModBlocks.WAXED_OXIDIZED_VERTICAL_CUT_COPPER_STAIRS);
+
+        // Adds all the models for variants of chiseled copper and all it's variants including the waxed, stair and slab versions.
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CHISELED_COPPER);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.EXPOSED_CHISELED_COPPER);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.WEATHERED_CHISELED_COPPER);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.OXIDIZED_CHISELED_COPPER);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.WAXED_CHISELED_COPPER);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.WAXED_EXPOSED_CHISELED_COPPER);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.WAXED_WEATHERED_CHISELED_COPPER);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.WAXED_OXIDIZED_CHISELED_COPPER);
+
         //blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.COPPER_SCAFFHOLDING);
 
         // Sulfate related blocks
         blockStateModelGenerator.registerTorch(ModBlocks.SULFATE_TORCH, ModBlocks.SULFATE_WALL_TORCH);
         blockStateModelGenerator.registerCampfire(ModBlocks.SULFATE_CAMPFIRE);
         blockStateModelGenerator.registerLantern(ModBlocks.SULFATE_LANTERN);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.BLOCK_OF_COPPER_SULFATE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.BLOCK_OF_COPPER_OXIDE);
     }
 
     @Override

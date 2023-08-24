@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "cu:weathered_chiseled_copper"
+  },
+  "result": "minecraft:weathered_cut_copper"
+}

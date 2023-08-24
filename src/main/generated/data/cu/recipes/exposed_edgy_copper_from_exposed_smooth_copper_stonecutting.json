@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "cu:exposed_smooth_copper"
+  },
+  "result": "cu:exposed_edgy_copper"
+}

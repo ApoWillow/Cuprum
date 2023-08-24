@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "cu:weathered_smooth_copper"
+  },
+  "result": "cu:weathered_edgy_copper"
+}

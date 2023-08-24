@@ -81,6 +81,39 @@ public class CUMod implements ModInitializer {
         OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.WEATHERED_EDGY_COPPER_STAIRS, ModBlocks.WAXED_WEATHERED_EDGY_COPPER_STAIRS);
         OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.OXIDIZED_EDGY_COPPER_STAIRS, ModBlocks.WAXED_OXIDIZED_EDGY_COPPER_STAIRS);
 
+        // Adds the ability to oxidize and wax the vertical cut copper and all it's variants
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.VERTICAL_CUT_COPPER, ModBlocks.EXPOSED_VERTICAL_CUT_COPPER);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.EXPOSED_VERTICAL_CUT_COPPER, ModBlocks.WEATHERED_VERTICAL_CUT_COPPER);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.WEATHERED_VERTICAL_CUT_COPPER, ModBlocks.OXIDIZED_VERTICAL_CUT_COPPER);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.VERTICAL_CUT_COPPER, ModBlocks.WAXED_VERTICAL_CUT_COPPER);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.EXPOSED_VERTICAL_CUT_COPPER, ModBlocks.WAXED_EXPOSED_VERTICAL_CUT_COPPER);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.WEATHERED_VERTICAL_CUT_COPPER, ModBlocks.WAXED_WEATHERED_VERTICAL_CUT_COPPER);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.OXIDIZED_VERTICAL_CUT_COPPER, ModBlocks.WAXED_OXIDIZED_VERTICAL_CUT_COPPER);
+
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.VERTICAL_CUT_COPPER_SLAB, ModBlocks.EXPOSED_VERTICAL_CUT_COPPER_SLAB);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.EXPOSED_VERTICAL_CUT_COPPER_SLAB, ModBlocks.WEATHERED_VERTICAL_CUT_COPPER_SLAB);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.WEATHERED_VERTICAL_CUT_COPPER_SLAB, ModBlocks.OXIDIZED_VERTICAL_CUT_COPPER_SLAB);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.VERTICAL_CUT_COPPER_SLAB, ModBlocks.WAXED_VERTICAL_CUT_COPPER_SLAB);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.EXPOSED_VERTICAL_CUT_COPPER_SLAB, ModBlocks.WAXED_EXPOSED_VERTICAL_CUT_COPPER_SLAB);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.WEATHERED_VERTICAL_CUT_COPPER_SLAB, ModBlocks.WAXED_WEATHERED_VERTICAL_CUT_COPPER_SLAB);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.OXIDIZED_VERTICAL_CUT_COPPER_SLAB, ModBlocks.WAXED_OXIDIZED_VERTICAL_CUT_COPPER_SLAB);
+
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.VERTICAL_CUT_COPPER_STAIRS, ModBlocks.EXPOSED_VERTICAL_CUT_COPPER_STAIRS);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.EXPOSED_VERTICAL_CUT_COPPER_STAIRS, ModBlocks.WEATHERED_VERTICAL_CUT_COPPER_STAIRS);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.WEATHERED_VERTICAL_CUT_COPPER_STAIRS, ModBlocks.OXIDIZED_VERTICAL_CUT_COPPER_STAIRS);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.VERTICAL_CUT_COPPER_STAIRS, ModBlocks.WAXED_VERTICAL_CUT_COPPER_STAIRS);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.EXPOSED_VERTICAL_CUT_COPPER_STAIRS, ModBlocks.WAXED_EXPOSED_VERTICAL_CUT_COPPER_STAIRS);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.WEATHERED_VERTICAL_CUT_COPPER_STAIRS, ModBlocks.WAXED_WEATHERED_VERTICAL_CUT_COPPER_STAIRS);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.OXIDIZED_VERTICAL_CUT_COPPER_STAIRS, ModBlocks.WAXED_OXIDIZED_VERTICAL_CUT_COPPER_STAIRS);
+
+        // Adds the ability to oxidize the wax the chiseled block and all it's variants
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.CHISELED_COPPER, ModBlocks.EXPOSED_CHISELED_COPPER);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.EXPOSED_CHISELED_COPPER, ModBlocks.WEATHERED_CHISELED_COPPER);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.WEATHERED_CHISELED_COPPER, ModBlocks.OXIDIZED_CHISELED_COPPER);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.CHISELED_COPPER, ModBlocks.WAXED_CHISELED_COPPER);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.EXPOSED_CHISELED_COPPER, ModBlocks.WAXED_EXPOSED_CHISELED_COPPER);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.WEATHERED_CHISELED_COPPER, ModBlocks.WAXED_WEATHERED_CHISELED_COPPER);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.OXIDIZED_CHISELED_COPPER, ModBlocks.WAXED_OXIDIZED_CHISELED_COPPER);
 
         // Adds the ability to oxidize and wax the levitator block and all it's variants
         OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.LEVITATOR_BLOCK, ModBlocks.EXPOSED_LEVITATOR_BLOCK);

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "cu:edgy_copper_stairs"
+  },
+  "result": "cu:smooth_copper_stairs"
+}

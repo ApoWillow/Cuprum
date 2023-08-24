@@ -1,5 +1,4 @@
 {
-
   "item.cu.rose_gold_ingot": "Rose Gold Ingot",
   "item.cu.rose_gold_sword": "Rose Gold Sword",
   "item.cu.rose_gold_shovel": "Rose Gold Shovel",
@@ -17,7 +16,7 @@
 
   "item.cu.copper_anchor": "Copper Anchor",
 
-  "itemgroup.cu": "Copper Undergo",
+  "itemgroup.cu": "Cu",
 
   "block.cu.smooth_copper": "Smooth Copper",
   "block.cu.exposed_smooth_copper": "Exposed Smooth Copper",
@@ -100,9 +99,47 @@
   "block.cu.waxed_weathered_levitator_block": "Waxed Weathered Levitator",
   "block.cu.waxed_oxidized_levitator_block": "Waxed Oxidized Levitator",
 
+  "block.cu.vertical_cut_copper": "Vertical Cut Copper",
+  "block.cu.exposed_vertical_cut_copper": "Exposed Vertical Cut Copper",
+  "block.cu.weathered_vertical_cut_copper": "Weathered Vertical Cut Copper",
+  "block.cu.oxidized_vertical_cut_copper": "Oxidized Vertical Cut Copper",
+  "block.cu.waxed_vertical_cut_copper": "Waxed Vertical Cut Copper",
+  "block.cu.waxed_exposed_vertical_cut_copper": "Waxed Vertical Cut Chiseled Copper",
+  "block.cu.waxed_weathered_vertical_cut_copper": "Waxed Weathered Vertical Cut Copper",
+  "block.cu.waxed_oxidized_vertical_cut_copper": "Waxed Oxidized Vertical Cut Copper",
+
+  "block.cu.vertical_cut_copper_stairs": "Vertical Cut Copper Stairs",
+  "block.cu.exposed_vertical_cut_copper_stairs": "Exposed Vertical Cut Copper Stairs",
+  "block.cu.weathered_vertical_cut_copper_stairs": "Weathered Vertical Cut Copper Stairs",
+  "block.cu.oxidized_vertical_cut_copper_stairs": "Oxidized Vertical Cut Copper Stairs",
+  "block.cu.waxed_vertical_cut_copper_stairs": "Waxed Vertical Cut Copper Stairs",
+  "block.cu.waxed_exposed_vertical_cut_copper_stairs": "Waxed Vertical Cut Chiseled Copper Stairs",
+  "block.cu.waxed_weathered_vertical_cut_copper_stairs": "Waxed Weathered Vertical Cut Copper Stairs",
+  "block.cu.waxed_oxidized_vertical_cut_copper_stairs": "Waxed Oxidized Vertical Cut Copper Stairs",
+
+  "block.cu.vertical_cut_copper_slab": "Vertical Cut Copper Slab",
+  "block.cu.exposed_vertical_cut_copper_slab": "Exposed Vertical Cut Copper Slab",
+  "block.cu.weathered_vertical_cut_copper_slab": "Weathered Vertical Cut Copper Slab",
+  "block.cu.oxidized_vertical_cut_copper_slab": "Oxidized Vertical Cut Copper Slab",
+  "block.cu.waxed_vertical_cut_copper_slab": "Waxed Vertical Cut Copper Slab",
+  "block.cu.waxed_exposed_vertical_cut_copper_slab": "Waxed Vertical Cut Chiseled Copper Slab",
+  "block.cu.waxed_weathered_vertical_cut_copper_slab": "Waxed Weathered Vertical Cut Copper Slab",
+  "block.cu.waxed_oxidized_vertical_cut_copper_slab": "Waxed Oxidized Vertical Cut Copper Slab",
+
+  "block.cu.chiseled_copper": "Chiseled Copper",
+  "block.cu.exposed_chiseled_copper": "Exposed Chiseled Copper",
+  "block.cu.weathered_chiseled_copper": "Weathered Chiseled Copper",
+  "block.cu.oxidized_chiseled_copper": "Oxidized Chiseled Copper",
+  "block.cu.waxed_chiseled_copper": "Waxed Chiseled Copper",
+  "block.cu.waxed_exposed_chiseled_copper": "Waxed Exposed Chiseled Copper",
+  "block.cu.waxed_weathered_chiseled_copper": "Waxed Weathered Chiseled Copper",
+  "block.cu.waxed_oxidized_chiseled_copper": "Waxed Oxidized Chiseled Copper",
+
   "item.cu.copper_sulfate": "Copper Sulfate",
   "block.cu.sulfate_torch": "Copper Sulfate Torch",
   "block.cu.sulfate_wall_torch": "Copper Sulfate Wall Torch",
   "block.cu.sulfate_campfire": "Copper Sulfate Campfire",
-  "block.cu.sulfate_lantern": "Copper Sulfate Lantern"
+  "block.cu.sulfate_lantern": "Copper Sulfate Lantern",
+  "block.cu.block_of_copper_sulfate": "Block of Copper Sulfate",
+  "block.cu.block_of_copper_oxide": "Block of Copper Oxide"
 }

@@ -1,9 +1,6 @@
 package net.apowillow.cu;
 
-import net.apowillow.cu.data.ModLootTableGenerator;
-import net.apowillow.cu.data.ModModelProvider;
-import net.apowillow.cu.data.ModRecipeGenerator;
-import net.apowillow.cu.data.ModTagsGenerator;
+import net.apowillow.cu.data.*;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 
@@ -16,5 +13,6 @@ public class CUModDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ModRecipeGenerator::new);
 		pack.addProvider(ModModelProvider::new);
 		pack.addProvider(ModTagsGenerator::new);
+		pack.addProvider(ModArmorTagsGenerator::new);
 	}
 }

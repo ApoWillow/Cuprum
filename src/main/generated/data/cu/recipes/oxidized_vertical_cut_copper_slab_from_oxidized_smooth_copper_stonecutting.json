@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "cu:oxidized_smooth_copper"
+  },
+  "result": "cu:oxidized_vertical_cut_copper_slab"
+}

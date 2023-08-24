@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "cu:waxed_exposed_smooth_copper_slab"
+  },
+  "result": "cu:waxed_exposed_edgy_copper_slab"
+}

@@ -12,7 +12,6 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 public class ModItemGroup {
-
     public static ItemGroup CU_GROUP = Registry.register(Registries.ITEM_GROUP, new Identifier(CUMod.MOD_ID, "cu"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.cu"))
                     .icon(() -> new ItemStack(ModBlocks.EDGY_COPPER)).entries((displayContext, entries) -> {
@@ -31,8 +30,6 @@ public class ModItemGroup {
                         entries.add(ModItems.COPPER_ANCHOR);
                         entries.add(ModItems.COPPER_WRENCH);
 
-                        entries.add(ModItems.COPPER_OXIDE);
-                        entries.add(ModItems.COPPER_SULFATE);
                         entries.add(ModItems.SULFATE_TORCH);
                         entries.add(ModBlocks.SULFATE_CAMPFIRE);
                         entries.add(ModBlocks.SULFATE_LANTERN);
@@ -91,6 +88,42 @@ public class ModItemGroup {
                         entries.add(ModBlocks.WAXED_WEATHERED_EDGY_COPPER_STAIRS);
                         entries.add(ModBlocks.WAXED_OXIDIZED_EDGY_COPPER_STAIRS);
 
+                        entries.add(ModBlocks.VERTICAL_CUT_COPPER);
+                        entries.add(ModBlocks.EXPOSED_VERTICAL_CUT_COPPER);
+                        entries.add(ModBlocks.WEATHERED_VERTICAL_CUT_COPPER);
+                        entries.add(ModBlocks.OXIDIZED_VERTICAL_CUT_COPPER);
+                        entries.add(ModBlocks.WAXED_VERTICAL_CUT_COPPER);
+                        entries.add(ModBlocks.WAXED_EXPOSED_VERTICAL_CUT_COPPER);
+                        entries.add(ModBlocks.WAXED_WEATHERED_VERTICAL_CUT_COPPER);
+                        entries.add(ModBlocks.WAXED_OXIDIZED_VERTICAL_CUT_COPPER);
+
+                        entries.add(ModBlocks.VERTICAL_CUT_COPPER_SLAB);
+                        entries.add(ModBlocks.EXPOSED_VERTICAL_CUT_COPPER_SLAB);
+                        entries.add(ModBlocks.WEATHERED_VERTICAL_CUT_COPPER_SLAB);
+                        entries.add(ModBlocks.OXIDIZED_VERTICAL_CUT_COPPER_SLAB);
+                        entries.add(ModBlocks.WAXED_VERTICAL_CUT_COPPER_SLAB);
+                        entries.add(ModBlocks.WAXED_EXPOSED_VERTICAL_CUT_COPPER_SLAB);
+                        entries.add(ModBlocks.WAXED_WEATHERED_VERTICAL_CUT_COPPER_SLAB);
+                        entries.add(ModBlocks.WAXED_OXIDIZED_VERTICAL_CUT_COPPER_SLAB);
+
+                        entries.add(ModBlocks.VERTICAL_CUT_COPPER_STAIRS);
+                        entries.add(ModBlocks.EXPOSED_VERTICAL_CUT_COPPER_STAIRS);
+                        entries.add(ModBlocks.WEATHERED_VERTICAL_CUT_COPPER_STAIRS);
+                        entries.add(ModBlocks.OXIDIZED_VERTICAL_CUT_COPPER_STAIRS);
+                        entries.add(ModBlocks.WAXED_VERTICAL_CUT_COPPER_STAIRS);
+                        entries.add(ModBlocks.WAXED_EXPOSED_VERTICAL_CUT_COPPER_STAIRS);
+                        entries.add(ModBlocks.WAXED_WEATHERED_VERTICAL_CUT_COPPER_STAIRS);
+                        entries.add(ModBlocks.WAXED_OXIDIZED_VERTICAL_CUT_COPPER_STAIRS);
+
+                        entries.add(ModBlocks.CHISELED_COPPER);
+                        entries.add(ModBlocks.EXPOSED_CHISELED_COPPER);
+                        entries.add(ModBlocks.WEATHERED_CHISELED_COPPER);
+                        entries.add(ModBlocks.OXIDIZED_CHISELED_COPPER);
+                        entries.add(ModBlocks.WAXED_CHISELED_COPPER);
+                        entries.add(ModBlocks.WAXED_EXPOSED_CHISELED_COPPER);
+                        entries.add(ModBlocks.WAXED_WEATHERED_CHISELED_COPPER);
+                        entries.add(ModBlocks.WAXED_OXIDIZED_CHISELED_COPPER);
+
                         entries.add(ModBlocks.COPPER_LAMP);
                         entries.add(ModBlocks.EXPOSED_COPPER_LAMP);
                         entries.add(ModBlocks.WEATHERED_COPPER_LAMP);
@@ -117,6 +150,11 @@ public class ModItemGroup {
                         entries.add(ModBlocks.WAXED_EXPOSED_LEVITATOR_BLOCK);
                         entries.add(ModBlocks.WAXED_WEATHERED_LEVITATOR_BLOCK);
                         entries.add(ModBlocks.WAXED_OXIDIZED_LEVITATOR_BLOCK);
+
+                        entries.add(ModBlocks.BLOCK_OF_COPPER_OXIDE);
+                        entries.add(ModItems.COPPER_OXIDE);
+                        entries.add(ModBlocks.BLOCK_OF_COPPER_SULFATE);
+                        entries.add(ModItems.COPPER_SULFATE);
 
                     }).build());
 

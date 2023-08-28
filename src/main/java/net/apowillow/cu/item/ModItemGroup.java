@@ -156,6 +156,8 @@ public class ModItemGroup {
                         entries.add(ModBlocks.BLOCK_OF_COPPER_SULFATE);
                         entries.add(ModItems.COPPER_SULFATE);
 
+                        entries.add(CUMod.COPPER_HORN);
+
                     }).build());
 
     public static void registerItemGroups() {

@@ -27,7 +27,7 @@ public class ModItems {
     public static Item ROSE_GOLD_INGOT = registerItem("rose_gold_ingot",
             new Item(new FabricItemSettings()));
     public static Item ROSE_GOLD_SWORD = registerItem("rose_gold_sword",
-            new SwordItem(RoseGoldToolMaterial.ROSE_GOLD, 5,-2.4f,
+            new SwordItem(RoseGoldToolMaterial.ROSE_GOLD, 5,-2.3f,
                     new FabricItemSettings()));
     public static Item ROSE_GOLD_SHOVEL = registerItem("rose_gold_shovel",
             new ShovelItem(RoseGoldToolMaterial.ROSE_GOLD, 4,-3.0f,
@@ -39,7 +39,7 @@ public class ModItems {
             new HoeItem(RoseGoldToolMaterial.ROSE_GOLD, 0,-1.0f,
                     new FabricItemSettings()));
     public static Item ROSE_GOLD_AXE = registerItem("rose_gold_axe",
-            new AxeItem(RoseGoldToolMaterial.ROSE_GOLD, 7,-3.1f,
+            new AxeItem(RoseGoldToolMaterial.ROSE_GOLD, 8,-3.1f,
                     new FabricItemSettings()));
     // Rose Gold Armor Material
     public static final ArmorMaterial ROSE_GOLD_ARMOR_MATERIAL = new RoseGoldArmorMaterial();
@@ -68,7 +68,7 @@ public class ModItems {
 
     // Copper Anchor
     public static SwordItem COPPER_ANCHOR = (SwordItem) registerItem("copper_anchor",
-            new CopperAnchorItem(RoseGoldToolMaterial.COPPER,6,5f, new FabricItemSettings()));
+            new CopperAnchorItem(RoseGoldToolMaterial.COPPER,6,-2.7f, new FabricItemSettings()));
 
 
     private static Item registerItem(String name, Item item) {

@@ -3,25 +3,33 @@ package net.apowillow.cu;
 import net.apowillow.cu.block.ModBlocks;
 import net.apowillow.cu.item.ModItemGroup;
 import net.apowillow.cu.item.ModItems;
+import net.apowillow.cu.item.custom.CopperHornItem;
 import net.apowillow.cu.networking.ModPackets;
 import net.apowillow.cu.particle.ModParticles;
+import net.apowillow.cu.registry.copper_horn.CopperHornInstrumentTags;
+import net.apowillow.cu.registry.copper_horn.CopperHornInstruments;
+import net.apowillow.cu.registry.copper_horn.CopperHornRegistries;
 import net.apowillow.cu.util.ModRegistries;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry;
+import net.minecraft.item.Item;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class CUMod implements ModInitializer {
     public static final String MOD_ID = "cu";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+    public static final Item COPPER_HORN = new CopperHornItem(new Item.Settings().maxCount(1), CopperHornInstrumentTags.COPPER_HORNS);
+
 
     @Override
     public void onInitialize() {
         ModItems.registerModItems();
         ModItemGroup.registerItemGroups();
-
-        //ModBlockEntities.registerAllBlockEntities();
 
         ModPackets.registerC2SPackets();
         ModPackets.registerS2CPackets();
@@ -143,5 +151,12 @@ public class CUMod implements ModInitializer {
         OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.OXIDIZED_LINED_COPPER_LAMP, ModBlocks.WAXED_OXIDIZED_LINED_COPPER_LAMP);
 
         ModRegistries.registerModStuffs();
+
+        CopperHornInstruments.registerAndGetDefault(CopperHornRegistries.COPPER_HORN_INSTRUMENT);
+        Registry.register(Registries.ITEM, id("copper_horn"), COPPER_HORN);
+    }
+
+    public static Identifier id(String path) {
+        return new Identifier(MOD_ID, path);
     }
 }

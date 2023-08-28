@@ -14,5 +14,6 @@ public class CUModDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ModModelProvider::new);
 		pack.addProvider(ModTagsGenerator::new);
 		pack.addProvider(ModArmorTagsGenerator::new);
+		pack.addProvider(ModCopperHornTagsGenerator::new);
 	}
 }

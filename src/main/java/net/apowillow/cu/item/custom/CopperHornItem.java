@@ -15,7 +15,6 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.text.MutableText;
 import net.minecraft.text.Text;
 import net.minecraft.util.*;
-import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
 import org.jetbrains.annotations.Nullable;
@@ -42,23 +41,15 @@ public class CopperHornItem extends Item {
             tooltip.add(mutableText.formatted(Formatting.GRAY));
         }
     }
-
     public static ItemStack getStackForInstrument(Item item, RegistryEntry<CopperHornInstrument> instrument) {
         ItemStack itemStack = new ItemStack(item);
         CopperHornItem.setInstrument(itemStack, instrument);
         return itemStack;
     }
-
-    public static void setRandomInstrumentFromTag(ItemStack stack, TagKey<CopperHornInstrument> instrumentTag, Random random) {
-        Optional<RegistryEntry<CopperHornInstrument>> optional = CopperHornRegistries.COPPER_HORN_INSTRUMENT.getEntryList(instrumentTag).flatMap(entryList -> entryList.getRandom(random));
-        optional.ifPresent(copperHornInstrumentRegistryEntry -> CopperHornItem.setInstrument(stack, copperHornInstrumentRegistryEntry));
-    }
-
     private static void setInstrument(ItemStack stack, RegistryEntry<CopperHornInstrument> instrument) {
         NbtCompound nbtCompound = stack.getOrCreateNbt();
         nbtCompound.putString(COPPER_HORN_INSTRUMENT, instrument.getKey().orElseThrow(() -> new IllegalStateException("Invalid instrument")).getValue().toString());
     }
-
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack itemStack = user.getStackInHand(hand);
@@ -72,13 +63,11 @@ public class CopperHornItem extends Item {
         }
         return TypedActionResult.fail(itemStack);
     }
-
     @Override
     public int getMaxUseTime(ItemStack stack) {
         Optional<? extends RegistryEntry<CopperHornInstrument>> optional = this.getInstrument(stack);
         return optional.map(copperHornInstrumentRegistryEntry -> copperHornInstrumentRegistryEntry.value().useDuration()).orElse(0);
     }
-
     private Optional<? extends RegistryEntry<CopperHornInstrument>> getInstrument(ItemStack stack) {
         Identifier identifier;
         NbtCompound nbtCompound = stack.getNbt();
@@ -91,7 +80,6 @@ public class CopperHornItem extends Item {
         }
         return Optional.empty();
     }
-
     @Override
     public UseAction getUseAction(ItemStack stack) {
         return UseAction.TOOT_HORN;

@@ -20,7 +20,7 @@ public class CopperHornSoundEvents {
     }
 
     private static SoundEvent register(String id) {
-        return Registry.register(Registries.SOUND_EVENT, CUMod.MOD_ID, SoundEvent.of(CUMod.id(id)));
+        return Registry.register(Registries.SOUND_EVENT, CUMod.id(id), SoundEvent.of(CUMod.id(id)));
     }
 
     private enum CopperHornSoundType {

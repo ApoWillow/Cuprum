@@ -4,8 +4,7 @@ package net.apowillow.cu.item;
 import net.apowillow.cu.CUMod;
 import net.apowillow.cu.block.ModBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
+import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
@@ -156,7 +155,6 @@ public class ModItemGroup {
                         entries.add(ModBlocks.BLOCK_OF_COPPER_SULFATE);
                         entries.add(ModItems.COPPER_SULFATE);
 
-                        entries.add(CUMod.COPPER_HORN);
 
                     }).build());
 

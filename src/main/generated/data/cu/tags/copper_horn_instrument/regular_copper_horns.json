@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "cu:great_copper_horn",
+    "cu:old_copper_horn",
+    "cu:pure_copper_horn",
+    "cu:dry_copper_horn",
+    "cu:mumble_copper_horn",
+    "cu:clear_copper_horn"
+  ]
+}

@@ -9,6 +9,7 @@ import net.apowillow.cu.particle.ModParticles;
 import net.apowillow.cu.registry.copper_horn.CopperHornInstrumentTags;
 import net.apowillow.cu.registry.copper_horn.CopperHornInstruments;
 import net.apowillow.cu.registry.copper_horn.CopperHornRegistries;
+import net.apowillow.cu.util.ModLootTableModifiers;
 import net.apowillow.cu.util.ModModelPredicateProvider;
 import net.apowillow.cu.util.ModRegistries;
 import net.fabricmc.api.ModInitializer;
@@ -40,6 +41,7 @@ public class CUMod implements ModInitializer {
         ModBlocks.registerModBlocks();
 
         ModModelPredicateProvider.registerModules();
+        ModLootTableModifiers.modifyLootTables();
 
         // Adds the ability to oxidize and wax the smooth copper and all it's variants
         OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.SMOOTH_COPPER, ModBlocks.EXPOSED_SMOOTH_COPPER);

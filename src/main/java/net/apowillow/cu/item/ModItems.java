@@ -1,7 +1,6 @@
 package net.apowillow.cu.item;
 
 import net.apowillow.cu.CUMod;
-import net.apowillow.cu.item.custom.CopperAnchorItem;
 import net.apowillow.cu.item.custom.CopperOxideItem;
 import net.apowillow.cu.item.custom.CopperWrenchItem;
 import net.apowillow.cu.block.ModBlocks;
@@ -65,10 +64,6 @@ public class ModItems {
     // Copper Wrench
     public static Item COPPER_WRENCH = registerItem("copper_wrench",
             new CopperWrenchItem(new FabricItemSettings().maxCount(1).maxDamage(64)));
-
-    // Copper Anchor
-    public static SwordItem COPPER_ANCHOR = (SwordItem) registerItem("copper_anchor",
-            new CopperAnchorItem(RoseGoldToolMaterial.COPPER,6,-2.7f, new FabricItemSettings()));
 
 
     private static Item registerItem(String name, Item item) {

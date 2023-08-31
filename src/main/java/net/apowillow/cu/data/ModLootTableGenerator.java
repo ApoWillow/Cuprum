@@ -1,7 +1,6 @@
 package net.apowillow.cu.data;
 
 import net.apowillow.cu.block.ModBlocks;
-import net.apowillow.cu.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 
@@ -133,7 +132,7 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
         // Adds all the Copper Sulfate related block drops
         addDrop(ModBlocks.SULFATE_TORCH);
         addDrop(ModBlocks.SULFATE_WALL_TORCH);
-        addDrop(ModBlocks.SULFATE_CAMPFIRE, ModItems.COPPER_OXIDE);
+        //addDrop(ModBlocks.SULFATE_CAMPFIRE, ModItems.COPPER_OXIDE);
         addDrop(ModBlocks.BLOCK_OF_COPPER_OXIDE);
         addDrop(ModBlocks.BLOCK_OF_COPPER_SULFATE);
     }

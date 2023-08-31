@@ -22,8 +22,8 @@ public class ModTagsGenerator extends FabricTagProvider.BlockTagProvider {
         addsAxeBlocks(BlockTags.AXE_MINEABLE);
     }
     private FabricTagProvider<Block>.FabricTagBuilder addsAxeBlocks(TagKey<Block> tagKey) {
-        return getOrCreateTagBuilder(tagKey)
-                .add(ModBlocks.SULFATE_CAMPFIRE);
+        return getOrCreateTagBuilder(tagKey);
+                //.add(ModBlocks.SULFATE_CAMPFIRE);
     }
 
     private FabricTagProvider<Block>.FabricTagBuilder addsPickaxeBlocks(TagKey<Block> tagKey){

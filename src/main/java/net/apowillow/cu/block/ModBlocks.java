@@ -10,15 +10,11 @@ import net.apowillow.cu.particle.ModParticles;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
-import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
-
-import java.util.function.ToIntFunction;
 
 public class ModBlocks {
 
@@ -382,8 +378,8 @@ public class ModBlocks {
     public static final TorchBlock SULFATE_WALL_TORCH = (TorchBlock) registerCustomBlock("sulfate_wall_torch",
             new WallTorchBlock(FabricBlockSettings.copyOf(Blocks.TORCH).breakInstantly(), ModParticles.GREEN_FLAME_PARTICLE));
 
-    public static final Block SULFATE_CAMPFIRE = registerBlock("sulfate_campfire",
-            new CampfireBlock(true, 1, FabricBlockSettings.copyOf(Blocks.CAMPFIRE)));
+    //public static final Block SULFATE_CAMPFIRE = registerBlock("sulfate_campfire",
+            //new CopperSulfateCampfireBlock(false, 1, FabricBlockSettings.copyOf(Blocks.CAMPFIRE)));
 
     public static final LanternBlock SULFATE_LANTERN = (LanternBlock) registerBlock("sulfate_lantern",
             new LanternBlock(FabricBlockSettings.copyOf(Blocks.LANTERN).requiresTool()));
@@ -413,9 +409,9 @@ public class ModBlocks {
                 new BlockItem(block, new FabricItemSettings()));
     }
 
-    private static ToIntFunction<BlockState> createLightLevelFromLitBlockState(int litLevel) {
+    /*private static ToIntFunction<BlockState> createLightLevelFromLitBlockState(int litLevel) {
         return state -> state.get(Properties.LIT) ? litLevel : 0;
-    }
+    }*/
 
     public static void registerModBlocks() {
         CUMod.LOGGER.info("Registering ModBlocks for " + CUMod.MOD_ID);

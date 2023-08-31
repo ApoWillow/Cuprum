@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.event.registry.FabricRegistryBuilder;
 import net.minecraft.registry.DefaultedRegistry;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.entry.RegistryEntry;
 
 public class CopperHornRegistries {
     public static final RegistryKey<Registry<CopperHornInstrument>> COPPER_HORN_INSTRUMENT_KEY = RegistryKey.ofRegistry(CUMod.id("copper_horn_instrument"));

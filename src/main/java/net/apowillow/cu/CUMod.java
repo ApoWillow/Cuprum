@@ -6,21 +6,16 @@ import net.apowillow.cu.item.ModItems;
 import net.apowillow.cu.item.custom.CopperHornItem;
 import net.apowillow.cu.networking.ModPackets;
 import net.apowillow.cu.particle.ModParticles;
-import net.apowillow.cu.registry.copper_horn.CopperHornInstrument;
 import net.apowillow.cu.registry.copper_horn.CopperHornInstrumentTags;
 import net.apowillow.cu.registry.copper_horn.CopperHornInstruments;
 import net.apowillow.cu.registry.copper_horn.CopperHornRegistries;
 import net.apowillow.cu.util.ModRegistries;
 import net.fabricmc.api.ModInitializer;
 
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
-import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -159,12 +154,6 @@ public class CUMod implements ModInitializer {
 
         CopperHornInstruments.registerAndGetDefault(CopperHornRegistries.COPPER_HORN_INSTRUMENT);
         Registry.register(Registries.ITEM, id("copper_horn"), COPPER_HORN);
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(entries -> {
-            for (RegistryEntry<CopperHornInstrument> registryEntry : CopperHornRegistries.COPPER_HORN_INSTRUMENT.iterateEntries(CopperHornInstrumentTags.COPPER_HORNS)) {
-                entries.addAfter(Items.GOAT_HORN, CopperHornItem.getStackForInstrument(CUMod.COPPER_HORN, registryEntry));
-            }
-        });
     }
 
     public static Identifier id(String path) {

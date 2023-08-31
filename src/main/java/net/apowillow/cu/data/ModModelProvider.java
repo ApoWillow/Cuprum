@@ -115,7 +115,7 @@ public class ModModelProvider extends FabricModelProvider {
 
         // Sulfate related blocks
         blockStateModelGenerator.registerTorch(ModBlocks.SULFATE_TORCH, ModBlocks.SULFATE_WALL_TORCH);
-        blockStateModelGenerator.registerCampfire(ModBlocks.SULFATE_CAMPFIRE);
+        //blockStateModelGenerator.registerCampfire(ModBlocks.SULFATE_CAMPFIRE);
         blockStateModelGenerator.registerLantern(ModBlocks.SULFATE_LANTERN);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.BLOCK_OF_COPPER_SULFATE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.BLOCK_OF_COPPER_OXIDE);

@@ -8,11 +8,6 @@
     "MixinOxidizableSlab",
     "MixinOxidizableStairs"
   ],
-  "client": [
-    "ItemRendererAccessor",
-    "ItemRendererMixin",
-    "ModelLoaderMixin"
-  ],
   "injectors": {
     "defaultRequire": 1
 	}

@@ -3,12 +3,18 @@ package net.apowillow.cu.item;
 
 import net.apowillow.cu.CUMod;
 import net.apowillow.cu.block.ModBlocks;
+import net.apowillow.cu.item.custom.CopperHornItem;
+import net.apowillow.cu.registry.copper_horn.CopperHornInstrument;
+import net.apowillow.cu.registry.copper_horn.CopperHornInstrumentTags;
+import net.apowillow.cu.registry.copper_horn.CopperHornRegistries;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
+
 
 public class ModItemGroup {
     public static ItemGroup CU_GROUP = Registry.register(Registries.ITEM_GROUP, new Identifier(CUMod.MOD_ID, "cu"),
@@ -26,11 +32,10 @@ public class ModItemGroup {
                         entries.add(ModItems.ROSE_GOLD_LEGGINGS);
                         entries.add(ModItems.ROSE_GOLD_BOOTS);
 
-                        entries.add(ModItems.COPPER_ANCHOR);
                         entries.add(ModItems.COPPER_WRENCH);
 
                         entries.add(ModItems.SULFATE_TORCH);
-                        entries.add(ModBlocks.SULFATE_CAMPFIRE);
+                        //entries.add(ModBlocks.SULFATE_CAMPFIRE);
                         entries.add(ModBlocks.SULFATE_LANTERN);
 
                         entries.add(ModBlocks.SMOOTH_COPPER);
@@ -155,6 +160,9 @@ public class ModItemGroup {
                         entries.add(ModBlocks.BLOCK_OF_COPPER_SULFATE);
                         entries.add(ModItems.COPPER_SULFATE);
 
+                        for (RegistryEntry<CopperHornInstrument> registryEntry : CopperHornRegistries.COPPER_HORN_INSTRUMENT.iterateEntries(CopperHornInstrumentTags.COPPER_HORNS)) {
+                            entries.add(CopperHornItem.getStackForInstrument(CUMod.COPPER_HORN, registryEntry));
+                        }
 
                     }).build());
 

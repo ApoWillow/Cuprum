@@ -1,6 +1,5 @@
 package net.apowillow.cu.util;
 
-import net.apowillow.cu.CUMod;
 import net.apowillow.cu.item.ModItems;
 import net.apowillow.cu.networking.ModPackets;
 import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;

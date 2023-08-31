@@ -9,9 +9,7 @@ import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.Items;
-import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
-import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.util.Identifier;
 
 import java.util.function.Consumer;
@@ -790,19 +788,6 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                         FabricRecipeProvider.conditionsFromItem(Items.GLOWSTONE))
                 .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModBlocks.COPPER_LAMP)));
 
-        // Copper Anchor Recipe
-        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.COPPER_ANCHOR)
-                .pattern(" CC")
-                .pattern(" CC")
-                .pattern("B  ")
-                .input('C', Items.COPPER_INGOT)
-                .input('B', Blocks.COPPER_BLOCK)
-                .criterion(FabricRecipeProvider.hasItem(Items.COPPER_INGOT),
-                        FabricRecipeProvider.conditionsFromItem(Items.COPPER_INGOT))
-                .criterion(FabricRecipeProvider.hasItem(Blocks.COPPER_BLOCK),
-                        FabricRecipeProvider.conditionsFromItem(Blocks.COPPER_BLOCK))
-                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.COPPER_ANCHOR)));
-
         // Copper Wrench Recipe
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.COPPER_WRENCH)
                 .pattern(" C ")
@@ -836,7 +821,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                         FabricRecipeProvider.conditionsFromItem(Items.COPPER_INGOT))
                 .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.COPPER_SULFATE)));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SULFATE_CAMPFIRE)
+        /*ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SULFATE_CAMPFIRE)
                 .pattern(" S ")
                 .pattern("SCS")
                 .pattern("LLL")
@@ -847,7 +832,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                         FabricRecipeProvider.conditionsFromItem(Items.STICK))
                 .criterion(FabricRecipeProvider.hasItem(ModItems.COPPER_SULFATE),
                         FabricRecipeProvider.conditionsFromItem(Items.COPPER_INGOT))
-                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModBlocks.SULFATE_CAMPFIRE)));
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModBlocks.SULFATE_CAMPFIRE))); */
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SULFATE_LANTERN)
                 .pattern("III")

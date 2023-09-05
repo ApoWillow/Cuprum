@@ -15,6 +15,7 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.text.MutableText;
 import net.minecraft.text.Text;
 import net.minecraft.util.*;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
 import org.jetbrains.annotations.Nullable;
@@ -46,6 +47,12 @@ public class CopperHornItem extends Item {
         CopperHornItem.setInstrument(itemStack, instrument);
         return itemStack;
     }
+
+    public static void setRandomInstrumentFromTag(ItemStack stack, TagKey<CopperHornInstrument> instrumentTag, Random random) {
+        Optional<RegistryEntry<CopperHornInstrument>> optional = CopperHornRegistries.COPPER_HORN_INSTRUMENT.getEntryList(instrumentTag).flatMap(entryList -> entryList.getRandom(random));
+        optional.ifPresent(copperHornInstrumentRegistryEntry -> CopperHornItem.setInstrument(stack, copperHornInstrumentRegistryEntry));
+    }
+
     private static void setInstrument(ItemStack stack, RegistryEntry<CopperHornInstrument> instrument) {
         NbtCompound nbtCompound = stack.getOrCreateNbt();
         nbtCompound.putString(COPPER_HORN_INSTRUMENT, instrument.getKey().orElseThrow(() -> new IllegalStateException("Invalid instrument")).getValue().toString());

@@ -1,10 +1,12 @@
 package net.apowillow.cu.data;
 
+import net.apowillow.cu.CUMod;
 import net.apowillow.cu.block.ModBlocks;
 import net.apowillow.cu.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.block.Blocks;
+import net.minecraft.data.server.recipe.ComplexRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
@@ -869,6 +871,8 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(ModItems.COPPER_SULFATE),
                         FabricRecipeProvider.conditionsFromItem(Items.IRON_NUGGET))
                 .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModBlocks.BLOCK_OF_COPPER_SULFATE)));
+
+        ComplexRecipeJsonBuilder.create(CUMod.COPPER_HORN_RECIPE).offerTo(exporter, CUMod.id("copper_horn").toString());
 
 
     }

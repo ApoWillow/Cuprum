@@ -4,8 +4,8 @@ import net.apowillow.cu.block.ModBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 
-public class ModLootTableGenerator extends FabricBlockLootTableProvider {
-    public ModLootTableGenerator(FabricDataOutput dataOutput) {
+public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
+    public ModBlockLootTableGenerator(FabricDataOutput dataOutput) {
         super(dataOutput);
     }
 

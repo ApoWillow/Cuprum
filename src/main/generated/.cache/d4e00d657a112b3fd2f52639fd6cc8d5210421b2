@@ -1,4 +1,4 @@
-// 1.20.1	2023-08-31T21:10:14.1119717	Copper Undergo/Block Loot Tables
+// 1.20.1	2023-09-05T22:27:11.2263965	Copper Undergo/Block Loot Tables
 f3961750cdfa301ab70f9aff43e3e374e90af152 data\cu\loot_tables\blocks\exposed_copper_lamp.json
 97533b089f49f5cc78c154f4f77ebcabeff43307 data\cu\loot_tables\blocks\smooth_copper.json
 f7e98834dc0eecb8651f3a54f7137f0832bf572f data\cu\loot_tables\blocks\waxed_oxidized_lined_copper_lamp.json
@@ -16,8 +16,8 @@ f764a64c6f4778a137457ce62d84cd4a6e1c98d6 data\cu\loot_tables\blocks\waxed_oxidiz
 aec534a71b49855655a8e5ed2f8603deda69c8b2 data\cu\loot_tables\blocks\sulfate_torch.json
 f3444a41ec22b9ba619b6c0adcdabf1b3d2c5dff data\cu\loot_tables\blocks\weathered_vertical_cut_copper.json
 778902f16d2350c43cd572e72bc9aa236ad24c29 data\cu\loot_tables\blocks\waxed_exposed_edgy_copper_stairs.json
-d19e326726659fe018888823ea949eaf0d995dd9 data\cu\loot_tables\blocks\vertical_cut_copper.json
 22a84746cbc1f15c3cbefd802414bdbcb69a4230 data\cu\loot_tables\blocks\exposed_levitator_block.json
+d19e326726659fe018888823ea949eaf0d995dd9 data\cu\loot_tables\blocks\vertical_cut_copper.json
 8ad54ccc328b8bd4d09f54dacd81d645cb295f66 data\cu\loot_tables\blocks\weathered_vertical_cut_copper_slab.json
 5924eb74d4b7c240bd585883ddf14ac522cddb03 data\cu\loot_tables\blocks\waxed_exposed_edgy_copper_slab.json
 2d4dd2c0f0bcca7da01b9ea0a0ee00367a784b24 data\cu\loot_tables\blocks\waxed_levitator_block.json
@@ -50,8 +50,8 @@ aaffa72d223fc65ddc8c0535da7e9e8fface7847 data\cu\loot_tables\blocks\exposed_vert
 7d526ab1df4bbcf9dfb9293a1424726fa7adce7c data\cu\loot_tables\blocks\edgy_copper.json
 2a90d4a902947a15c4f6ebffb97d8c4378b0a8d8 data\cu\loot_tables\blocks\exposed_smooth_copper_slab.json
 e4bf54f07aaf9dfa9dbe95159fb0f5570224c019 data\cu\loot_tables\blocks\weathered_smooth_copper.json
-ee37e0b0140e5cdfe12c761baf959b6e499ea0e9 data\cu\loot_tables\blocks\exposed_edgy_copper.json
 8f07201431094e19ceb2b3a26d9ece0da10698db data\cu\loot_tables\blocks\waxed_weathered_edgy_copper_slab.json
+ee37e0b0140e5cdfe12c761baf959b6e499ea0e9 data\cu\loot_tables\blocks\exposed_edgy_copper.json
 a58b7dd59e54ef3f491cc96d3022c68c1844018a data\cu\loot_tables\blocks\oxidized_vertical_cut_copper_stairs.json
 13dd4ab909578140ca9b06cf4c86d2780efc50e9 data\cu\loot_tables\blocks\weathered_edgy_copper_slab.json
 9cbdafa7b52def5e2b8efec32c94c74d94f8a1da data\cu\loot_tables\blocks\waxed_exposed_copper_lamp.json

@@ -65,6 +65,8 @@ public class ModItems {
     public static Item COPPER_WRENCH = registerItem("copper_wrench",
             new CopperWrenchItem(new FabricItemSettings().maxCount(1).maxDamage(64)));
 
+    // Custom Goat Horns
+
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(CUMod.MOD_ID, name), item);

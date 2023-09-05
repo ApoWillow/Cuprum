@@ -6,7 +6,8 @@
     "MixinAxeItem",
     "MixinOxidizableBlock",
     "MixinOxidizableSlab",
-    "MixinOxidizableStairs"
+    "MixinOxidizableStairs",
+    "MixinGoatHornItem"
   ],
   "injectors": {
     "defaultRequire": 1

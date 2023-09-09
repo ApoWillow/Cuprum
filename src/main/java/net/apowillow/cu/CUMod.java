@@ -16,15 +16,9 @@ import net.apowillow.cu.util.ModModelPredicateProvider;
 import net.apowillow.cu.util.ModRegistries;
 import net.fabricmc.api.ModInitializer;
 
-import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
 import net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry;
 import net.minecraft.item.Item;
-import net.minecraft.loot.LootPool;
-import net.minecraft.loot.LootTables;
-import net.minecraft.loot.condition.RandomChanceLootCondition;
-import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.function.LootFunctionType;
-import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.recipe.SpecialRecipeSerializer;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -173,18 +167,6 @@ public class CUMod implements ModInitializer {
 
         CopperHornInstruments.registerAndGetDefault(CopperHornRegistries.COPPER_HORN_INSTRUMENT);
         Registry.register(Registries.ITEM, id("copper_horn"), COPPER_HORN);
-
-        LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
-            if (id.equals(LootTables.PILLAGER_OUTPOST_CHEST)) {
-                tableBuilder.pool(LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.2f).build())
-                        .with(ItemEntry.builder(COPPER_HORN))
-                        .apply(SetCopperHornLootFunction.builder(CopperHornInstrumentTags.REGULAR_COPPER_HORNS))
-                );
-            }
-        });
-
         Registry.register(Registries.RECIPE_SERIALIZER, id("copper_horn_recipe"), COPPER_HORN_RECIPE);
 
     }

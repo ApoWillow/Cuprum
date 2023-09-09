@@ -4,7 +4,6 @@ import net.apowillow.cu.block.ModBlocks;
 import net.apowillow.cu.item.ModItemGroup;
 import net.apowillow.cu.item.ModItems;
 import net.apowillow.cu.item.custom.CopperHornItem;
-import net.apowillow.cu.loot.SetCopperHornLootFunction;
 import net.apowillow.cu.networking.ModPackets;
 import net.apowillow.cu.particle.ModParticles;
 import net.apowillow.cu.recipe.CopperHornRecipe;
@@ -31,10 +30,6 @@ public class CUMod implements ModInitializer {
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
     public static final Item COPPER_HORN = new CopperHornItem(new Item.Settings().maxCount(1), CopperHornInstrumentTags.COPPER_HORNS);
     public static final SpecialRecipeSerializer<CopperHornRecipe> COPPER_HORN_RECIPE = new SpecialRecipeSerializer<>(CopperHornRecipe::new);
-    public static final LootFunctionType SET_COPPER_HORN_INSTRUMENT = Registry.register(
-            Registries.LOOT_FUNCTION_TYPE, id("set_copper_horn_instrument"),
-            new LootFunctionType(new SetCopperHornLootFunction.Serializer())
-    );
 
     @Override
     public void onInitialize() {

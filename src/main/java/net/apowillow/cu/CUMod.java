@@ -17,7 +17,6 @@ import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry;
 import net.minecraft.item.Item;
-import net.minecraft.loot.function.LootFunctionType;
 import net.minecraft.recipe.SpecialRecipeSerializer;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;

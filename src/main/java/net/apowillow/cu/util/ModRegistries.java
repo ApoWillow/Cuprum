@@ -185,6 +185,13 @@ public class ModRegistries {
                 }
                 return itemStack;
             }
+
+            @Override
+            protected void playSound(BlockPointer pointer) {
+                if (!isSuccess()){
+                    super.playSound(pointer);
+                }
+            }
         });
 
         DispenserBlock.registerBehavior(CUMod.COPPER_HORN, new FallibleItemDispenserBehavior() {
@@ -278,6 +285,13 @@ public class ModRegistries {
                 }
 
                 return itemStack;
+            }
+
+            @Override
+            protected void playSound(BlockPointer pointer) {
+                if (!isSuccess()){
+                    super.playSound(pointer);
+                }
             }
         });
     }

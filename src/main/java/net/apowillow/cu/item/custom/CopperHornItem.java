@@ -1,10 +1,8 @@
 package net.apowillow.cu.item.custom;
 
-import net.apowillow.cu.CUMod;
 import net.apowillow.cu.registry.copper_horn.CopperHornInstrument;
 import net.apowillow.cu.registry.copper_horn.CopperHornRegistries;
 import net.minecraft.client.item.TooltipContext;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;

@@ -1,6 +1,5 @@
 package net.apowillow.cu.util;
 
-import com.sun.jna.ptr.PointerByReference;
 import net.apowillow.cu.CUMod;
 import net.apowillow.cu.item.ModItems;
 import net.apowillow.cu.item.custom.CopperHornItem;
@@ -15,8 +14,6 @@ import net.minecraft.block.DispenserBlock;
 import net.minecraft.block.dispenser.FallibleItemDispenserBehavior;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.block.entity.DispenserBlockEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.GoatHornItem;
 import net.minecraft.item.Instrument;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -35,7 +32,6 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPointer;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
-import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
 
 
@@ -135,7 +131,6 @@ public class ModRegistries {
                     double second1 = getFloatFromString(time, 17);
                     double second2 = getFloatFromString(oldTime, 17);
 
-
                     if (Math.abs(second1 - second2) >= (double) instrument.useDuration() / 20) {
                         setSuccess(true);
                     } else {
@@ -190,6 +185,13 @@ public class ModRegistries {
                 }
                 return itemStack;
             }
+
+            @Override
+            protected void playSound(BlockPointer pointer) {
+                if (!isSuccess()){
+                    super.playSound(pointer);
+                }
+            }
         });
 
         DispenserBlock.registerBehavior(CUMod.COPPER_HORN, new FallibleItemDispenserBehavior() {
@@ -232,23 +234,23 @@ public class ModRegistries {
                     if (Math.abs(second1 - second2) >= (double) instrument.useDuration() / 20) {
                         setSuccess(true);
                     } else {
-                        short min1 = getShortFromString(time, 14, 16);
-                        short min2 = getShortFromString(oldTime, 14, 16);
+                        short min1 = getByteFromString(time, 14, 16);
+                        short min2 = getByteFromString(oldTime, 14, 16);
                         if (Math.abs(min1 - min2) >= 1) {
                             setSuccess(true);
                         } else {
-                            short hour1 = getShortFromString(time, 11, 13);
-                            short hour2 = getShortFromString(oldTime, 11, 13);
+                            short hour1 = getByteFromString(time, 11, 13);
+                            short hour2 = getByteFromString(oldTime, 11, 13);
                             if (Math.abs(hour1 - hour2) >= 1) {
                                 setSuccess(true);
                             } else {
-                                short day1 = getShortFromString(time, 8, 10);
-                                short day2 = getShortFromString(oldTime, 8, 10);
+                                short day1 = getByteFromString(time, 8, 10);
+                                short day2 = getByteFromString(oldTime, 8, 10);
                                 if (Math.abs(day1 - day2) >= 1) {
                                     setSuccess(true);
                                 } else {
-                                    short month1 = getShortFromString(time, 5, 7);
-                                    short month2 = getShortFromString(oldTime, 5, 7);
+                                    short month1 = getByteFromString(time, 5, 7);
+                                    short month2 = getByteFromString(oldTime, 5, 7);
                                     if (Math.abs(month1 - month2) >= 1) {
                                         setSuccess(true);
                                     } else {
@@ -283,6 +285,13 @@ public class ModRegistries {
                 }
 
                 return itemStack;
+            }
+
+            @Override
+            protected void playSound(BlockPointer pointer) {
+                if (!isSuccess()){
+                    super.playSound(pointer);
+                }
             }
         });
     }
@@ -372,6 +381,17 @@ public class ModRegistries {
             second = Short.parseShort(secondS);
         } catch (Exception ignored) {
         }
+        return second;
+    }
+
+    private static byte getByteFromString(String time, int firstIndex, int lastIndex) {
+        byte second = 0;
+
+        String secondS = time.substring(firstIndex, lastIndex);
+
+        try {
+            second = Byte.parseByte(secondS);
+        } catch (Exception ignored) {}
         return second;
     }
 }

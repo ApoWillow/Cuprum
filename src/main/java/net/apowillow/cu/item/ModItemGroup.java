@@ -155,6 +155,15 @@ public class ModItemGroup {
                         entries.add(ModBlocks.WAXED_WEATHERED_LEVITATOR_BLOCK);
                         entries.add(ModBlocks.WAXED_OXIDIZED_LEVITATOR_BLOCK);
 
+                        entries.add(ModBlocks.COPPER_CHAIN);
+                        entries.add(ModBlocks.EXPOSED_COPPER_CHAIN);
+                        entries.add(ModBlocks.WEATHERED_COPPER_CHAIN);
+                        entries.add(ModBlocks.OXIDIZED_COPPER_CHAIN);
+                        entries.add(ModBlocks.WAXED_COPPER_CHAIN);
+                        entries.add(ModBlocks.WAXED_EXPOSED_COPPER_CHAIN);
+                        entries.add(ModBlocks.WAXED_WEATHERED_COPPER_CHAIN);
+                        entries.add(ModBlocks.WAXED_OXIDIZED_COPPER_CHAIN);
+
                         entries.add(ModBlocks.BLOCK_OF_COPPER_OXIDE);
                         entries.add(ModItems.COPPER_OXIDE);
                         entries.add(ModBlocks.BLOCK_OF_COPPER_SULFATE);

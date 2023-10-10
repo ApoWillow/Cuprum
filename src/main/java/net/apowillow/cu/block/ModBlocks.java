@@ -2,6 +2,7 @@ package net.apowillow.cu.block;
 
 import net.apowillow.cu.CUMod;
 import net.apowillow.cu.block.custom.CopperLampBlock;
+import net.apowillow.cu.block.custom.chain.CopperChainBlock;
 import net.apowillow.cu.block.custom.levitatorblocks.ExposedLevitatorBlock;
 import net.apowillow.cu.block.custom.levitatorblocks.LevitatorBlock;
 import net.apowillow.cu.block.custom.levitatorblocks.OxidizedLevitatorBlock;
@@ -317,7 +318,7 @@ public class ModBlocks {
                     .luminance(state -> state.get(CopperLampBlock.LIT) ? 15 : 0)));
 
     // Registering all the chain blocks
-    /*
+
     public static final Block COPPER_CHAIN = registerBlock("copper_chain",
             new CopperChainBlock(Oxidizable.OxidationLevel.UNAFFECTED, FabricBlockSettings.copyOf(Blocks.CHAIN).strength(3.0f).requiresTool()));
 
@@ -342,7 +343,6 @@ public class ModBlocks {
     public static final Block WAXED_OXIDIZED_COPPER_CHAIN = registerBlock("waxed_oxidized_copper_chain",
             new CopperChainBlock(Oxidizable.OxidationLevel.OXIDIZED, FabricBlockSettings.copyOf(Blocks.CHAIN).strength(3.0f).requiresTool()));
 
-     */
 
 
 

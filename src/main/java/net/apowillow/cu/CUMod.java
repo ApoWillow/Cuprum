@@ -157,6 +157,15 @@ public class CUMod implements ModInitializer {
         OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.WEATHERED_LINED_COPPER_LAMP, ModBlocks.WAXED_WEATHERED_LINED_COPPER_LAMP);
         OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.OXIDIZED_LINED_COPPER_LAMP, ModBlocks.WAXED_OXIDIZED_LINED_COPPER_LAMP);
 
+        // Adds the ability to oxidize and wax the copper chain and all it's variants
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.COPPER_CHAIN, ModBlocks.EXPOSED_COPPER_CHAIN);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.EXPOSED_COPPER_CHAIN, ModBlocks.WEATHERED_COPPER_CHAIN);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.WEATHERED_COPPER_CHAIN, ModBlocks.OXIDIZED_COPPER_CHAIN);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.COPPER_CHAIN, ModBlocks.WAXED_COPPER_CHAIN);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.EXPOSED_COPPER_CHAIN, ModBlocks.WAXED_EXPOSED_COPPER_CHAIN);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.WEATHERED_COPPER_CHAIN, ModBlocks.WAXED_WEATHERED_COPPER_CHAIN);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.OXIDIZED_COPPER_CHAIN, ModBlocks.WAXED_OXIDIZED_COPPER_CHAIN);
+
         ModRegistries.registerModStuffs();
 
         CopperHornInstruments.registerAndGetDefault(CopperHornRegistries.COPPER_HORN_INSTRUMENT);

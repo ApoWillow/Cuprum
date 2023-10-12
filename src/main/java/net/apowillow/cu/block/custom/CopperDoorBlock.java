@@ -1,7 +1,9 @@
 package net.apowillow.cu.block.custom;
 
+import com.google.common.collect.ImmutableMap;
 import net.apowillow.cu.CUMod;
 import net.apowillow.cu.registry.FasterOxidation;
+import net.apowillow.cu.util.oxidization.IOxidizable;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.DoubleBlockHalf;
 import net.minecraft.entity.Entity;
@@ -18,7 +20,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import org.jetbrains.annotations.Nullable;
 
-public class CopperDoorBlock extends DoorBlock implements Oxidizable {
+public class CopperDoorBlock extends DoorBlock implements IOxidizable {
     private final Oxidizable.OxidationLevel oxidationLevel;
 
     public CopperDoorBlock(Oxidizable.OxidationLevel oxidationLevel, Settings settings, BlockSetType blockSetType) {
@@ -41,7 +43,7 @@ public class CopperDoorBlock extends DoorBlock implements Oxidizable {
         if (!this.getDefaultState().isOf(sourceBlock) && bl != state.get(POWERED)) {
             if (!state.get(POWERED)) {
                 playOpenCloseSound(null, world, pos, false);
-            }else {
+            } else {
                 playOpenCloseSound(null, world, pos, true);
             }
 
@@ -72,7 +74,41 @@ public class CopperDoorBlock extends DoorBlock implements Oxidizable {
 
     @Override
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
-        CUMod.LOGGER.info("update state");
+        if (!world.isClient()) {
+            if ((Oxidizable.getIncreasedOxidationBlock(neighborState.getBlock()).isPresent()/* || Oxidizable.getDecreasedOxidationBlock(neighborState.getBlock()).isPresent()*/) && state.get(HALF).equals(DoubleBlockHalf.LOWER)) {
+                if (Oxidizable.getIncreasedOxidationBlock(state.getBlock()).get().equals(state.getBlock())/* || Oxidizable.getDecreasedOxidationBlock(state.getBlock()).get().equals(state.getBlock())*/) {
+                    CUMod.LOGGER.info("setted state");
+                    return neighborState.with(HALF, DoubleBlockHalf.UPPER);
+                }
+            }
+
+            if ((Oxidizable.getIncreasedOxidationBlock(state.getBlock()).isPresent()/* || Oxidizable.getDecreasedOxidationBlock(neighborState.getBlock()).isPresent()*/) && state.get(HALF).equals(DoubleBlockHalf.UPPER)) {
+                if (Oxidizable.getIncreasedOxidationBlock(state.getBlock()).get().equals(neighborState.getBlock())/* || Oxidizable.getDecreasedOxidationBlock(state.getBlock()).get().equals(state.getBlock())*/) {
+                    CUMod.LOGGER.info("setted state");
+                    return neighborState.with(HALF, DoubleBlockHalf.LOWER);
+                }
+            }
+        }
+
+
+        /*        if (Oxidizable.getIncreasedOxidationBlock(state.getBlock()).isPresent() && Oxidizable.getDecreasedOxidationBlock(state.getBlock()).isPresent() && Oxidizable.getIncreasedOxidationBlock(state.getBlock()).get().equals(state.getBlock()) && Oxidizable.getDecreasedOxidationBlock(state.getBlock()).get().equals(state.getBlock())) {
+            CUMod.LOGGER.info("setted state");
+            return neighborState.with(HALF, state.get(HALF).equals(DoubleBlockHalf.LOWER) ? DoubleBlockHalf.LOWER : DoubleBlockHalf.UPPER);
+        }*/
+        CUMod.LOGGER.info(state.toString());
+        CUMod.LOGGER.info(neighborState.toString());
+        CUMod.LOGGER.info("update");
+
+        /*DoubleBlockHalf doubleBlockHalf = state.get(HALF);
+        if (direction.getAxis() == Direction.Axis.Y && doubleBlockHalf == DoubleBlockHalf.LOWER == (direction == Direction.UP)) {
+            if (neighborState.isOf(this) && neighborState.get(HALF) != doubleBlockHalf) {
+                return (((state.with(FACING, neighborState.get(FACING))).with(OPEN, neighborState.get(OPEN))).with(HINGE, neighborState.get(HINGE))).with(POWERED, neighborState.get(POWERED));
+            }
+            return Blocks.AIR.getDefaultState();
+        }
+        if (doubleBlockHalf == DoubleBlockHalf.LOWER && direction == Direction.DOWN && !state.canPlaceAt(world, pos)) {
+            return Blocks.AIR.getDefaultState();
+        }*/
         return super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
     }
 

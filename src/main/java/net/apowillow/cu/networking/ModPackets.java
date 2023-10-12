@@ -4,6 +4,7 @@ import net.apowillow.cu.CUMod;
 import net.apowillow.cu.networking.custom.BlockBreakParticlesS2CPacket;
 import net.apowillow.cu.networking.custom.GreenParicleS2CPacket;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
+import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.util.Identifier;
 
 public class ModPackets {

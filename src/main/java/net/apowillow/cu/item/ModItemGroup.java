@@ -169,6 +169,26 @@ public class ModItemGroup {
                         entries.add(ModBlocks.BLOCK_OF_COPPER_SULFATE);
                         entries.add(ModItems.COPPER_SULFATE);
 
+
+                        entries.add(ModBlocks.COPPER_DOOR);
+                        entries.add(ModBlocks.EXPOSED_COPPER_DOOR);
+                        entries.add(ModBlocks.WEATHERED_COPPER_DOOR);
+                        entries.add(ModBlocks.OXIDIZED_COPPER_DOOR);
+                        entries.add(ModBlocks.WAXED_COPPER_DOOR);
+                        entries.add(ModBlocks.WAXED_EXPOSED_COPPER_DOOR);
+                        entries.add(ModBlocks.WAXED_WEATHERED_COPPER_DOOR);
+                        entries.add(ModBlocks.WAXED_OXIDIZED_COPPER_DOOR);
+
+
+                        entries.add(ModBlocks.COPPER_TRAPDOOR);
+                        entries.add(ModBlocks.EXPOSED_COPPER_TRAPDOOR);
+                        entries.add(ModBlocks.WEATHERED_COPPER_TRAPDOOR);
+                        entries.add(ModBlocks.OXIDIZED_COPPER_TRAPDOOR);
+                        entries.add(ModBlocks.WAXED_COPPER_TRAPDOOR);
+                        entries.add(ModBlocks.WAXED_EXPOSED_COPPER_TRAPDOOR);
+                        entries.add(ModBlocks.WAXED_WEATHERED_COPPER_TRAPDOOR);
+                        entries.add(ModBlocks.WAXED_OXIDIZED_COPPER_TRAPDOOR);
+
                         for (RegistryEntry<CopperHornInstrument> registryEntry : CopperHornRegistries.COPPER_HORN_INSTRUMENT.iterateEntries(CopperHornInstrumentTags.COPPER_HORNS)) {
                             entries.add(CopperHornItem.getStackForInstrument(CUMod.COPPER_HORN, registryEntry));
                         }

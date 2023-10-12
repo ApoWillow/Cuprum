@@ -1,12 +1,15 @@
 package net.apowillow.cu.util;
 
 import net.apowillow.cu.CUMod;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.client.item.ModelPredicateProviderRegistry;
 import net.minecraft.item.Item;
 import net.minecraft.util.Hand;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.UseAction;
 
+@Environment(EnvType.CLIENT)
 public class ModModelPredicateProvider {
     public static void registerModules() {
         registerCopperHorn(CUMod.COPPER_HORN);

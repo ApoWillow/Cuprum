@@ -10,8 +10,7 @@ import net.minecraft.world.BlockView;
 public class FasterOxidation {
     public static BlockState oxideState(Oxidizable oxidizable, BlockState state) {
         var result = oxidizable.getDegradationResult(state);
-        if(result.isEmpty()) return state;
-        else return result.get();
+        return result.orElse(state);
     }
 
     public static boolean oxideBoolean(BlockView world, BlockPos pos) {

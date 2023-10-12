@@ -112,7 +112,16 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.WAXED_WEATHERED_CHISELED_COPPER);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.WAXED_OXIDIZED_CHISELED_COPPER);
 
-        //blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.COPPER_SCAFFHOLDING);
+
+        blockStateModelGenerator.registerDoor(ModBlocks.COPPER_DOOR);
+        blockStateModelGenerator.registerDoor(ModBlocks.EXPOSED_COPPER_DOOR);
+        blockStateModelGenerator.registerDoor(ModBlocks.WEATHERED_COPPER_DOOR);
+        blockStateModelGenerator.registerDoor(ModBlocks.OXIDIZED_COPPER_DOOR);
+
+        blockStateModelGenerator.registerTrapdoor(ModBlocks.COPPER_TRAPDOOR);
+        blockStateModelGenerator.registerTrapdoor(ModBlocks.EXPOSED_COPPER_TRAPDOOR);
+        blockStateModelGenerator.registerTrapdoor(ModBlocks.WEATHERED_COPPER_TRAPDOOR);
+        blockStateModelGenerator.registerTrapdoor(ModBlocks.OXIDIZED_COPPER_TRAPDOOR);
 
         // Sulfate related blocks
         blockStateModelGenerator.registerTorch(ModBlocks.SULFATE_TORCH, ModBlocks.SULFATE_WALL_TORCH);

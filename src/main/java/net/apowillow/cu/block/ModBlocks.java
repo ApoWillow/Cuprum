@@ -1,21 +1,29 @@
 package net.apowillow.cu.block;
 
 import net.apowillow.cu.CUMod;
+import net.apowillow.cu.block.custom.CopperDoorBlock;
 import net.apowillow.cu.block.custom.CopperLampBlock;
+import net.apowillow.cu.block.custom.CopperTrapdoorBlock;
 import net.apowillow.cu.block.custom.chain.CopperChainBlock;
 import net.apowillow.cu.block.custom.levitatorblocks.ExposedLevitatorBlock;
 import net.apowillow.cu.block.custom.levitatorblocks.LevitatorBlock;
 import net.apowillow.cu.block.custom.levitatorblocks.OxidizedLevitatorBlock;
 import net.apowillow.cu.block.custom.levitatorblocks.WeatheredLevitatorBlock;
 import net.apowillow.cu.particle.ModParticles;
+import net.apowillow.cu.util.ModBlockSetTypes;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
+import net.minecraft.block.enums.Instrument;
+import net.minecraft.block.piston.PistonBehavior;
+import net.minecraft.entity.EntityType;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.BlockView;
 
 public class ModBlocks {
 
@@ -317,8 +325,9 @@ public class ModBlocks {
             new CopperLampBlock(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(3.0f).requiresTool()
                     .luminance(state -> state.get(CopperLampBlock.LIT) ? 15 : 0)));
 
-    // Registering all the chain blocks
 
+
+    // Registering all the chain blocks
     public static final Block COPPER_CHAIN = registerBlock("copper_chain",
             new CopperChainBlock(Oxidizable.OxidationLevel.UNAFFECTED, FabricBlockSettings.copyOf(Blocks.CHAIN).strength(3.0f).requiresTool()));
 
@@ -342,6 +351,62 @@ public class ModBlocks {
 
     public static final Block WAXED_OXIDIZED_COPPER_CHAIN = registerBlock("waxed_oxidized_copper_chain",
             new CopperChainBlock(Oxidizable.OxidationLevel.OXIDIZED, FabricBlockSettings.copyOf(Blocks.CHAIN).strength(3.0f).requiresTool()));
+
+
+
+    // Registering all the door blocks
+    public static final Block COPPER_DOOR = registerBlock("copper_door",
+            new CopperDoorBlock(Oxidizable.OxidationLevel.UNAFFECTED, FabricBlockSettings.create().mapColor(Blocks.COPPER_BLOCK.getDefaultMapColor())
+                    .instrument(Instrument.BASS).strength(4.0f).nonOpaque().pistonBehavior(PistonBehavior.DESTROY).strength(3.0f).requiresTool(),
+                    ModBlockSetTypes.COPPER));
+    public static final Block EXPOSED_COPPER_DOOR = registerBlock("exposed_copper_door",
+            new CopperDoorBlock(Oxidizable.OxidationLevel.EXPOSED, FabricBlockSettings.copyOf(COPPER_DOOR), ModBlockSetTypes.COPPER));
+
+    public static final Block WEATHERED_COPPER_DOOR = registerBlock("weathered_copper_door",
+            new CopperDoorBlock(Oxidizable.OxidationLevel.WEATHERED, FabricBlockSettings.copyOf(COPPER_DOOR), ModBlockSetTypes.COPPER));
+
+    public static final Block OXIDIZED_COPPER_DOOR = registerBlock("oxidized_copper_door",
+            new CopperDoorBlock(Oxidizable.OxidationLevel.OXIDIZED, FabricBlockSettings.copyOf(COPPER_DOOR), ModBlockSetTypes.COPPER));
+
+    public static final Block WAXED_COPPER_DOOR = registerBlock("waxed_copper_door",
+            new CopperDoorBlock(Oxidizable.OxidationLevel.UNAFFECTED, FabricBlockSettings.copyOf(COPPER_DOOR), ModBlockSetTypes.COPPER));
+
+    public static final Block WAXED_EXPOSED_COPPER_DOOR = registerBlock("waxed_exposed_copper_door",
+            new CopperDoorBlock(Oxidizable.OxidationLevel.EXPOSED, FabricBlockSettings.copyOf(COPPER_DOOR), ModBlockSetTypes.COPPER));
+
+    public static final Block WAXED_WEATHERED_COPPER_DOOR = registerBlock("waxed_weathered_copper_door",
+            new CopperDoorBlock(Oxidizable.OxidationLevel.WEATHERED, FabricBlockSettings.copyOf(COPPER_DOOR), ModBlockSetTypes.COPPER));
+
+    public static final Block WAXED_OXIDIZED_COPPER_DOOR = registerBlock("waxed_oxidized_copper_door",
+            new CopperDoorBlock(Oxidizable.OxidationLevel.OXIDIZED, FabricBlockSettings.copyOf(COPPER_DOOR), ModBlockSetTypes.COPPER));
+
+
+
+
+    // Registering all the trapdoor blocks
+    public static final Block COPPER_TRAPDOOR = registerBlock("copper_trapdoor",
+            new CopperTrapdoorBlock(Oxidizable.OxidationLevel.UNAFFECTED, FabricBlockSettings.create().mapColor(Blocks.COPPER_BLOCK.getDefaultMapColor())
+                    .instrument(Instrument.BASS).strength(4.0f).nonOpaque().allowsSpawning(ModBlocks::neverAllowsSpawning), ModBlockSetTypes.COPPER));
+    public static final Block EXPOSED_COPPER_TRAPDOOR = registerBlock("exposed_copper_trapdoor",
+            new CopperTrapdoorBlock(Oxidizable.OxidationLevel.EXPOSED, FabricBlockSettings.copyOf(COPPER_TRAPDOOR), ModBlockSetTypes.COPPER));
+
+    public static final Block WEATHERED_COPPER_TRAPDOOR = registerBlock("weathered_copper_trapdoor",
+            new CopperTrapdoorBlock(Oxidizable.OxidationLevel.WEATHERED, FabricBlockSettings.copyOf(COPPER_TRAPDOOR), ModBlockSetTypes.COPPER));
+
+    public static final Block OXIDIZED_COPPER_TRAPDOOR = registerBlock("oxidized_copper_trapdoor",
+            new CopperTrapdoorBlock(Oxidizable.OxidationLevel.OXIDIZED, FabricBlockSettings.copyOf(COPPER_TRAPDOOR), ModBlockSetTypes.COPPER));
+
+    public static final Block WAXED_COPPER_TRAPDOOR = registerBlock("waxed_copper_trapdoor",
+            new CopperTrapdoorBlock(Oxidizable.OxidationLevel.UNAFFECTED, FabricBlockSettings.copyOf(COPPER_TRAPDOOR), ModBlockSetTypes.COPPER));
+
+    public static final Block WAXED_EXPOSED_COPPER_TRAPDOOR = registerBlock("waxed_exposed_copper_trapdoor",
+            new CopperTrapdoorBlock(Oxidizable.OxidationLevel.EXPOSED, FabricBlockSettings.copyOf(COPPER_TRAPDOOR), ModBlockSetTypes.COPPER));
+
+    public static final Block WAXED_WEATHERED_COPPER_TRAPDOOR = registerBlock("waxed_weathered_copper_trapdoor",
+            new CopperTrapdoorBlock(Oxidizable.OxidationLevel.WEATHERED, FabricBlockSettings.copyOf(COPPER_TRAPDOOR), ModBlockSetTypes.COPPER));
+
+    public static final Block WAXED_OXIDIZED_COPPER_TRAPDOOR = registerBlock("waxed_oxidized_copper_trapdoor",
+            new CopperTrapdoorBlock(Oxidizable.OxidationLevel.OXIDIZED, FabricBlockSettings.copyOf(COPPER_TRAPDOOR), ModBlockSetTypes.COPPER));
 
 
 
@@ -407,6 +472,10 @@ public class ModBlocks {
     private static Item registerBlockItem(String name, Block block) {
         return Registry.register(Registries.ITEM, new Identifier(CUMod.MOD_ID, name),
                 new BlockItem(block, new FabricItemSettings()));
+    }
+
+    private static Boolean neverAllowsSpawning(BlockState state, BlockView world, BlockPos pos, EntityType<?> type) {
+        return false;
     }
 
     /*private static ToIntFunction<BlockState> createLightLevelFromLitBlockState(int litLevel) {

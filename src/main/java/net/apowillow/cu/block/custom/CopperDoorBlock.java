@@ -1,13 +1,12 @@
 package net.apowillow.cu.block.custom;
 
-import com.google.common.collect.ImmutableMap;
 import net.apowillow.cu.CUMod;
 import net.apowillow.cu.registry.FasterOxidation;
-import net.apowillow.cu.util.oxidization.IOxidizable;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.DoubleBlockHalf;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.HoneycombItem;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.util.ActionResult;
@@ -20,7 +19,10 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import org.jetbrains.annotations.Nullable;
 
-public class CopperDoorBlock extends DoorBlock implements IOxidizable {
+import java.util.Optional;
+import static net.minecraft.item.HoneycombItem.WAXED_TO_UNWAXED_BLOCKS;
+
+public class CopperDoorBlock extends DoorBlock implements Oxidizable {
     private final Oxidizable.OxidationLevel oxidationLevel;
 
     public CopperDoorBlock(Oxidizable.OxidationLevel oxidationLevel, Settings settings, BlockSetType blockSetType) {
@@ -75,52 +77,57 @@ public class CopperDoorBlock extends DoorBlock implements IOxidizable {
     @Override
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
         if (!world.isClient()) {
-            if ((Oxidizable.getIncreasedOxidationBlock(neighborState.getBlock()).isPresent()/* || Oxidizable.getDecreasedOxidationBlock(neighborState.getBlock()).isPresent()*/) && state.get(HALF).equals(DoubleBlockHalf.LOWER)) {
-                if (Oxidizable.getIncreasedOxidationBlock(state.getBlock()).get().equals(state.getBlock())/* || Oxidizable.getDecreasedOxidationBlock(state.getBlock()).get().equals(state.getBlock())*/) {
-                    CUMod.LOGGER.info("setted state");
-                    return neighborState.with(HALF, DoubleBlockHalf.UPPER);
-                }
+            if (Oxidizable.getIncreasedOxidationBlock(state.getBlock()).isPresent() && Oxidizable.getIncreasedOxidationBlock(state.getBlock()).get().equals(neighborState.getBlock())) {
+                return neighborState.withIfExists(HALF, state.get(HALF).equals(DoubleBlockHalf.UPPER) ? DoubleBlockHalf.UPPER : DoubleBlockHalf.LOWER);
             }
 
-            if ((Oxidizable.getIncreasedOxidationBlock(state.getBlock()).isPresent()/* || Oxidizable.getDecreasedOxidationBlock(neighborState.getBlock()).isPresent()*/) && state.get(HALF).equals(DoubleBlockHalf.UPPER)) {
-                if (Oxidizable.getIncreasedOxidationBlock(state.getBlock()).get().equals(neighborState.getBlock())/* || Oxidizable.getDecreasedOxidationBlock(state.getBlock()).get().equals(state.getBlock())*/) {
-                    CUMod.LOGGER.info("setted state");
-                    return neighborState.with(HALF, DoubleBlockHalf.LOWER);
-                }
+            if (Oxidizable.getDecreasedOxidationBlock(state.getBlock()).isPresent() && Oxidizable.getDecreasedOxidationBlock(state.getBlock()).get().equals(neighborState.getBlock())) {
+                return neighborState.withIfExists(HALF, state.get(HALF).equals(DoubleBlockHalf.UPPER) ? DoubleBlockHalf.UPPER : DoubleBlockHalf.LOWER);
+            }
+
+            if (HoneycombItem.getWaxedState(state).isPresent() && HoneycombItem.getWaxedState(state).get().getBlock().equals(neighborState.getBlock())) {
+                return neighborState.withIfExists(HALF, state.get(HALF).equals(DoubleBlockHalf.UPPER) ? DoubleBlockHalf.UPPER : DoubleBlockHalf.LOWER);
+            }
+
+            if (getUnwaxedState(state).isPresent() && getUnwaxedState(state).get().getBlock().equals(neighborState.getBlock())) {
+                return neighborState.withIfExists(HALF, state.get(HALF).equals(DoubleBlockHalf.UPPER) ? DoubleBlockHalf.UPPER : DoubleBlockHalf.LOWER);
             }
         }
 
 
-        /*        if (Oxidizable.getIncreasedOxidationBlock(state.getBlock()).isPresent() && Oxidizable.getDecreasedOxidationBlock(state.getBlock()).isPresent() && Oxidizable.getIncreasedOxidationBlock(state.getBlock()).get().equals(state.getBlock()) && Oxidizable.getDecreasedOxidationBlock(state.getBlock()).get().equals(state.getBlock())) {
-            CUMod.LOGGER.info("setted state");
-            return neighborState.with(HALF, state.get(HALF).equals(DoubleBlockHalf.LOWER) ? DoubleBlockHalf.LOWER : DoubleBlockHalf.UPPER);
-        }*/
-        CUMod.LOGGER.info(state.toString());
-        CUMod.LOGGER.info(neighborState.toString());
-        CUMod.LOGGER.info("update");
+        //if (!world.isClient()) {
+        //    if ((Oxidizable.getIncreasedOxidationBlock(state.getBlock()).isPresent()/* || Oxidizable.getDecreasedOxidationBlock(state.getBlock()).isPresent()*/) && state.get(HALF).equals(DoubleBlockHalf.LOWER)) {
+        //        if (Oxidizable.getIncreasedOxidationBlock(state.getBlock()).get().equals(neighborState.getBlock())/* || Oxidizable.getDecreasedOxidationBlock(state.getBlock()).get().equals(state.getBlock())*/) {
+        //            //world.setBlockState(pos, neighborState.with(HALF, DoubleBlockHalf.UPPER), 0);
+        //            CUMod.LOGGER.info("setted state");
+        //            return neighborState.withIfExists(HALF, DoubleBlockHalf.LOWER);
+        //        }
+        //    }
 
-        /*DoubleBlockHalf doubleBlockHalf = state.get(HALF);
-        if (direction.getAxis() == Direction.Axis.Y && doubleBlockHalf == DoubleBlockHalf.LOWER == (direction == Direction.UP)) {
-            if (neighborState.isOf(this) && neighborState.get(HALF) != doubleBlockHalf) {
-                return (((state.with(FACING, neighborState.get(FACING))).with(OPEN, neighborState.get(OPEN))).with(HINGE, neighborState.get(HINGE))).with(POWERED, neighborState.get(POWERED));
-            }
-            return Blocks.AIR.getDefaultState();
-        }
-        if (doubleBlockHalf == DoubleBlockHalf.LOWER && direction == Direction.DOWN && !state.canPlaceAt(world, pos)) {
-            return Blocks.AIR.getDefaultState();
-        }*/
+//            if ((Oxidizable.getIncreasedOxidationBlock(state.getBlock()).isPresent()/* || Oxidizable.getDecreasedOxidationBlock(state.getBlock()).isPresent()*/) && state.get(HALF).equals(DoubleBlockHalf.UPPER)) {
+//                if (Oxidizable.getIncreasedOxidationBlock(state.getBlock()).get().equals(neighborState.getBlock())/* || Oxidizable.getDecreasedOxidationBlock(state.getBlock()).get().equals(state.getBlock())*/) {
+//                    //world.setBlockState(pos, neighborState.with(HALF, DoubleBlockHalf.LOWER), 0);
+//                    CUMod.LOGGER.info("setted state");
+//                   return neighborState.withIfExists(HALF, DoubleBlockHalf.UPPER);
+//               }
+//            }
+//        }
+
         return super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
+    }
+
+    public static Optional<BlockState> getUnwaxedState(BlockState state) {
+        return Optional.ofNullable(WAXED_TO_UNWAXED_BLOCKS.get().get(state.getBlock())).map(block -> block.getStateWithProperties(state));
     }
 
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         if (FasterOxidation.oxideBoolean(world, pos)) {
             if (state.get(HALF).equals(DoubleBlockHalf.LOWER)) {
-                world.setBlockState(pos.up(), FasterOxidation.oxideState(this, state/*.with(HALF, DoubleBlockHalf.UPPER)*/));
+                this.tryDegrade(state, world, pos, random);
             }
             return;
         }
-
 
         this.tickDegradation(state, world, pos, random);
     }

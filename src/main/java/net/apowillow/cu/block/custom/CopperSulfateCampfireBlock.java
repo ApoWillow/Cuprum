@@ -49,13 +49,13 @@ public class CopperSulfateCampfireBlock extends CampfireBlock {
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
         if (world.isClient) {
             if (state.get(LIT)) {
-                return CampfireBlock.checkType(type, BlockEntityType.CAMPFIRE, CampfireBlockEntity::clientTick);
+                return CampfireBlock.validateTicker(type, BlockEntityType.CAMPFIRE, CampfireBlockEntity::clientTick);
             }
         } else {
             if (state.get(LIT)) {
-                return CampfireBlock.checkType(type, BlockEntityType.CAMPFIRE, CampfireBlockEntity::litServerTick);
+                return CampfireBlock.validateTicker(type, BlockEntityType.CAMPFIRE, CampfireBlockEntity::litServerTick);
             }
-            return CampfireBlock.checkType(type, BlockEntityType.CAMPFIRE, CampfireBlockEntity::unlitServerTick);
+            return CampfireBlock.validateTicker(type, BlockEntityType.CAMPFIRE, CampfireBlockEntity::unlitServerTick);
         }
         return null;
     }

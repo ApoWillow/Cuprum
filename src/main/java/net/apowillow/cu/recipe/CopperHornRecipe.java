@@ -15,16 +15,16 @@ import net.minecraft.recipe.book.CraftingRecipeCategory;
 import net.minecraft.registry.DynamicRegistryManager;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.registry.tag.InstrumentTags;
-import net.minecraft.util.Identifier;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 
+import java.util.List;
 import java.util.Optional;
 
 public class CopperHornRecipe extends ShapedRecipe {
-    public CopperHornRecipe(Identifier id, CraftingRecipeCategory category) {
-        super(id, "", category, 3, 2, DefaultedList.copyOf(Ingredient.EMPTY,
+    public CopperHornRecipe(CraftingRecipeCategory category) {
+        super(CUMod.MOD_ID, "", category, 3, 2, DefaultedList.copyOf(Ingredient.EMPTY,
                 Ingredient.ofItems(Items.COPPER_INGOT), Ingredient.ofItems(Items.GOAT_HORN), Ingredient.ofItems(Items.COPPER_INGOT),
                 Ingredient.EMPTY, Ingredient.ofItems(Items.COPPER_INGOT), Ingredient.EMPTY
         ), new ItemStack(CUMod.COPPER_HORN));

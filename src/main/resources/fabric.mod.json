@@ -1,19 +1,18 @@
 {
 	"schemaVersion": 1,
 	"id": "cu",
-	"version": "1.0.0-1.20.1",
-	"name": "Copper Undergo",
-	"description": "Copper has been undergone, changed it, made a few repairs, and made it the best it can be :)",
+	"version": "1.0.0-1.20.2",
+	"name": "Cuprum",
+	"description": "Copper has been revamped, changed it, fi, and made it the best it can be :)",
 	"authors": [
 		"ApoWillow",
-		"Sn0wix_",
-		"Neuromancer"
+		"Sn0wix_"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
-	"license": "ARR",
+	"license": "MIT",
 	"icon": "assets/cu/icon.png",
 	"environment": "*",
 	"entrypoints": {
@@ -31,8 +30,8 @@
       "cu.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.14.21",
-		"minecraft": "~1.20.1",
+		"fabricloader": ">=0.14.23",
+		"minecraft": "~1.20.2",
 		"java": ">=17",
 		"fabric-api": "*"
 	},

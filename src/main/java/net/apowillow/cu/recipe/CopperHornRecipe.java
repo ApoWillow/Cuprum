@@ -5,9 +5,7 @@ import net.apowillow.cu.item.custom.CopperHornItem;
 import net.apowillow.cu.mixin.MixinGoatHornItem;
 import net.apowillow.cu.registry.copper_horn.CopperHornInstrumentTags;
 import net.minecraft.inventory.RecipeInputInventory;
-import net.minecraft.item.Instrument;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
+import net.minecraft.item.*;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.RecipeSerializer;
 import net.minecraft.recipe.ShapedRecipe;
@@ -19,15 +17,12 @@ import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 
-import java.util.List;
 import java.util.Optional;
 
 public class CopperHornRecipe extends ShapedRecipe {
+
     public CopperHornRecipe(CraftingRecipeCategory category) {
-        super(CUMod.MOD_ID, "", category, 3, 2, DefaultedList.copyOf(Ingredient.EMPTY,
-                Ingredient.ofItems(Items.COPPER_INGOT), Ingredient.ofItems(Items.GOAT_HORN), Ingredient.ofItems(Items.COPPER_INGOT),
-                Ingredient.EMPTY, Ingredient.ofItems(Items.COPPER_INGOT), Ingredient.EMPTY
-        ), new ItemStack(CUMod.COPPER_HORN));
+        super("", category, 3, 3, DefaultedList.copyOf(Ingredient.EMPTY, Ingredient.ofItems(Items.COPPER_INGOT), Ingredient.ofItems(Items.PAPER), Ingredient.ofItems(Items.GOAT_HORN), Ingredient.ofItems(Items.COPPER_INGOT), Ingredient.EMPTY, Ingredient.ofItems(Items.COPPER_INGOT), Ingredient.EMPTY), new ItemStack(CUMod.COPPER_HORN));
     }
 
     @Override

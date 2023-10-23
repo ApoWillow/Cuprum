@@ -55,7 +55,7 @@ public class ModRegistries {
             @Override
             protected ItemStack dispenseSilently(BlockPointer pointer, ItemStack stack) {
 
-                Direction direction = pointer.getBlockState().get(DispenserBlock.FACING);
+                Direction direction = pointer.getBlockState.get(DispenserBlock.FACING);
                 BlockPos blockPos = pointer.getPos().offset(direction);
                 BlockState state = pointer.getWorld().getBlockState(blockPos);
 

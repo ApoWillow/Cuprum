@@ -9,8 +9,9 @@
 		"Sn0wix_"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://modrinth.com/mod/cuprum",
+		"sources": "https://github.com/ApoWillow/Cuprum",
+		"issues": "https://github.com/ApoWillow/Cuprum/issues"
 	},
 	"license": "MIT",
 	"icon": "assets/cu/icon.png",

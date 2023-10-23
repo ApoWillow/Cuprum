@@ -19,11 +19,6 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
     }
 
     @Override
-    public void method_10419(Consumer<RecipeJsonProvider> exporter) {
-        
-    }
-
-    @Override
     public void generate(RecipeExporter exporter) {
 
         // Adds recipes for cut copper that doesn't already exist

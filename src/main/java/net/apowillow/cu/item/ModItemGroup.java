@@ -171,6 +171,7 @@ public class ModItemGroup {
 
                         for (RegistryEntry<CopperHornInstrument> registryEntry : CopperHornRegistries.COPPER_HORN_INSTRUMENT.iterateEntries(CopperHornInstrumentTags.COPPER_HORNS)) {
                             entries.add(CopperHornItem.getStackForInstrument(CUMod.COPPER_HORN, registryEntry));
+                            CUMod.LOGGER.info("added");
                         }
 
                     }).build());

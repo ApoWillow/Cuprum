@@ -55,9 +55,9 @@ public class ModRegistries {
             @Override
             protected ItemStack dispenseSilently(BlockPointer pointer, ItemStack stack) {
 
-                Direction direction = pointer.getBlockState.get(DispenserBlock.FACING);
-                BlockPos blockPos = pointer.getPos().offset(direction);
-                BlockState state = pointer.getWorld().getBlockState(blockPos);
+                Direction direction = pointer.state().get(DispenserBlock.FACING);
+                BlockPos blockPos = pointer.pos().offset(direction);
+                BlockState state = pointer.world().getBlockState(blockPos);
 
                 if (hasFacingProperty(state)) {
                     this.setSuccess(true);
@@ -75,10 +75,10 @@ public class ModRegistries {
                         state2 = cycle(state, Properties.HORIZONTAL_AXIS, false);
                     }
 
-                    pointer.getWorld().setBlockState(blockPos, state2);
-                    pointer.getWorld().playSound(null, blockPos, state.getSoundGroup().getPlaceSound(), SoundCategory.BLOCKS, 1.0f, 1.0f);
+                    pointer.world().setBlockState(blockPos, state2);
+                    pointer.world().playSound(null, blockPos, state.getSoundGroup().getPlaceSound(), SoundCategory.BLOCKS, 1.0f, 1.0f);
 
-                    pointer.getWorld().getPlayers().forEach(serverPlayerEntity -> {
+                    pointer.world().getPlayers().forEach(serverPlayerEntity -> {
                         PacketByteBuf buffer = PacketByteBufs.create();
                         buffer.writeBlockPos(blockPos);
                         ServerPlayNetworking.send(serverPlayerEntity, ModPackets.BLOCK_BREAK_PARTICLES_SPAWN, buffer);
@@ -88,7 +88,7 @@ public class ModRegistries {
                     this.setSuccess(false);
                 }
 
-                if (this.isSuccess() && stack.damage(1, pointer.getWorld().random, null)) {
+                if (this.isSuccess() && stack.damage(1, pointer.world().random, null)) {
                     stack.setCount(0);
                 }
                 return stack;
@@ -107,8 +107,8 @@ public class ModRegistries {
                     String oldTime = itemStack.getNbt().getString("lastDropperUsage");
 
                     if (oldTime == null || oldTime.isEmpty()) {
-                        if (pointer.getBlockEntity().getType().equals(BlockEntityType.DISPENSER)) {
-                            DispenserBlockEntity dispenserBlockEntity = pointer.getBlockEntity();
+                        if (pointer.blockEntity().getType().equals(BlockEntityType.DISPENSER)) {
+                            DispenserBlockEntity dispenserBlockEntity = pointer.blockEntity();
 
                             for (int i = 0; i < 9; i++) {
                                 ItemStack itemStack1 = dispenserBlockEntity.getStack(i);
@@ -165,8 +165,8 @@ public class ModRegistries {
                     }
 
                     if (this.isSuccess()) {
-                        if (pointer.getBlockEntity().getType().equals(BlockEntityType.DISPENSER)) {
-                            DispenserBlockEntity dispenserBlockEntity = pointer.getBlockEntity();
+                        if (pointer.blockEntity().getType().equals(BlockEntityType.DISPENSER)) {
+                            DispenserBlockEntity dispenserBlockEntity = pointer.blockEntity();
 
                             for (int i = 0; i < 9; i++) {
                                 ItemStack itemStack1 = dispenserBlockEntity.getStack(i);
@@ -207,8 +207,8 @@ public class ModRegistries {
                     String oldTime = itemStack.getNbt().getString("lastDropperUsage");
 
                     if (oldTime == null || oldTime.isEmpty()) {
-                        if (pointer.getBlockEntity().getType().equals(BlockEntityType.DISPENSER)) {
-                            DispenserBlockEntity dispenserBlockEntity = pointer.getBlockEntity();
+                        if (pointer.blockEntity().getType().equals(BlockEntityType.DISPENSER)) {
+                            DispenserBlockEntity dispenserBlockEntity = pointer.blockEntity();
 
                             for (int i = 0; i < 9; i++) {
                                 ItemStack itemStack1 = dispenserBlockEntity.getStack(i);
@@ -265,8 +265,8 @@ public class ModRegistries {
                     }
 
                     if (this.isSuccess()) {
-                        if (pointer.getBlockEntity().getType().equals(BlockEntityType.DISPENSER)) {
-                            DispenserBlockEntity dispenserBlockEntity = pointer.getBlockEntity();
+                        if (pointer.blockEntity().getType().equals(BlockEntityType.DISPENSER)) {
+                            DispenserBlockEntity dispenserBlockEntity = pointer.blockEntity();
 
                             for (int i = 0; i < 9; i++) {
                                 ItemStack itemStack1 = dispenserBlockEntity.getStack(i);
@@ -299,20 +299,20 @@ public class ModRegistries {
     private static void playCopperHornSound(BlockPointer pointer, CopperHornInstrument instrument) {
         SoundEvent soundEvent = instrument.melodySoundEvent();
 
-        if (pointer.getBlockState().getProperties().contains(Properties.FACING)) {
-            if (pointer.getBlockState().get(Properties.FACING).equals(Direction.UP)) {
+        if (pointer.state().getProperties().contains(Properties.FACING)) {
+            if (pointer.state().get(Properties.FACING).equals(Direction.UP)) {
                 soundEvent = instrument.harmonySoundEvent();
 
-            }else if (pointer.getBlockState().get(Properties.FACING).equals(Direction.DOWN)) {
+            }else if (pointer.state().get(Properties.FACING).equals(Direction.DOWN)) {
                 soundEvent = instrument.bassSoundEvent();
             }
         }
 
         float f = instrument.range() / 16.0f;
 
-        if (!pointer.getWorld().isClient) {
-            pointer.getWorld().playSound(null, pointer.getPos(), soundEvent, SoundCategory.RECORDS, f, 1.0f);
-            pointer.getWorld().emitGameEvent(GameEvent.INSTRUMENT_PLAY, pointer.getPos(), GameEvent.Emitter.of(pointer.getBlockState()));
+        if (!pointer.world().isClient) {
+            pointer.world().playSound(null, pointer.pos(), soundEvent, SoundCategory.RECORDS, f, 1.0f);
+            pointer.world().emitGameEvent(GameEvent.INSTRUMENT_PLAY, pointer.pos(), GameEvent.Emitter.of(pointer.state()));
         }
     }
 
@@ -321,9 +321,9 @@ public class ModRegistries {
 
         float f = instrument.range() / 16.0f;
 
-        if (!pointer.getWorld().isClient) {
-            pointer.getWorld().playSound(null, pointer.getPos(), soundEvent, SoundCategory.RECORDS, f, 1.0f);
-            pointer.getWorld().emitGameEvent(GameEvent.INSTRUMENT_PLAY, pointer.getPos(), GameEvent.Emitter.of(pointer.getBlockState()));
+        if (!pointer.world().isClient) {
+            pointer.world().playSound(null, pointer.pos(), soundEvent, SoundCategory.RECORDS, f, 1.0f);
+            pointer.world().emitGameEvent(GameEvent.INSTRUMENT_PLAY, pointer.pos(), GameEvent.Emitter.of(pointer.state()));
         }
     }
 

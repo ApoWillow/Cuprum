@@ -1,9 +1,14 @@
 package net.apowillow.cu.block.custom;
 
+import net.apowillow.cu.networking.ModPackets;
 import net.apowillow.cu.registry.FasterOxidation;
+import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
+import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.block.*;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.Fluids;
+import net.minecraft.network.PacketByteBuf;
+import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
@@ -37,12 +42,23 @@ public class CopperTrapdoorBlock extends TrapdoorBlock implements Oxidizable {
 
         boolean bl = world.isReceivingRedstonePower(pos);
         if (bl != state.get(POWERED)) {
+            spawnParticles(world, pos);
             playToggleSound(null, world, pos, state.get(POWERED));
             world.setBlockState(pos, state.with(POWERED, bl), Block.NOTIFY_LISTENERS);
-            if (state.get(WATERLOGGED).booleanValue()) {
+            if (state.get(WATERLOGGED)) {
                 world.scheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
             }
         }
+    }
+
+    private void spawnParticles(World world, BlockPos pos) {
+        world.getPlayers().forEach(player -> {
+            if (world.isPlayerInRange(pos.getX(), pos.getY(), pos.getZ(), 128)) {
+                PacketByteBuf buffer = PacketByteBufs.create();
+                buffer.writeBlockPos(pos);
+                ServerPlayNetworking.send((ServerPlayerEntity) player, ModPackets.REDSTONE_PARTICLE_SPAWN, buffer);
+            }
+        });
     }
 
     @Override

@@ -1,12 +1,16 @@
 package net.apowillow.cu.block.custom;
 
-import net.apowillow.cu.CUMod;
+import net.apowillow.cu.networking.ModPackets;
 import net.apowillow.cu.registry.FasterOxidation;
+import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
+import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.DoubleBlockHalf;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.HoneycombItem;
+import net.minecraft.network.PacketByteBuf;
+import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.util.ActionResult;
@@ -45,33 +49,39 @@ public class CopperDoorBlock extends DoorBlock implements Oxidizable {
         if (!this.getDefaultState().isOf(sourceBlock) && bl != state.get(POWERED)) {
             if (!state.get(POWERED)) {
                 playOpenCloseSound(null, world, pos, false);
+
+                if (state.get(HALF).equals(DoubleBlockHalf.LOWER)) {
+                    spawnParticles(world, pos);
+                }else {
+                    spawnParticles(world, pos.down());
+                }
+
             } else {
                 playOpenCloseSound(null, world, pos, true);
+
+                if (state.get(HALF).equals(DoubleBlockHalf.LOWER)) {
+                    spawnParticles(world, pos);
+                }else {
+                    spawnParticles(world, pos.down());
+                }
             }
 
             world.setBlockState(pos, (state.with(POWERED, bl)).with(OPEN, state.get(OPEN)), Block.NOTIFY_LISTENERS);
         }
     }
 
-    public void playOpenCloseSound(@Nullable Entity entity, World world, BlockPos pos, boolean open) {
-        world.playSound(entity, pos, open ? this.getBlockSetType().doorOpen() : this.getBlockSetType().doorClose(), SoundCategory.BLOCKS, 1.0f, world.getRandom().nextFloat() * 0.1f + 0.9f);
+    private void spawnParticles(World world, BlockPos pos) {
+        world.getPlayers().forEach(player -> {
+            if (world.isPlayerInRange(pos.getX(), pos.getY(), pos.getZ(), 128)) {
+                PacketByteBuf buffer = PacketByteBufs.create();
+                buffer.writeBlockPos(pos);
+                ServerPlayNetworking.send((ServerPlayerEntity) player, ModPackets.REDSTONE_PARTICLE_SPAWN, buffer);
+            }
+        });
     }
 
-    @Override
-    public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
-        /*if (state.get(HALF).equals(DoubleBlockHalf.LOWER)) {
-            if (Oxidizable.getIncreasedOxidationBlock(world.getBlockState(pos.up()).getBlock()).equals(state.getBlock())) {
-                CUMod.LOGGER.info("lower stayed");
-                return;
-            }
-        }else {
-            if (Oxidizable.getIncreasedOxidationBlock(world.getBlockState(pos.down()).getBlock()).equals(state.getBlock())) {
-                CUMod.LOGGER.info("upper stayed");
-                return;
-            }
-        }*/
-
-        super.onBreak(world, pos, state, player);
+    public void playOpenCloseSound(@Nullable Entity entity, World world, BlockPos pos, boolean open) {
+        world.playSound(entity, pos, open ? this.getBlockSetType().doorOpen() : this.getBlockSetType().doorClose(), SoundCategory.BLOCKS, 1.0f, world.getRandom().nextFloat() * 0.1f + 0.9f);
     }
 
     @Override
@@ -93,26 +103,6 @@ public class CopperDoorBlock extends DoorBlock implements Oxidizable {
                 return neighborState.withIfExists(HALF, state.get(HALF).equals(DoubleBlockHalf.UPPER) ? DoubleBlockHalf.UPPER : DoubleBlockHalf.LOWER);
             }
         }
-
-
-        //if (!world.isClient()) {
-        //    if ((Oxidizable.getIncreasedOxidationBlock(state.getBlock()).isPresent()/* || Oxidizable.getDecreasedOxidationBlock(state.getBlock()).isPresent()*/) && state.get(HALF).equals(DoubleBlockHalf.LOWER)) {
-        //        if (Oxidizable.getIncreasedOxidationBlock(state.getBlock()).get().equals(neighborState.getBlock())/* || Oxidizable.getDecreasedOxidationBlock(state.getBlock()).get().equals(state.getBlock())*/) {
-        //            //world.setBlockState(pos, neighborState.with(HALF, DoubleBlockHalf.UPPER), 0);
-        //            CUMod.LOGGER.info("setted state");
-        //            return neighborState.withIfExists(HALF, DoubleBlockHalf.LOWER);
-        //        }
-        //    }
-
-//            if ((Oxidizable.getIncreasedOxidationBlock(state.getBlock()).isPresent()/* || Oxidizable.getDecreasedOxidationBlock(state.getBlock()).isPresent()*/) && state.get(HALF).equals(DoubleBlockHalf.UPPER)) {
-//                if (Oxidizable.getIncreasedOxidationBlock(state.getBlock()).get().equals(neighborState.getBlock())/* || Oxidizable.getDecreasedOxidationBlock(state.getBlock()).get().equals(state.getBlock())*/) {
-//                    //world.setBlockState(pos, neighborState.with(HALF, DoubleBlockHalf.LOWER), 0);
-//                    CUMod.LOGGER.info("setted state");
-//                   return neighborState.withIfExists(HALF, DoubleBlockHalf.UPPER);
-//               }
-//            }
-//        }
-
         return super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
     }
 

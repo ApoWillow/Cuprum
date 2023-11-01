@@ -9,6 +9,9 @@
     "MixinOxidizableSlab",
     "MixinOxidizableStairs"
   ],
+  "client": [
+    "ParticleUtilMixin"
+  ],
   "injectors": {
     "defaultRequire": 1
 	}
